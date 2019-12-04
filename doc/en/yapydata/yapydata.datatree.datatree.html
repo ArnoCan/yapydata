@@ -1,0 +1,892 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.3. yapydata.datatree.datatree &mdash; yapydata  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5.4. yapydata.datatree.synini" href="yapydata.datatree.synini.html" />
+    <link rel="prev" title="5.2. yapydata.datatree.__init__" href="yapydata.datatree.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">YapyData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">4. Documents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_modules.html">5. Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="yapydata.html">5.1. yapydata.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.html">5.2. yapydata.datatree.__init__</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. yapydata.datatree.datatree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-yapydata.datatree.datatree">5.3.1. Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">5.3.2. Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grow-branch">5.3.2.1. grow_branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#readout-data">5.3.2.2. readout_data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#datatree">5.3.3. DataTree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#init">5.3.3.1. __init__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#call">5.3.3.2. __call__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create">5.3.3.3. create</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get">5.3.3.4. get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#isvalid-top">5.3.3.5. isvalid_top</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#join">5.3.3.6. join</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import-data">5.3.3.7. import_data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">5.3.4. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synini.html">5.4. yapydata.datatree.synini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synjson.html">5.5. yapydata.datatree.synjson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synjson4627.html">5.6. yapydata.datatree.synjson4627</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synprop.html">5.7. yapydata.datatree.synprop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synxml.html">5.8. yapydata.datatree.synxml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synyaml.html">5.9. yapydata.datatree.synyaml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">6. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">7. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">8. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">9. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">10. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yapydata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index_modules.html">5. Modules</a> &raquo;</li>
+        
+      <li>5.3. yapydata.datatree.datatree</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/yapydata.datatree.datatree.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="shortcuttab"><div class="section" id="yapydata-datatree-datatree">
+<h1>5.3. yapydata.datatree.datatree<a class="headerlink" href="#yapydata-datatree-datatree" title="Permalink to this headline">¶</a></h1>
+<p>The module ‘datatree.datatree’ implements the actual access to structured in-memory data.
+The data is implemented by a subset of Python data types as a canonical in-memory
+structure comaptible to the standard package <em>json</em>.
+The specific modules for the supported syntaxes extend the required methods.</p>
+<div class="section" id="module-yapydata.datatree.datatree">
+<span id="module"></span><h2>5.3.1. Module<a class="headerlink" href="#module-yapydata.datatree.datatree" title="Permalink to this headline">¶</a></h2>
+<p>The <em>YapyData.datatree</em> module provides the core class for the handling of
+simple data classes for the most common data representation languages. The
+provided core class <em>DataTree</em> provided the <em>Python</em> data types, which comprise
+the most standard data types.</p>
+<p>The derived classes support for the most common data description languages
+and add therefore the specific constraints and extensions. The package provides
+these features for low-level libraries of the software stack, therefore depends
+whenever possible on standard libraries only. It supports low-level read-only access
+to files and in-memory data. The read data could be modified in-memory only for
+example in order to superpose higher priority data read from the call options
+of the command line .</p>
+<p>The internal representation of the DDLs is exclusively compatible to the standard
+<em>json</em> package in accordance to <em>RFC-7159</em>. The supported DDLs of the read files are:</p>
+<ul class="simple">
+<li><p><em>INI</em></p></li>
+<li><p><em>JSON</em></p></li>
+<li><p><em>XML</em></p></li>
+<li><p><em>YAML</em></p></li>
+</ul>
+<p>A similar package for higher application layer levels is available by <em>multiconf</em>,
+which provides sophisticated features such as cross-conversion and mixed-mode applications
+by modularization, and enhanced processing plugins for various DDLs.</p>
+<p>The validation and preparation including cross-conversion is supported by
+<strong>multiconf</strong>, while the specifics of the <em>DL</em> is supported by the language
+module such as <em>jsondata</em> and <em>xmldata</em>.</p>
+<p>Sources: <a class="reference external" href="_modules/yapydata/datatree/datatree.html#">yapydata/datatree/datatree.py</a></p>
+</div>
+<div class="section" id="functions">
+<h2>5.3.2. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="grow-branch">
+<h3>5.3.2.1. grow_branch<a class="headerlink" href="#grow-branch" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.datatree.grow_branch">
+<code class="sig-prename descclassname">datatree.</code><code class="sig-name descname">grow_branch</code><span class="sig-paren">(</span><em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="headerlink" href="#yapydata.datatree.datatree.grow_branch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new branch including the assigned value to
+the last node. The node types are defined by the types
+of the <em>subpath</em> entries.</p>
+<p>Supports a single linear branch only, no sub-branching.</p>
+<p>The created path is validated for permitted types.
+The derived types such as JSON have to support their
+own branch method. Thus provided as a static method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subpath</strong> – Variable list/tuple of path keys and indexes.</p></li>
+<li><p><strong>kargs</strong> – <dl>
+<dt>value:</dt><dd><p>Value to be assigned to the final node.</p>
+<p>default := None</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A created branch.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>YapyDataDataTreeOidError</strong> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="readout-data">
+<h3>5.3.2.2. readout_data<a class="headerlink" href="#readout-data" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="yapydata.datatree.datatree.readout_data">
+<code class="sig-prename descclassname">yapydata.datatree.datatree.</code><code class="sig-name descname">readout_data</code><span class="sig-paren">(</span><em class="sig-param">xval</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#readout_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.readout_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>For API call-compliance with other syntaxes. Returns here the
+input tree only.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>xval</strong> – The input tree from the <em>DataTree</em>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The returns here the input <em>xval</em>.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="datatree">
+<h2>5.3.3. DataTree<a class="headerlink" href="#datatree" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="yapydata.datatree.datatree.DataTree">
+<em class="property">class </em><code class="sig-prename descclassname">yapydata.datatree.datatree.</code><code class="sig-name descname">DataTree</code><span class="sig-paren">(</span><em class="sig-param">data=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#DataTree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.DataTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides JSON based read-only configuration of capabilities.</p>
+<p>The access to structured data trees offers various methods to
+access paths of nested node attributes. This comprises the
+creation as well as the readout.</p>
+<p>The following equivalent creation methods are supported, where
+‘treenode’ could be either the root node, or any subordinated
+branch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">treenode</span><span class="p">[</span><span class="s1">&#39;subnode0&#39;</span><span class="p">][</span><span class="s1">&#39;subnode1&#39;</span><span class="p">][</span><span class="s1">&#39;subnode7&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># dynamic items</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="n">treenode</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>                              <span class="c1"># dynamic items by &#39;create()&#39;</span>
+            <span class="s1">&#39;subnode0&#39;</span><span class="p">,</span> <span class="s1">&#39;subnode1&#39;</span><span class="p">,</span> <span class="s1">&#39;subnode7&#39;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="n">treenode</span><span class="o">.</span><span class="n">subnode0</span><span class="o">.</span><span class="n">subnode1</span><span class="o">.</span><span class="n">subnode7</span>           <span class="c1"># static attribute addressing style</span>
+</pre></div>
+</div>
+<p>The following equivalent readout methods are supported, where
+‘treenode’ could be either the root node, or any subordinated
+branch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="n">treenode</span><span class="p">[</span><span class="s1">&#39;subnode0&#39;</span><span class="p">][</span><span class="s1">&#39;subnode1&#39;</span><span class="p">][</span><span class="s1">&#39;subnode7&#39;</span><span class="p">]</span>  <span class="c1"># dynamic items</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">treenode</span><span class="p">(</span><span class="s1">&#39;subnode0&#39;</span><span class="p">,</span> <span class="s1">&#39;subnode1&#39;</span><span class="p">,</span> <span class="s1">&#39;subnode7&#39;</span><span class="p">)</span>  <span class="c1"># dynamic items by &#39;__call__&#39;</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">treenode</span><span class="o">.</span><span class="n">subnode0</span><span class="o">.</span><span class="n">subnode1</span><span class="o">.</span><span class="n">subnode7</span>           <span class="c1"># static attribute addressing style</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<div class="section" id="init">
+<h3>5.3.3.1. __init__<a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.datatree.DataTree.__init__">
+<code class="sig-prename descclassname">DataTree.</code><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">data=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#DataTree.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.DataTree.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – <p>Configuration data in accordance to the selected data language syntax.
+The default is the Python syntax including the appropriate data types.
+This may impose additional constraints by derived classes e.g. in case
+of persistent data such as JSON and XML - see other classes within
+this module.</p>
+<p>The default Python DL implementation supports in-memory access only,
+while persistence will be available for example by pickling.</p>
+<p>The initial <em>data</em> defines the permitted type of the first item
+within the <em>subpath</em> of the spanned data tree. The default value acts
+here as a placeholder for an empty structure, which could be defined
+by following extension operations arbitrarily.</p>
+<p>The basic constraint introduced here is that intermediate nodes
+require support of subscription. This is due to the addressing concepts
+implemented by <em>DataTree</em>. Thus even though a <em>set</em> could technically
+be an intermediate node, it could not be indexed, thus could not be
+addressed by the standard member functions. Resulting ‘set’ and ‘frozenset’
+are supported by <em>DataTree</em> as end-nodes only, same as atomic data types.</p>
+<p>Anyhow, the &lt;top-node&gt; is by default permitted to be an end-node. Thus
+the context defines the applicability dynamically.</p>
+<p>The consistency of the data tree including the valid intermediate nodes
+is verified by access, so basically within the responsibility of the caller.</p>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None / initialized object</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#yapydata.datatree.datatree.YapyDataDataTreeError" title="yapydata.datatree.datatree.YapyDataDataTreeError"><strong>YapyDataDataTreeError</strong></a> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="call">
+<h3>5.3.3.2. __call__<a class="headerlink" href="#call" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.datatree.DataTree.__call__">
+<code class="sig-prename descclassname">DataTree.</code><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param">*subpath</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#DataTree.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.DataTree.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Readout the value of a node, or an attribute. The name binding
+of the path is provided as a tuple of path items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subpath</strong> – <p>The list of keys constituting a branch of a data tree.
+The <em>subpath</em> is treated as a branch of one of the nodes
+of a provided <em>searchpath</em> - which is by default the top node.
+The supported values are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subpath</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="n">ids</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="n">ids</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">node</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;</span> <span class="p">[</span><span class="s1">&#39;,&#39;</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="n">ids</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">node</span><span class="o">-</span><span class="nb">id</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="nb">str</span>            <span class="c1"># string:  dict</span>
+    <span class="o">|</span> <span class="nb">int</span>            <span class="c1"># integer: lists, tuple, dict</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The value of the node within <em>data</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nodeid</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="n">single</span><span class="o">-</span><span class="n">nodeid</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">nodeids</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="nb">tuple</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">nodeids</span><span class="o">&gt;</span>
+<span class="p">)</span>
+<span class="n">single</span><span class="o">-</span><span class="n">nodeid</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">nodeid</span><span class="o">&gt;</span>
+<span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">nodeids</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;[&#39;</span> <span class="o">&lt;</span><span class="n">nodeidlists</span><span class="o">&gt;</span> <span class="s1">&#39;]&#39;</span>
+<span class="nb">tuple</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">nodeids</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">&lt;</span><span class="n">nodeidlists</span><span class="o">&gt;</span> <span class="s1">&#39;)&#39;</span>
+<span class="n">nodeidlists</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">nodeid</span><span class="o">&gt;</span> <span class="p">[</span><span class="s1">&#39;,&#39;</span> <span class="o">&lt;</span><span class="n">nodeidlists</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">nodeid</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="n">ItemKey</span>
+    <span class="o">|</span> <span class="n">ListIndex</span>
+<span class="p">)</span>
+<span class="n">ItemKey</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;valid dict-key&quot;</span>
+<span class="n">ListIndex</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;valid list-index&quot;</span>
+</pre></div>
+</div>
+<p>The derived syntax classes may impose specific constraints.
+Thus it is recommended to use integers and strings only
+for maximum compatibility, and the ease of using mixed syntaxes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ItemKey</span> <span class="p">:</span><span class="o">=</span>    <span class="nb">str</span>  <span class="c1"># string:  dict</span>
+<span class="n">ListIndex</span> <span class="p">:</span><span class="o">=</span>  <span class="nb">int</span>  <span class="c1"># integer: lists, tuple, dict</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>kargs</strong> – <dl>
+<dt>searchpath:</dt><dd><p>Optional search path for the match of the provided
+address <em>subpath</em>. The provided <em>subpath</em> is applied
+to each node of the <em>searchpath</em> in accordance to the
+<em>direction</em> option. This provides the search and
+enumeration of side branches:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">searchpath</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">-</span><span class="n">item</span><span class="o">-</span><span class="nb">list</span><span class="o">&gt;</span>
+
+<span class="n">path</span><span class="o">-</span><span class="n">item</span><span class="o">-</span><span class="nb">list</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">-</span><span class="n">item</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">-</span><span class="n">item</span><span class="o">-</span><span class="nb">list</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">path</span><span class="o">-</span><span class="n">item</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="nb">str</span>  <span class="c1"># item name</span>
+    <span class="o">|</span> <span class="nb">int</span>  <span class="c1"># item index</span>
+<span class="p">)</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">top</span><span class="o">-</span><span class="n">node</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The search path entries has to be actually present by default.
+These  could be either created by loading a complete tree
+structure, or by using the <em>Capabilities.create()</em> member.
+See also parameter ‘strict’.</p>
+</dd>
+<dt>direction:</dt><dd><p>The search direction of the <em>subpath</em> within the
+<em>searchpath</em>. In case of multiple superpositioned
+attributes the first traversed match.</p>
+<p>The provided values are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">direction</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="n">up</span>   <span class="o">|</span> <span class="mi">0</span>  <span class="o">|</span> <span class="kc">False</span> <span class="c1"># search from right-to-left</span>
+    <span class="o">|</span> <span class="n">down</span> <span class="o">|</span> <span class="mi">1</span>  <span class="o">|</span> <span class="kc">True</span>  <span class="c1"># search from left-to-right</span>
+<span class="p">)</span>
+
+<span class="n">default</span><span class="p">:</span><span class="o">=</span> <span class="n">up</span>
+</pre></div>
+</div>
+</dd>
+<dt>match:</dt><dd><p>Sets the match criteria for the search operation.
+Interferes with <em>direction</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">match</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="n">M_FIRST</span> <span class="o">|</span> <span class="s1">&#39;first&#39;</span>   <span class="c1"># use first matching node</span>
+    <span class="o">|</span> <span class="n">M_LAST</span>  <span class="o">|</span> <span class="s1">&#39;last&#39;</span>    <span class="c1"># use last matching node</span>
+    <span class="o">|</span> <span class="n">M_ALL</span>   <span class="o">|</span> <span class="s1">&#39;all&#39;</span>     <span class="c1"># use all - iterate all matches</span>
+<span class="p">)</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="n">M_FIRST</span>
+</pre></div>
+</div>
+</dd>
+<dt>partial:</dt><dd><p>Enables the return of partial sub paths in case the requested
+path is not completely present.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">partial</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="kc">True</span>   <span class="c1"># when not completely present, the longest</span>
+             <span class="c1"># existing part is returned, the completeness</span>
+             <span class="c1"># is provided by the result attribute &lt;partial&gt;</span>
+    <span class="o">|</span> <span class="kc">False</span>  <span class="c1"># when not completely present an exception</span>
+             <span class="c1"># is raised</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>strict:</dt><dd><p>Controls the required consistency. This comprises:</p>
+<ol class="arabic simple">
+<li><p>the presence of the search path entries</p></li>
+<li><p>the presence of the requested subpath within the set
+of search paths</p></li>
+</ol>
+</dd>
+<dt>pysyn:</dt><dd><p>Activates full <em>Python</em> syntax. This in particular enables all
+container types of intermediate nodes for arbitrary paths.
+Includes <em>tuple</em>, <em>set</em>, <em>frozenset</em>, etc.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pysyn</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="kc">True</span>   <span class="c1"># allows all python types as container nodes</span>
+    <span class="o">|</span> <span class="kc">False</span>  <span class="c1"># allows list and dict only as container nodes</span>
+<span class="p">)</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>In case of a match returns the tuple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">path</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">partial</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">path</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="s2">&quot;the list of keys of the top-down path&quot;</span>
+    <span class="o">|</span> <span class="s2">&quot;empty list when no item exists&quot;</span>        <span class="c1"># see &lt;complete&gt;</span>
+<span class="p">)</span>
+<span class="n">attr</span><span class="o">-</span><span class="n">value</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;value of the targeted node/attribute&quot;</span>
+<span class="n">partial</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="kc">False</span>   <span class="c1"># the complete requested path</span>
+    <span class="o">|</span> <span class="kc">True</span>    <span class="c1"># the actually present part of the path</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Else raises <em>YapyDataDataTreeOidError</em>.</p>
+</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>YapyDataDataTreeOidError</strong> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="create">
+<h3>5.3.3.3. create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.datatree.DataTree.create">
+<code class="sig-prename descclassname">DataTree.</code><code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">*subpath</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#DataTree.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.DataTree.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a <em>subpath</em> to a given node, default is from top.
+Reuses existing nodes, starts the creation at the first point
+of branch-out from the exiting tree.</p>
+<p>In general no padding of pre-required entries is done. This e.g.
+requires in case of a <em>list</em> the start with the index <em>0</em>, while
+in case of the <em>dict</em> arbitrary keys could be assigned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subpath</strong> – <p>The list of keys constituting a branch of a data tree.
+The <em>subpath</em> is treated as a branch of one of the nodes
+of a provided <em>searchpath</em> - which is by default the top node.
+The supported values are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subpath</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="n">ids</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="n">ids</span><span class="o">&gt;</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">node</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;</span> <span class="p">[</span><span class="s1">&#39;,&#39;</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="n">ids</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">node</span><span class="o">-</span><span class="nb">id</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="n">present</span><span class="o">-</span><span class="n">intermediate</span><span class="o">-</span><span class="n">node</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">node</span><span class="o">&gt;</span>
+<span class="p">)</span>
+<span class="n">present</span><span class="o">-</span><span class="n">intermediate</span><span class="o">-</span><span class="n">node</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="nb">str</span>             <span class="c1"># string:  dict</span>
+    <span class="o">|</span> <span class="nb">int</span>             <span class="c1"># integer: lists, tuple, dict</span>
+    <span class="o">|</span> <span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span>    <span class="c1"># logic:   dict</span>
+    <span class="o">|</span> <span class="kc">None</span>            <span class="c1"># null:    dict</span>
+<span class="p">)</span>
+<span class="n">new</span><span class="o">-</span><span class="n">node</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="nb">str</span>             <span class="c1"># string:  dict</span>
+    <span class="o">|</span> <span class="nb">int</span>             <span class="c1"># integer: list</span>
+    <span class="o">|</span> <span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span>    <span class="c1"># logic:   dict</span>
+    <span class="o">|</span> <span class="kc">None</span>            <span class="c1"># null:    dict</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Some <em>Python</em> data types are immutable, which could be subscripted read-only,
+e.g. strings. While others such as sets are iterable, but not subscriptable
+at all. Refer to the manual for a detailed list.</p>
+</p></li>
+<li><p><strong>kargs</strong> – <dl>
+<dt>hook:</dt><dd><p>Optional node as parent of the insertion point for the new sub path.
+The node must exist and be part of the targeted data structure. No
+additional checks are done:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hook</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">memory</span><span class="o">-</span><span class="n">node</span><span class="o">&gt;</span>
+<span class="n">memory</span><span class="o">-</span><span class="n">node</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;node address&quot;</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">top</span><span class="o">-</span><span class="n">node</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The <em>hook</em> node could either be a border node of the existing tree,
+or any arbitrary node with a partial of complete part of the requested
+<em>subpath</em>. Existing nodes are reused.</p>
+</dd>
+<dt>strict:</dt><dd><p>If <em>True</em> requires all present nodes of the <em>subpath</em> to of the
+appropriate type, missing are created. When <em>False</em> present nodes
+of inappropriate type are simply replaced.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">strict</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="kc">True</span>   <span class="c1"># nodes must be present</span>
+    <span class="o">|</span> <span class="kc">False</span>  <span class="c1"># missing are created</span>
+<span class="p">)</span>
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>Nodes of type <em>None</em> are always treated as non-present placeholder,
+thus replaced in any case.</p>
+</dd>
+<dt>value:</dt><dd><p>Value of the created final node:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">node</span><span class="o">&gt;</span>
+
+<span class="n">value</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">node</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">valid</span><span class="o">-</span><span class="n">json</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="nb">type</span><span class="o">&gt;</span>
+<span class="n">valid</span><span class="o">-</span><span class="n">json</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="nb">type</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+                      <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span>
+                    <span class="o">|</span> <span class="nb">str</span>                  <span class="c1"># unicode</span>
+                    <span class="o">|</span> <span class="nb">dict</span> <span class="o">|</span> <span class="nb">list</span>
+                    <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span>  <span class="c1"># equivalent: null|true|false</span>
+                    <span class="p">)</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>In case of success the in-memory nodes of the sub path:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">path</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">path</span><span class="o">-</span><span class="nb">tuple</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="ow">in</span><span class="o">-</span><span class="n">memory</span> <span class="n">nodes</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="n">non</span><span class="o">-</span><span class="n">subscriptable</span><span class="o">-</span><span class="n">node</span><span class="o">&gt;</span>
+<span class="p">)</span>
+<span class="ow">in</span><span class="o">-</span><span class="n">memory</span> <span class="n">nodes</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;the list of in-memory nodes with support of subscription&quot;</span>
+<span class="p">)</span>
+<span class="n">non</span><span class="o">-</span><span class="n">subscriptable</span><span class="o">-</span><span class="n">node</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;any valid type&quot;</span>
+</pre></div>
+</div>
+<p>else raises <em>YapyDataDataTreeOidError</em>.</p>
+<p>The last node contains in case of an atomic type the value
+of the node, while the intermediate nodes represent the
+indexed containers.</p>
+</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>YapyDataDataTreeOidError</strong> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="get">
+<h3>5.3.3.4. get<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.datatree.DataTree.get">
+<code class="sig-prename descclassname">DataTree.</code><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">*path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#DataTree.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.DataTree.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the value of the path within the member ‘data’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key0</span><span class="p">][</span><span class="n">key1</span><span class="p">][</span><span class="n">key2</span><span class="p">]</span><span class="o">...</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – <p>The value of the node within <em>data</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">key</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="n">single</span><span class="o">-</span><span class="n">key</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">keys</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="nb">tuple</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">keys</span><span class="o">&gt;</span>
+<span class="p">)</span>
+<span class="n">single</span><span class="o">-</span><span class="n">key</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span>
+<span class="nb">list</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">keys</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;[&#39;</span> <span class="o">&lt;</span><span class="n">keylists</span><span class="o">&gt;</span> <span class="s1">&#39;]&#39;</span>
+<span class="nb">tuple</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">keys</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">&lt;</span><span class="n">keylist</span><span class="o">&gt;</span> <span class="s1">&#39;)&#39;</span>
+<span class="n">keylist</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="p">[</span><span class="s1">&#39;,&#39;</span> <span class="o">&lt;</span><span class="n">keylist</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">key</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="n">ItemKey</span>
+    <span class="o">|</span> <span class="n">ListIndex</span>
+<span class="p">)</span>
+<span class="n">ItemKey</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;valid dict-key&quot;</span>
+<span class="n">ListIndex</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;valid list-index&quot;</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of the addressed node/value.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="isvalid-top">
+<h3>5.3.3.5. isvalid_top<a class="headerlink" href="#isvalid-top" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.datatree.DataTree.isvalid_top">
+<em class="property">static </em><code class="sig-prename descclassname">DataTree.</code><code class="sig-name descname">isvalid_top</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#DataTree.isvalid_top"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.DataTree.isvalid_top" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate compliance of top-node. To be provided by derived classes
+for specific syntaxes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – Top node.</p></li>
+<li><p><strong>kargs</strong> – Specific syntax related dynamic parameters to be defined
+by derived classes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Results:</dt><dd><dl class="simple">
+<dt>YapyDataTreeError:</dt><dd><p>Raises exception when not valid.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="join">
+<h3>5.3.3.6. join<a class="headerlink" href="#join" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.datatree.DataTree.join">
+<code class="sig-prename descclassname">DataTree.</code><code class="sig-name descname">join</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">keyidx=None</em>, <em class="sig-param">hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#DataTree.join"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.DataTree.join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Superposes a JSON structure onto an existing. This
+is a fixed mode and strategy special case of the generic
+method <em>superpose()</em>. Implemented by recursion. The reduced
+parameter set provides better performance on large trees
+while the graph parameters still could be efficiently set
+by default values.</p>
+<p>The superpositioning is supported by multiple strategies
+defined by the parameter <em>mode</em>. The provided algorithm
+of the strategy is <em>join</em>, where the input data is processed
+on the exisiting tree by modification and creation as required.</p>
+<ul class="simple">
+<li><p>branches are resolved from top to the leafs</p></li>
+<li><p>missing sub-branches are created</p></li>
+<li><p>missing leafs are created</p></li>
+<li><p>existing leafs are replaced</p></li>
+</ul>
+<p>This implements a last-wins strategy, thus in particular supports
+incremental load of configurations by raising priority.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – Top node of the data tree to be superposed.</p></li>
+<li><p><strong>keyidx</strong> – <p>Key or index to be used at the insertion node.
+If not given the insertion node is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">into</span> <span class="nb">dict</span><span class="p">:</span> <span class="n">update</span> <span class="n">by</span> <span class="n">the</span> <span class="n">new</span> <span class="n">node</span>
+<span class="n">into</span> <span class="nb">list</span><span class="p">:</span> <span class="n">append</span> <span class="n">the</span> <span class="n">new</span> <span class="n">node</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>hook</strong> – <p>The insertion node for the new data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">when</span>  <span class="ow">not</span> <span class="n">given</span><span class="p">:</span> <span class="n">use</span> <span class="n">top</span><span class="o">.</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns the merged data tree,
+raises an exception in case of failure.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#yapydata.datatree.datatree.YapyDataDataTreeError" title="yapydata.datatree.datatree.YapyDataDataTreeError"><strong>YapyDataDataTreeError</strong></a> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="import-data">
+<h3>5.3.3.7. import_data<a class="headerlink" href="#import-data" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.datatree.DataTree.import_data">
+<code class="sig-prename descclassname">DataTree.</code><code class="sig-name descname">import_data</code><span class="sig-paren">(</span><em class="sig-param">fpname</em>, <em class="sig-param">key=None</em>, <em class="sig-param">node=None</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#DataTree.import_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.DataTree.import_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The core class <a href="#id1"><span class="problematic" id="id2">*</span></a>DataTree <a href="#id3"><span class="problematic" id="id4">*</span></a>does not support serialization.</p>
+<p>For serialization use either a derived syntax class, or
+serialize it e..g. by pickling and use the in-memory data.
+For example by pickling:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">import_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fpname</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fpname</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fpname</span> <span class="o">+</span> <span class="s1">&#39;.pkl&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">YapyDataTreeError</span><span class="p">(</span>
+                <span class="s2">&quot;Missing file: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fpname</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fpname</span> <span class="o">=</span> <span class="n">fpname</span> <span class="o">+</span> <span class="s1">&#39;.pkl&#39;</span>
+
+    <span class="k">if</span> <span class="n">key</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">YapyDataTreeError</span><span class="p">(</span>
+            <span class="s2">&quot;Given key(</span><span class="si">%s</span><span class="s2">) requires a valid node.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)))</span>
+
+    <span class="n">datafile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">fpname</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">datafile</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+        <span class="n">pval</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">key</span><span class="p">:</span>
+        <span class="n">node</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">pval</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">pval</span>
+
+    <span class="k">return</span> <span class="n">pval</span>
+
+<span class="n">See</span> <span class="n">manuals</span> <span class="k">for</span> <span class="n">security</span> <span class="n">issues</span> <span class="n">of</span> <span class="n">pickling</span><span class="o">.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>5.3.4. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="yapydata.datatree.datatree.YapyDataDataTreeError">
+<em class="property">exception </em><code class="sig-prename descclassname">yapydata.datatree.datatree.</code><code class="sig-name descname">YapyDataDataTreeError</code><a class="reference internal" href="_modules/yapydata/datatree/datatree.html#YapyDataDataTreeError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.datatree.YapyDataDataTreeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Common access error.</p>
+</dd></dl>
+
+<p>s.. autoexception:: yapydata.datatree.datatree.YapyDataDataTreeOidError</p>
+</div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="yapydata.datatree.synini.html" class="btn btn-neutral float-right" title="5.4. yapydata.datatree.synini" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="yapydata.datatree.html" class="btn btn-neutral float-left" title="5.2. yapydata.datatree.__init__" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 04, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

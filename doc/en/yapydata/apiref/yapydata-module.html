@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>yapydata</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link - Main Document -->
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index_part_apiref_scaled.html">Top</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_parent" href="frames.html">&larr;</a>
+          &nbsp;
+      <th>
+      <th>
+          &nbsp;
+          <a target="_parent" href="frames-right.html">&rarr;</a>
+          &nbsp;&nbsp;&nbsp;
+      </th>
+
+  <!-- Overview link - api reference-->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Overview&nbsp;&nbsp;&nbsp;</th>
+
+
+  <!-- Module -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Module</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Class -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="class-tree.html">Class</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+  <!--
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Tree</a>&nbsp;&nbsp;&nbsp;</th>
+  -->
+  
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+              <th>&nbsp;&nbsp;&nbsp;<a
+                href="http://pypi.python.org/pypi/setupdocx">@www</a>&nbsp;&nbsp;&nbsp;</th>
+          </tr></table></th>
+
+  <!-- About link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="about.html">About</a>&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table>
+<table class="subnavbar" width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td>
+      <table class="items" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <span class="options">
+                  <a href="frames.html" target="_top">&lt;Frames(L)</a>
+                </span>
+                &nbsp;
+            </td>
+            <td align="center">
+                &#124;
+                &nbsp;
+                <span class="options">
+                    <a href="yapydata-module.html" target="_top">No&nbsp;Frames</a>
+                </span>
+                &nbsp;
+                &#124;
+            </td>
+            <td align="center">
+                &nbsp;
+                <span class="options">
+                   <a href="frames-right.html" target="_top">Frames(R)&gt;</a>
+                </span>
+            </td>
+           </tr>
+      </table>
+    </td>
+    <td>
+    </td>
+ </tr>
+ <tr>
+</table>
+      <span class="breadcrumbs">
+        Package&nbsp;yapydata
+      </span>
+<!-- ==================== PACKAGE DESCRIPTION ==================== -->
+<div class="packageDescription">
+<h1 class="epydoc">Package yapydata</h1><p class="nomargin-top"><span class="codelink"><a href="yapydata-pysrc.html">source&nbsp;code</a></span></p>
+<pre class="literalblock">
+*YapyData* - Yet Another Python Data - provides various low-level *Python* utilities for the management and processing
+of structured data types. The definition, persistence, and the processing is hereby supported
+for multiple data definition languages. The current support comprises:
+
+* *JSON*
+* *XML*
+* *YAML*
+
+In addition the syntaxes defined by the widespread legacy configuration file formats:
+
+* *INI* - multiple variants: *INI*, *INIX*, *CFG*, *CONF*
+* *.properties* - the *Java* configuration syntax in *INI* style
+
+The package *YapyData* is member of the *DataFusion* family by providing the basic 
+syntaxes and features required for the low-level components of modern software stacks.
+This is applicable including for installation utilities, thus is kept independent
+from higher stack-layers when ever possible.
+Ultimately, when required features are even provided redundant in favor of independence.
+
+The higher application level semantic features such as full validation and standard compliant
+processing options such as e.g. RFC-6901 [RFC6901]_ and RFC6902 [RFC6902]_.
+
+The subpackage layout prioritizes modularity and granularity, eventually at the cost of
+minor performance reduction.
+For specific use-cases of large data alternates with better performance are included,
+while the generic cases offer flexibility.   
+
+The absolute and overall priority is the avoidance of circular dependencies.
+
+</pre>
+
+<hr />
+
+</div>
+<div class="fields">      <p><strong>Version:</strong>
+        0.1.1
+      </p>
+      <p><strong>Author:</strong>
+        Arno-Can Uestuensoez
+      </p>
+      <p><strong>License:</strong>
+        Artistic-License-2.0 + Forced-Fairplay-Constraints
+      </p>
+</div><!-- ==================== SUBMODULES ==================== -->
+<a name="section-Submodules"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Submodules</span></td>
+</tr>
+  <tr><td class="summary">
+  <ul class="nomargin">
+    <li> <strong class="uidlink"><a href="yapydata.datatree-module.html">yapydata.datatree</a></strong>: <em class="summary"><em>YapyData.data</em> provides various low-level <em>Python</em> utilities for Python
+data structures and syntaxes</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="yapydata.datatree.datatree-module.html">yapydata.datatree.datatree</a></strong>: <em class="summary">The <em>YapyData.datatree</em> module provides the core class for the handling of
+simple data classes for the most common data representation languages. The
+provided core class <em>DataTree</em> provided the <em>Python</em> data types, which comprise
+the most standard data types.</em>    </li>
+    <li> <strong class="uidlink"><a href="yapydata.datatree.synxml-module.html">yapydata.datatree.synxml</a></strong>: <em class="summary">The <em>YapyData.xml</em> module provides <em>XML</em>.</em>    </li>
+    <li> <strong class="uidlink"><a href="yapydata.datatree.synyaml-module.html">yapydata.datatree.synyaml</a></strong>: <em class="summary">The <em>YapyData.xml</em> module provides <em>XML</em>.</em>    </li>
+    <li> <strong class="uidlink"><a href="yapydata.datatree.synprop-module.html">yapydata.datatree.synprop</a></strong>: <em class="summary">The <em>yapydata.datatree.synprop</em> module provides <em>Java</em> <em>.properties</em>.</em>    </li>
+    <li> <strong class="uidlink"><a href="yapydata.datatree.synjson-module.html">yapydata.datatree.synjson</a></strong>: <em class="summary">The *YapyData.json* module provides *JSON* access in compliance to RFC-7159 [RFC7159]_.</em>    </li>
+    <li> <strong class="uidlink"><a href="yapydata.datatree.synjson4627-module.html">yapydata.datatree.synjson4627</a></strong>: <em class="summary">The *YapyData.json4627* module provides *JSON* access in compliance to RFC-4627 [RFC4627]_.</em>    </li>
+    <li> <strong class="uidlink"><a href="yapydata.datatree.synini-module.html">yapydata.datatree.synini</a></strong>: <em class="summary">The <em>YapyData.ini</em> module provides the extended <em>INI</em> file syntax access
+with optional extended syntax features.
+The core syntax is defined by the standard library <em>configparser.ConfigParser</em>,
+<em>YapyData.data</em> supports <em>Python2.7</em>, and <em>Python3.5+</em>.</em>    </li>
+    </ul>
+    </li>
+  </ul></td></tr>
+</table>
+
+<br />
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Classes</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="yapydata.YapyDataError-class.html" class="summary-name">YapyDataError</a><br />
+      Subsystem <em>YapyData</em>.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="yapydata.YapyDataTypeError-class.html" class="summary-name">YapyDataTypeError</a><br />
+      Type mismatch, e.g. incompatible, check syntax,
+and refer to <em>strict</em> parameters.
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__uuid__"></a><span class="summary-name">__uuid__</span> = <code title="&quot;60cac28d-efe6-4a8d-802f-fa4fc94fa741&quot;">&quot;60cac28d-efe6-4a8d-802f-fa4fc94fa741&quot;</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link - Main Document -->
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index_part_apiref_scaled.html">Top</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_parent" href="frames.html">&larr;</a>
+          &nbsp;
+      <th>
+      <th>
+          &nbsp;
+          <a target="_parent" href="frames-right.html">&rarr;</a>
+          &nbsp;&nbsp;&nbsp;
+      </th>
+
+  <!-- Overview link - api reference-->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Overview&nbsp;&nbsp;&nbsp;</th>
+
+
+  <!-- Module -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Module</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Class -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="class-tree.html">Class</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+  <!--
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Tree</a>&nbsp;&nbsp;&nbsp;</th>
+  -->
+  
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+              <th>&nbsp;&nbsp;&nbsp;<a
+                href="http://pypi.python.org/pypi/setupdocx">@www</a>&nbsp;&nbsp;&nbsp;</th>
+          </tr></table></th>
+
+  <!-- About link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="about.html">About</a>&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table>
+<table class="footTable" border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+        Copyright(C) 2019 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="https://arnocan.wordpress.com"
+        >https://arnocan.wordpress.com</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="lest" class="footer">
+    Generated by Epydoc 4.0.3 / Python-3.8 / fedora27 on Wed Dec  4 14:21:29 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

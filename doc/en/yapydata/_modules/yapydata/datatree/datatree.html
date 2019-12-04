@@ -1,0 +1,1410 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>yapydata.datatree.datatree &mdash; yapydata  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">YapyData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_documents.html">4. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_modules.html">5. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_indices.html">6. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_resources.html">7. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">8. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">9. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_license.html">10. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">yapydata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../yapydata.html">yapydata</a> &raquo;</li>
+        
+      <li>yapydata.datatree.datatree</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for yapydata.datatree.datatree</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;The *YapyData.datatree* module provides the core class for the handling of</span>
+<span class="sd">simple data classes for the most common data representation languages. The</span>
+<span class="sd">provided core class *DataTree* provided the *Python* data types, which comprise</span>
+<span class="sd">the most standard data types.</span>
+
+<span class="sd">The derived classes support for the most common data description languages</span>
+<span class="sd">and add therefore the specific constraints and extensions. The package provides</span>
+<span class="sd">these features for low-level libraries of the software stack, therefore depends </span>
+<span class="sd">whenever possible on standard libraries only. It supports low-level read-only access</span>
+<span class="sd">to files and in-memory data. The read data could be modified in-memory only for </span>
+<span class="sd">example in order to superpose higher priority data read from the call options</span>
+<span class="sd">of the command line .</span>
+
+<span class="sd">The internal representation of the DDLs is exclusively compatible to the standard</span>
+<span class="sd">*json* package in accordance to *RFC-7159*. The supported DDLs of the read files are:</span>
+
+<span class="sd">* *INI*</span>
+<span class="sd">* *JSON*</span>
+<span class="sd">* *XML*</span>
+<span class="sd">* *YAML*</span>
+
+<span class="sd">A similar package for higher application layer levels is available by *multiconf*,</span>
+<span class="sd">which provides sophisticated features such as cross-conversion and mixed-mode applications</span>
+<span class="sd">by modularization, and enhanced processing plugins for various DDLs.    </span>
+
+<span class="sd">The validation and preparation including cross-conversion is supported by</span>
+<span class="sd">**multiconf**, while the specifics of the *DL* is supported by the language</span>
+<span class="sd">module such as *jsondata* and *xmldata*.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">yapydata.datatree</span> <span class="k">import</span> <span class="n">YapyDataTreeError</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">cPickle</span> <span class="k">as</span> <span class="nn">pickle</span>  <span class="c1"># @UnusedImport</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">pickle</span>  <span class="c1"># @Reimport</span>
+
+<span class="kn">from</span> <span class="nn">pythonids</span> <span class="k">import</span> <span class="n">ISSTR</span>
+
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Arno-Can Uestuensoez&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (C) 2019 Arno-Can Uestuensoez&quot;</span> \
+                <span class="s2">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.1.1&#39;</span>
+<span class="n">__uuid__</span> <span class="o">=</span> <span class="s2">&quot;60cac28d-efe6-4a8d-802f-fa4fc94fa741&quot;</span>
+
+<span class="n">__docformat__</span> <span class="o">=</span> <span class="s2">&quot;restructuredtext en&quot;</span>
+
+
+<div class="viewcode-block" id="YapyDataDataTreeError"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.YapyDataDataTreeError">[docs]</a><span class="k">class</span> <span class="nc">YapyDataDataTreeError</span><span class="p">(</span><span class="n">YapyDataTreeError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Common access error. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<span class="k">class</span> <span class="nc">YapyDataTypeError</span><span class="p">(</span><span class="n">YapyDataTreeError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Common access error. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+<div class="viewcode-block" id="readout_data"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.readout_data">[docs]</a><span class="k">def</span> <span class="nf">readout_data</span><span class="p">(</span><span class="n">xval</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;For API call-compliance with other syntaxes. Returns here the</span>
+<span class="sd">    input tree only.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        xval:</span>
+<span class="sd">            The input tree from the *DataTree*.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The returns here the input *xval*.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        pass-through</span>
+<span class="sd">        </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">xval</span></div>
+
+
+<span class="k">class</span> <span class="nc">YapyDataDataTreeOidError</span><span class="p">(</span><span class="n">YapyDataDataTreeError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Requested object name is not present.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Displays the issue of the exception.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            message:</span>
+<span class="sd">                The message to be displayed.</span>
+<span class="sd">                Addition options *pathhook*, *path*, and</span>
+<span class="sd">                *trailer* are appended when present.</span>
+<span class="sd">                These are also provided as memmeber variables</span>
+<span class="sd">                for derived exceptions.</span>
+
+<span class="sd">            kargs:</span>
+<span class="sd">                pathhook:</span>
+<span class="sd">                    The missing item of the path.</span>
+
+<span class="sd">                path:</span>
+<span class="sd">                    Resolved path.</span>
+
+<span class="sd">                searchpath:</span>
+<span class="sd">                    Optional search path.</span>
+
+<span class="sd">                trailer:</span>
+<span class="sd">                    Optional textual hint.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            the raised exception</span>
+<span class="sd">            </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            itself</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_in</span> <span class="o">=</span> <span class="n">message</span>
+        <span class="n">message_out</span> <span class="o">=</span> <span class="n">message</span><span class="p">[:]</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pathhook</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;pathhook&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pathhook</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">searchpath</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;searchpath&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">searchpath</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trailer</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;trailer&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trailer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+             
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pathhook</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+            <span class="n">message_out</span> <span class="o">+=</span>  <span class="s2">&quot;Missing subpath hook:&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pathhook</span><span class="p">:</span>
+            <span class="n">message_out</span> <span class="o">+=</span>  <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  pathhook:     </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pathhook</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+            <span class="n">message_out</span> <span class="o">+=</span>  <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  path:         </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">searchpath</span><span class="p">:</span>
+            <span class="n">message_out</span> <span class="o">+=</span>  <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  searchpath:   </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">searchpath</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">trailer</span><span class="p">:</span>
+            <span class="n">message_out</span> <span class="o">+=</span>  <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trailer</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_out</span> <span class="o">=</span> <span class="n">message_out</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">YapyDataDataTreeOidError</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message_out</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">)</span>
+
+
+<span class="c1"># mode</span>
+<span class="n">M_COMP</span> <span class="o">=</span> <span class="mi">1</span>     <span class="c1">#: complete</span>
+<span class="n">M_FRAG</span> <span class="o">=</span> <span class="mi">2</span>     <span class="c1">#: fragment</span>
+<span class="n">M_INC</span> <span class="o">=</span> <span class="mi">4</span>      <span class="c1">#: increment</span>
+
+
+<span class="c1"># strategy</span>
+<span class="n">S_CREA</span> <span class="o">=</span> <span class="mi">256</span>   <span class="c1">#: create</span>
+<span class="n">S_DEL</span> <span class="o">=</span> <span class="mi">512</span>    <span class="c1">#: delete</span>
+<span class="n">S_JOIN</span> <span class="o">=</span> <span class="mi">1024</span>  <span class="c1">#: join</span>
+<span class="n">S_MOD</span> <span class="o">=</span> <span class="mi">2048</span>   <span class="c1">#: modify</span>
+<span class="n">S_REP</span>  <span class="o">=</span> <span class="mi">4096</span>  <span class="c1">#: replace</span>
+
+
+<span class="n">_debug</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">_verbose</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+<span class="k">def</span> <span class="nf">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">subpath</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates a new branch including the assigned value to</span>
+<span class="sd">    the last node. The node types are defined by the types</span>
+<span class="sd">    of the *subpath* entries.</span>
+<span class="sd">    </span>
+<span class="sd">    Supports a single linear branch only, no sub-branching.</span>
+<span class="sd">    </span>
+<span class="sd">    The created path is validated for permitted types.</span>
+<span class="sd">    The derived types such as JSON have to support their</span>
+<span class="sd">    own branch method. Thus provided as a static method.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        subpath:</span>
+<span class="sd">            Variable list/tuple of path keys and indexes.</span>
+
+<span class="sd">        kargs:</span>
+<span class="sd">            value:</span>
+<span class="sd">                Value to be assigned to the final node.</span>
+
+<span class="sd">                default := None</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A created branch.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        YapyDataDataTreeOidError</span>
+
+<span class="sd">        pass-through</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_val</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+    <span class="n">_subpath</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">subpath</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ik</span> <span class="o">=</span> <span class="n">_subpath</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_val</span>
+    
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ik</span><span class="p">,</span> <span class="p">(</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">frozenset</span><span class="p">))</span> <span class="ow">or</span> <span class="n">ik</span> <span class="o">==</span> <span class="kc">None</span>  <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ik</span><span class="p">,</span> <span class="n">ISSTR</span><span class="p">):</span>
+        <span class="c1"># python only: (True, False,), None, ...</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">ik</span><span class="p">:</span> <span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)}</span>
+
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ik</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ik</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># no padding</span>
+            <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                    <span class="s2">&quot;new list requires idx==0: </span><span class="si">%s</span><span class="se">\n</span><span class="s2"> see: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">),</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="n">ik</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)]</span>
+
+    <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+            <span class="s2">&quot;invalid subpath key/index: </span><span class="si">%s</span><span class="se">\n</span><span class="s2"> see: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">ik</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+        
+
+<div class="viewcode-block" id="DataTree"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.DataTree">[docs]</a><span class="k">class</span> <span class="nc">DataTree</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Provides JSON based read-only configuration of capabilities.</span>
+<span class="sd">    </span>
+<span class="sd">    The access to structured data trees offers various methods to</span>
+<span class="sd">    access paths of nested node attributes. This comprises the</span>
+<span class="sd">    creation as well as the readout.</span>
+
+<span class="sd">    The following equivalent creation methods are supported, where</span>
+<span class="sd">    &#39;treenode&#39; could be either the root node, or any subordinated</span>
+<span class="sd">    branch::</span>
+
+<span class="sd">        treenode[&#39;subnode0&#39;][&#39;subnode1&#39;][&#39;subnode7&#39;] = value  # dynamic items</span>
+<span class="sd">        </span>
+<span class="sd">        value = treenode.create(                              # dynamic items by &#39;create()&#39;</span>
+<span class="sd">                    &#39;subnode0&#39;, &#39;subnode1&#39;, &#39;subnode7&#39;,</span>
+<span class="sd">                )</span>
+
+<span class="sd">        value = treenode.subnode0.subnode1.subnode7           # static attribute addressing style</span>
+
+<span class="sd">    The following equivalent readout methods are supported, where</span>
+<span class="sd">    &#39;treenode&#39; could be either the root node, or any subordinated</span>
+<span class="sd">    branch::</span>
+
+<span class="sd">        value = treenode[&#39;subnode0&#39;][&#39;subnode1&#39;][&#39;subnode7&#39;]  # dynamic items</span>
+<span class="sd">        value = treenode(&#39;subnode0&#39;, &#39;subnode1&#39;, &#39;subnode7&#39;)  # dynamic items by &#39;__call__&#39;</span>
+<span class="sd">        value = treenode.subnode0.subnode1.subnode7           # static attribute addressing style</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">M_FIRST</span> <span class="o">=</span> <span class="mi">1</span>   <span class="c1"># use first matching node</span>
+    <span class="n">M_LAST</span> <span class="o">=</span> <span class="mi">2</span>    <span class="c1"># use last matching node</span>
+    <span class="n">M_ALL</span> <span class="o">=</span> <span class="mi">3</span>     <span class="c1"># use all - iterate all matches</span>
+
+    <span class="n">match_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">M_FIRST</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">M_LAST</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">M_ALL</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s1">&#39;first&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;last&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;all&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">}</span>    
+
+<div class="viewcode-block" id="DataTree.isvalid_top"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.DataTree.isvalid_top">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">isvalid_top</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Validate compliance of top-node. To be provided by derived classes</span>
+<span class="sd">        for specific syntaxes.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            value:</span>
+<span class="sd">                Top node.</span>
+
+<span class="sd">            kargs:</span>
+<span class="sd">                Specific syntax related dynamic parameters to be defined</span>
+<span class="sd">                by derived classes.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+
+<span class="sd">        Results:</span>
+<span class="sd">            YapyDataTreeError:</span>
+<span class="sd">                Raises exception when not valid.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="DataTree.__init__"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.DataTree.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            data:</span>
+<span class="sd">                Configuration data in accordance to the selected data language syntax.</span>
+<span class="sd">                The default is the Python syntax including the appropriate data types. </span>
+<span class="sd">                This may impose additional constraints by derived classes e.g. in case</span>
+<span class="sd">                of persistent data such as JSON and XML - see other classes within</span>
+<span class="sd">                this module.</span>
+<span class="sd">                </span>
+<span class="sd">                The default Python DL implementation supports in-memory access only,</span>
+<span class="sd">                while persistence will be available for example by pickling.</span>
+
+<span class="sd">                The initial *data* defines the permitted type of the first item</span>
+<span class="sd">                within the *subpath* of the spanned data tree. The default value acts</span>
+<span class="sd">                here as a placeholder for an empty structure, which could be defined</span>
+<span class="sd">                by following extension operations arbitrarily.</span>
+
+<span class="sd">                The basic constraint introduced here is that intermediate nodes</span>
+<span class="sd">                require support of subscription. This is due to the addressing concepts</span>
+<span class="sd">                implemented by *DataTree*. Thus even though a *set* could technically</span>
+<span class="sd">                be an intermediate node, it could not be indexed, thus could not be</span>
+<span class="sd">                addressed by the standard member functions. Resulting &#39;set&#39; and &#39;frozenset&#39;</span>
+<span class="sd">                are supported by *DataTree* as end-nodes only, same as atomic data types.</span>
+<span class="sd">                </span>
+<span class="sd">                Anyhow, the &lt;top-node&gt; is by default permitted to be an end-node. Thus</span>
+<span class="sd">                the context defines the applicability dynamically.</span>
+
+<span class="sd">                The consistency of the data tree including the valid intermediate nodes</span>
+<span class="sd">                is verified by access, so basically within the responsibility of the caller.</span>
+
+<span class="sd">        Returns:</span>
+
+<span class="sd">            None / initialized object</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            YapyDataDataTreeError</span>
+
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="DataTree.__call__"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.DataTree.__call__">[docs]</a>    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">subpath</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Readout the value of a node, or an attribute. The name binding</span>
+<span class="sd">        of the path is provided as a tuple of path items. </span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            subpath:</span>
+<span class="sd">                The list of keys constituting a branch of a data tree.</span>
+<span class="sd">                The *subpath* is treated as a branch of one of the nodes</span>
+<span class="sd">                of a provided *searchpath* - which is by default the top node.</span>
+<span class="sd">                The supported values are::</span>
+
+<span class="sd">                    subpath := &lt;list-of-node-ids&gt;</span>
+<span class="sd">                    &lt;list-of-node-ids&gt; := &lt;node-id&gt; [&#39;,&#39; &lt;list-of-node-ids&gt;]</span>
+<span class="sd">                    node-id := (</span>
+<span class="sd">                          str            # string:  dict</span>
+<span class="sd">                        | int            # integer: lists, tuple, dict</span>
+<span class="sd">                    )</span>
+
+<span class="sd">                The value of the node within *data*::</span>
+
+<span class="sd">                    nodeid := (</span>
+<span class="sd">                          &lt;single-nodeid&gt;</span>
+<span class="sd">                        | &lt;list-of-nodeids&gt;</span>
+<span class="sd">                        | &lt;tuple-of-nodeids&gt;</span>
+<span class="sd">                    )</span>
+<span class="sd">                    single-nodeid := &lt;nodeid&gt;</span>
+<span class="sd">                    list-of-nodeids := &#39;[&#39; &lt;nodeidlists&gt; &#39;]&#39;</span>
+<span class="sd">                    tuple-of-nodeids := &#39;(&#39; &lt;nodeidlists&gt; &#39;)&#39;</span>
+<span class="sd">                    nodeidlists := &lt;nodeid&gt; [&#39;,&#39; &lt;nodeidlists&gt;]</span>
+<span class="sd">                    nodeid := (</span>
+<span class="sd">                          ItemKey</span>
+<span class="sd">                        | ListIndex</span>
+<span class="sd">                    )</span>
+<span class="sd">                    ItemKey := &quot;valid dict-key&quot;</span>
+<span class="sd">                    ListIndex := &quot;valid list-index&quot;</span>
+
+<span class="sd">                The derived syntax classes may impose specific constraints.</span>
+<span class="sd">                Thus it is recommended to use integers and strings only</span>
+<span class="sd">                for maximum compatibility, and the ease of using mixed syntaxes::  </span>
+
+<span class="sd">                    ItemKey :=    str  # string:  dict</span>
+<span class="sd">                    ListIndex :=  int  # integer: lists, tuple, dict</span>
+
+<span class="sd">            kargs:</span>
+<span class="sd">                searchpath:</span>
+<span class="sd">                    Optional search path for the match of the provided </span>
+<span class="sd">                    address *subpath*. The provided *subpath* is applied</span>
+<span class="sd">                    to each node of the *searchpath* in accordance to the </span>
+<span class="sd">                    *direction* option. This provides the search and </span>
+<span class="sd">                    enumeration of side branches::</span>
+
+<span class="sd">                        searchpath := &lt;path-item-list&gt; </span>
+
+<span class="sd">                        path-item-list := &lt;path-item&gt; [, &lt;path-item-list&gt;]</span>
+<span class="sd">                        path-item := (</span>
+<span class="sd">                              str  # item name </span>
+<span class="sd">                            | int  # item index</span>
+<span class="sd">                        ) </span>
+
+<span class="sd">                        default := &lt;top-node&gt;</span>
+
+<span class="sd">                    The search path entries has to be actually present by default.</span>
+<span class="sd">                    These  could be either created by loading a complete tree</span>
+<span class="sd">                    structure, or by using the *Capabilities.create()* member.</span>
+<span class="sd">                    See also parameter &#39;strict&#39;.</span>
+
+<span class="sd">                direction:</span>
+<span class="sd">                    The search direction of the *subpath* within the </span>
+<span class="sd">                    *searchpath*. In case of multiple superpositioned</span>
+<span class="sd">                    attributes the first traversed match.</span>
+
+<span class="sd">                    The provided values are::</span>
+
+<span class="sd">                        direction := (</span>
+<span class="sd">                              up   | 0  | False # search from right-to-left</span>
+<span class="sd">                            | down | 1  | True  # search from left-to-right</span>
+<span class="sd">                        )</span>
+
+<span class="sd">                        default:= up</span>
+
+<span class="sd">                match:</span>
+<span class="sd">                    Sets the match criteria for the search operation.</span>
+<span class="sd">                    Interferes with *direction*::</span>
+
+<span class="sd">                        match := (</span>
+<span class="sd">                              M_FIRST | &#39;first&#39;   # use first matching node</span>
+<span class="sd">                            | M_LAST  | &#39;last&#39;    # use last matching node</span>
+<span class="sd">                            | M_ALL   | &#39;all&#39;     # use all - iterate all matches</span>
+<span class="sd">                        )</span>
+
+<span class="sd">                        default := M_FIRST</span>
+
+<span class="sd">                partial:</span>
+<span class="sd">                    Enables the return of partial sub paths in case the requested</span>
+<span class="sd">                    path is not completely present. ::</span>
+
+<span class="sd">                        partial := (</span>
+<span class="sd">                              True   # when not completely present, the longest </span>
+<span class="sd">                                     # existing part is returned, the completeness</span>
+<span class="sd">                                     # is provided by the result attribute &lt;partial&gt;</span>
+<span class="sd">                            | False  # when not completely present an exception</span>
+<span class="sd">                                     # is raised </span>
+<span class="sd">                        )</span>
+
+<span class="sd">                strict:</span>
+<span class="sd">                    Controls the required consistency. This comprises:</span>
+
+<span class="sd">                    1. the presence of the search path entries</span>
+
+<span class="sd">                    2. the presence of the requested subpath within the set</span>
+<span class="sd">                       of search paths</span>
+
+<span class="sd">                pysyn:</span>
+<span class="sd">                    Activates full *Python* syntax. This in particular enables all</span>
+<span class="sd">                    container types of intermediate nodes for arbitrary paths.</span>
+<span class="sd">                    Includes *tuple*, *set*, *frozenset*, etc. ::</span>
+
+<span class="sd">                        pysyn := (</span>
+<span class="sd">                              True   # allows all python types as container nodes</span>
+<span class="sd">                            | False  # allows list and dict only as container nodes</span>
+<span class="sd">                        )</span>
+
+<span class="sd">                        default := False</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            In case of a match returns the tuple::</span>
+
+<span class="sd">                return := (&lt;attr-value-path&gt;, &lt;attr-value&gt;, &lt;partial&gt;)</span>
+
+<span class="sd">                attr-value-path := (</span>
+<span class="sd">                      &quot;the list of keys of the top-down path&quot;</span>
+<span class="sd">                    | &quot;empty list when no item exists&quot;        # see &lt;complete&gt;</span>
+<span class="sd">                )</span>
+<span class="sd">                attr-value := &quot;value of the targeted node/attribute&quot;</span>
+<span class="sd">                partial := (</span>
+<span class="sd">                      False   # the complete requested path</span>
+<span class="sd">                    | True    # the actually present part of the path</span>
+<span class="sd">                )</span>
+
+<span class="sd">            Else raises *YapyDataDataTreeOidError*.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            YapyDataDataTreeOidError</span>
+
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_srch</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;searchpath&#39;</span><span class="p">,</span> <span class="p">())</span>
+        <span class="n">_dir</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;direction&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">_match</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="n">DataTree</span><span class="o">.</span><span class="n">M_FIRST</span><span class="p">)</span>
+        <span class="n">_pysyn</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pysyn&#39;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">_srch</span><span class="p">,</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">,)):</span>
+            <span class="k">raise</span> <span class="n">YapyDataDataTreeError</span><span class="p">(</span>
+                <span class="s2">&quot;search path requires &#39;tuple&#39; or&#39;list&#39;, got: &quot;</span>
+                <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">_srch</span><span class="p">)</span>
+                <span class="p">)</span> 
+
+        <span class="c1">#</span>
+        <span class="c1"># match criteria</span>
+        <span class="c1">#</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">_match</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">match_map</span><span class="p">[</span><span class="n">_match</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">_match</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">match_map</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">_match</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> 
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">YapyDataDataTreeError</span><span class="p">(</span>
+                    <span class="s2">&quot;valid match are (first, </span><span class="si">%d</span><span class="s2">, last, </span><span class="si">%d</span><span class="s2">, all, </span><span class="si">%d</span><span class="s2">,), got: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                        <span class="n">DataTree</span><span class="o">.</span><span class="n">M_FIRST</span><span class="p">,</span>
+                        <span class="n">DataTree</span><span class="o">.</span><span class="n">M_LAST</span><span class="p">,</span>
+                        <span class="n">DataTree</span><span class="o">.</span><span class="n">M_ALL</span><span class="p">,</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="n">_match</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+
+        <span class="c1">#</span>
+        <span class="c1"># search direction</span>
+        <span class="c1">#</span>
+        <span class="k">if</span> <span class="n">_dir</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_dir</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">_dir</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">_dir</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;up&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,):</span>
+                <span class="n">_dir</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">elif</span> <span class="n">_dir</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,):</span>
+                <span class="n">_dir</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">YapyDataDataTreeError</span><span class="p">(</span>
+                    <span class="s2">&quot;valid directions are (up, 0, down, 1), got: &quot;</span>
+                    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">_dir</span><span class="p">)</span>
+                    <span class="p">)</span> 
+
+        <span class="c1"># collect the nodes on the searchpath</span>
+        <span class="n">_path_nodes</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,]</span>
+        <span class="n">_cur</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">if</span> <span class="n">_srch</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">_srch</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">_cur</span> <span class="o">=</span> <span class="n">_cur</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+                <span class="k">except</span> <span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">KeyError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                            <span class="s2">&quot;invalid search path: </span><span class="si">%s</span><span class="se">\n</span><span class="s2"> see: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                                <span class="nb">str</span><span class="p">(</span><span class="n">_srch</span><span class="p">),</span>
+                                <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                            <span class="p">)</span>
+                        <span class="p">)</span>
+                <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_cur</span><span class="p">)</span>
+
+        <span class="c1"># revert for bottom-up search direction        </span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_dir</span><span class="p">:</span>
+            <span class="c1"># upward - up | 0 | False</span>
+            <span class="n">_path_nodes</span> <span class="o">=</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">)</span>
+
+        <span class="c1"># now search the subpath for each node of the search path</span>
+        <span class="c1"># first match wins</span>
+        <span class="k">for</span> <span class="n">_pn</span> <span class="ow">in</span> <span class="n">_path_nodes</span><span class="p">:</span>
+            <span class="n">_cur</span> <span class="o">=</span> <span class="n">_pn</span>
+            <span class="n">_idx_subpath</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># reset here</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">subpath</span><span class="p">:</span>
+                <span class="n">_excep</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">_cur</span> <span class="o">=</span> <span class="n">_cur</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+
+                <span class="k">except</span> <span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">KeyError</span><span class="p">,):</span>
+                    <span class="c1"># a valid type - but missing value</span>
+                    <span class="c1"># continue with next level - only when nodes do not fit</span>
+                    <span class="n">_cur</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="n">_excep</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">break</span>
+                
+                <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                    <span class="c1"># not a valid data type</span>
+                    <span class="k">if</span> <span class="n">_pysyn</span><span class="p">:</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="n">_cur</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">_cur</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+                        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">_cur</span><span class="p">,</span> <span class="nb">set</span><span class="p">):</span>
+                                <span class="k">try</span><span class="p">:</span>
+                                    <span class="n">_cur</span><span class="o">=</span><span class="n">_cur</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">([</span><span class="n">x</span><span class="p">])</span>
+                                    <span class="n">_cur</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">_cur</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+                                <span class="k">except</span><span class="p">:</span>
+                                    <span class="n">_cur</span> <span class="o">=</span> <span class="kc">None</span>
+                                    <span class="n">_excep</span> <span class="o">=</span> <span class="kc">True</span>
+                                    <span class="k">break</span>
+
+                        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                            <span class="k">try</span><span class="p">:</span>
+                                <span class="n">_cur</span> <span class="o">=</span> <span class="n">_cur</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+                            
+                            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># for debug</span>
+                                <span class="n">_cur</span> <span class="o">=</span> <span class="kc">None</span>
+                                <span class="n">_excep</span> <span class="o">=</span> <span class="kc">True</span>
+                                <span class="k">break</span>
+
+                        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># for debug</span>
+                            <span class="n">_cur</span> <span class="o">=</span> <span class="kc">None</span>
+                            <span class="n">_excep</span> <span class="o">=</span> <span class="kc">True</span>
+                            <span class="k">break</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># continue with next level - only when nodes do not fit</span>
+                        <span class="n">_cur</span> <span class="o">=</span> <span class="kc">None</span>
+                        <span class="n">_excep</span> <span class="o">=</span> <span class="kc">True</span>
+                        <span class="k">break</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">_excep</span><span class="p">:</span>
+                <span class="k">break</span>  <span class="c1"># has hit a regular match</span>
+
+        <span class="k">if</span> <span class="n">_excep</span><span class="p">:</span>
+            <span class="c1"># no match - prefer a message with error hint here</span>
+            <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                        <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                        <span class="n">pathhook</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">[</span><span class="n">_idx_subpath</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]),</span>
+                        <span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">),</span>
+                        <span class="n">searchpath</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">_srch</span><span class="p">),</span>
+                <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">_cur</span></div>
+
+<span class="c1">#     def __str__(self):</span>
+<span class="c1">#         res = &#39;&#39;</span>
+<span class="c1">#         return res</span>
+
+
+<div class="viewcode-block" id="DataTree.create"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.DataTree.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">subpath</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates a *subpath* to a given node, default is from top.</span>
+<span class="sd">        Reuses existing nodes, starts the creation at the first point</span>
+<span class="sd">        of branch-out from the exiting tree.</span>
+<span class="sd">        </span>
+<span class="sd">        In general no padding of pre-required entries is done. This e.g.</span>
+<span class="sd">        requires in case of a *list* the start with the index *0*, while</span>
+<span class="sd">        in case of the *dict* arbitrary keys could be assigned.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            subpath:</span>
+<span class="sd">                The list of keys constituting a branch of a data tree.</span>
+<span class="sd">                The *subpath* is treated as a branch of one of the nodes</span>
+<span class="sd">                of a provided *searchpath* - which is by default the top node.</span>
+<span class="sd">                The supported values are::</span>
+
+<span class="sd">                    subpath := &lt;list-of-node-ids&gt;</span>
+<span class="sd">                    &lt;list-of-node-ids&gt; := &lt;node-id&gt; [&#39;,&#39; &lt;list-of-node-ids&gt;]</span>
+<span class="sd">                    node-id := (</span>
+<span class="sd">                          &lt;present-intermediate-node&gt;</span>
+<span class="sd">                        | &lt;new-node&gt;</span>
+<span class="sd">                    )</span>
+<span class="sd">                    present-intermediate-node := (</span>
+<span class="sd">                          str             # string:  dict</span>
+<span class="sd">                        | int             # integer: lists, tuple, dict</span>
+<span class="sd">                        | True | False    # logic:   dict</span>
+<span class="sd">                        | None            # null:    dict</span>
+<span class="sd">                    )</span>
+<span class="sd">                    new-node := (</span>
+<span class="sd">                          str             # string:  dict</span>
+<span class="sd">                        | int             # integer: list</span>
+<span class="sd">                        | True | False    # logic:   dict</span>
+<span class="sd">                        | None            # null:    dict</span>
+<span class="sd">                    )</span>
+
+<span class="sd">                Some *Python* data types are immutable, which could be subscripted read-only,</span>
+<span class="sd">                e.g. strings. While others such as sets are iterable, but not subscriptable</span>
+<span class="sd">                at all. Refer to the manual for a detailed list.</span>
+
+<span class="sd">            kargs:</span>
+<span class="sd">                hook:</span>
+<span class="sd">                    Optional node as parent of the insertion point for the new sub path.</span>
+<span class="sd">                    The node must exist and be part of the targeted data structure. No </span>
+<span class="sd">                    additional checks are done::</span>
+
+<span class="sd">                        hook := &lt;memory-node&gt;</span>
+<span class="sd">                        memory-node := &quot;node address&quot;</span>
+
+<span class="sd">                        default := &lt;top-node&gt;</span>
+
+<span class="sd">                    The *hook* node could either be a border node of the existing tree,</span>
+<span class="sd">                    or any arbitrary node with a partial of complete part of the requested</span>
+<span class="sd">                    *subpath*. Existing nodes are reused.</span>
+
+<span class="sd">                strict:</span>
+<span class="sd">                    If *True* requires all present nodes of the *subpath* to of the</span>
+<span class="sd">                    appropriate type, missing are created. When *False* present nodes</span>
+<span class="sd">                    of inappropriate type are simply replaced. ::</span>
+
+<span class="sd">                        strict := (</span>
+<span class="sd">                              True   # nodes must be present</span>
+<span class="sd">                            | False  # missing are created</span>
+<span class="sd">                        )</span>
+<span class="sd">                        default := False</span>
+
+<span class="sd">                    Nodes of type *None* are always treated as non-present placeholder,</span>
+<span class="sd">                    thus replaced in any case.</span>
+
+<span class="sd">                value:</span>
+<span class="sd">                    Value of the created final node::</span>
+
+<span class="sd">                        value := &lt;value-of-node&gt;</span>
+
+<span class="sd">                        value-of-node := &lt;valid-json-node-type&gt;</span>
+<span class="sd">                        valid-json-node-type := (</span>
+<span class="sd">                                              int | float</span>
+<span class="sd">                                            | str                  # unicode</span>
+<span class="sd">                                            | dict | list</span>
+<span class="sd">                                            | None | True | False  # equivalent: null|true|false</span>
+<span class="sd">                                            )</span>
+
+<span class="sd">                        default := None</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            In case of success the in-memory nodes of the sub path::</span>
+
+<span class="sd">                return := (&lt;attr-value-path&gt;)</span>
+
+<span class="sd">                attr-value-path-tuple := (</span>
+<span class="sd">                      &lt;in-memory nodes&gt;</span>
+<span class="sd">                    | &lt;non-subscriptable-node&gt;</span>
+<span class="sd">                )</span>
+<span class="sd">                in-memory nodes := (</span>
+<span class="sd">                    &quot;the list of in-memory nodes with support of subscription&quot;</span>
+<span class="sd">                )</span>
+<span class="sd">                non-subscriptable-node := &quot;any valid type&quot;</span>
+
+<span class="sd">            else raises *YapyDataDataTreeOidError*.</span>
+
+<span class="sd">            The last node contains in case of an atomic type the value</span>
+<span class="sd">            of the node, while the intermediate nodes represent the</span>
+<span class="sd">            indexed containers.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            YapyDataDataTreeOidError</span>
+
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">_strict</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;strict&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">_val</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">subpath</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">subpath</span><span class="p">,</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">,)):</span>
+            <span class="c1"># no path supported at all - so it is a replacement value for self.data only</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_val</span>
+            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,)</span>
+
+        <span class="c1"># collect the nodes on the search path</span>
+        <span class="c1"># requires a stepwise lookahead, doing it recursive</span>
+        <span class="n">_last</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># last successful container-node</span>
+        <span class="n">_hook</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;hook&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># the current insertion point</span>
+        <span class="n">_path_nodes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">_subpath</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">subpath</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">_subpath</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># iterate the present nodes</span>
+                <span class="n">_hook</span> <span class="o">=</span> <span class="n">_hook</span><span class="p">[</span><span class="n">_subpath</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_hook</span><span class="p">)</span>
+                <span class="n">_last</span> <span class="o">=</span> <span class="n">_subpath</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># store it for backlog of branch-out on non-container hook</span>
+
+            <span class="c1">#</span>
+            <span class="c1"># now work out and create missing nodes</span>
+            <span class="c1">#</span>
+            <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                <span class="c1"># it is a new item in a list, so to be appended - sparse in not permitted/supported</span>
+                <span class="k">if</span> <span class="n">_subpath</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">_hook</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                            <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                            <span class="n">pathhook</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">_subpath</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                            <span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">),</span>
+                    <span class="p">)</span>
+                <span class="n">_k</span> <span class="o">=</span> <span class="n">_subpath</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+                <span class="c1"># now build the new part</span>
+                <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">))</span>
+                <span class="n">_hook</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">)</span>
+            
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="c1"># it is a new item in a &#39;dict&#39; - just insert it</span>
+                <span class="c1"># now build the new part</span>
+                <span class="n">_k</span> <span class="o">=</span> <span class="n">_subpath</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">_node</span> <span class="o">=</span> <span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)</span>
+
+                <span class="n">_hook</span><span class="p">[</span><span class="n">_k</span><span class="p">]</span> <span class="o">=</span> <span class="n">_node</span>
+                <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_node</span><span class="p">)</span>
+
+                <span class="c1"># add created subpaths for result vector</span>
+                <span class="k">for</span> <span class="n">_kx</span> <span class="ow">in</span> <span class="n">_subpath</span><span class="p">:</span>
+                    <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">_kx</span><span class="p">])</span>
+
+                <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">)</span>
+
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                <span class="c1"># it is a new item, but not within a container,</span>
+                <span class="c1"># so replaces if permitted for replacement,</span>
+                <span class="c1"># check of valid condition by:</span>
+                <span class="c1">#</span>
+                <span class="c1"># - _strict==False - replace as required if valid</span>
+                <span class="c1"># - None - placeholder for non-present</span>
+                <span class="c1">#</span>
+                <span class="k">if</span> <span class="n">_strict</span><span class="p">:</span>
+                    <span class="c1"># at least one present node does not match required strict type-condition</span>
+                    <span class="c1"># requires a container, got an atomic or non-indexable(set, ...)</span>
+                    <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                        <span class="s2">&quot;invalid subpath: </span><span class="si">%s</span><span class="se">\n</span><span class="s2"> see: subpath[</span><span class="si">%s</span><span class="s2">] = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">),</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">_subpath</span><span class="p">[</span><span class="mi">0</span><span class="p">])),</span>  <span class="c1"># for robustness...</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="n">_subpath</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                        <span class="p">)</span>
+                    <span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">_last</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="c1"># so it was the first attempt</span>
+                    <span class="c1">#</span>
+                    <span class="c1"># here the self.data is the first created node, thus included in the return</span>
+                    <span class="c1"># can check it by id(&lt;self-obj&gt;.data) == id(&lt;return-val&gt;[0])</span>
+                    <span class="c1">#</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)</span>
+
+                    <span class="c1"># add created subpaths for result vector</span>
+                    <span class="n">_k</span> <span class="o">=</span> <span class="n">_subpath</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">_k</span><span class="p">])</span>
+                    <span class="k">for</span> <span class="n">_kx</span> <span class="ow">in</span> <span class="n">_subpath</span><span class="p">:</span>
+                        <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">_kx</span><span class="p">])</span>
+                    
+                    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">)</span>
+
+
+                <span class="c1">#***</span>
+                <span class="c1">#*** here we had a partial resolution with a trailing non-container node ***</span>
+                <span class="c1">#*** the node-value is released for replacement by strict==False *** </span>
+                <span class="c1">#***</span>
+
+                <span class="c1"># no container type fixed yet, </span>
+                <span class="c1"># so now add, and drop/replace the non-container node </span>
+                <span class="n">_k</span> <span class="o">=</span> <span class="n">_subpath</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">_k</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                    <span class="c1"># key is &#39;int&#39; so as defined the (default) container is a list</span>
+                    <span class="c1"># &#39;int&#39; keys of &#39;dict&#39; are not supported for creation, while the read access is provided </span>
+                    <span class="c1"># so create them manually, use them as you like</span>
+                    <span class="k">if</span> <span class="n">_k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># requires _k==0 because here it is the first</span>
+                        <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                            <span class="s2">&quot;invalid subpath inital index range for new &#39;list&#39;: </span><span class="si">%s</span><span class="se">\n</span><span class="s2"> see: subpath[</span><span class="si">%s</span><span class="s2">] = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                                <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">),</span>
+                                <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">_k</span><span class="p">)),</span>  <span class="c1"># for robustness...</span>
+                                <span class="nb">str</span><span class="p">(</span><span class="n">_k</span><span class="p">)</span>
+                            <span class="p">)</span>
+                        <span class="p">)</span>
+
+                    <span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="n">_last</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">),</span> <span class="p">]</span>
+                    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">)</span>
+
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">_k</span><span class="p">,</span> <span class="n">ISSTR</span><span class="p">):</span>
+                    <span class="c1"># this basically should never fail - as long as &#39;_k&#39; is immutable...</span>
+                    <span class="c1"># so for now want the eventual exception including it&#39;s stack...  </span>
+                    <span class="k">if</span> <span class="n">_path_nodes</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">)</span> <span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+                            <span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="n">_last</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_k</span><span class="p">:</span> <span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)}</span>
+                            <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">_k</span><span class="p">])</span>
+
+                            <span class="c1"># add created subpaths for result vector</span>
+                            <span class="k">for</span> <span class="n">_kx</span> <span class="ow">in</span> <span class="n">_subpath</span><span class="p">:</span>
+                                <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">_kx</span><span class="p">])</span>
+
+                        <span class="k">else</span><span class="p">:</span>  <span class="c1"># ==1</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">_last</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">_k</span><span class="p">:</span> <span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)}</span>
+                            <span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">_last</span><span class="p">]</span>
+                            <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">_last</span><span class="p">][</span><span class="n">_k</span><span class="p">])</span>
+
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">_k</span><span class="p">:</span> <span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)}</span>
+                        <span class="n">_path_nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+                    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">)</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                        <span class="s2">&quot;invalid subpath key/index type: </span><span class="si">%s</span><span class="se">\n</span><span class="s2"> see: subpath[</span><span class="si">%s</span><span class="s2">] = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">),</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">_k</span><span class="p">)),</span>  <span class="c1"># for robustness...</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="n">_k</span><span class="p">)</span>
+                        <span class="p">)</span>
+                    <span class="p">)</span>
+
+        <span class="c1">#</span>
+        <span class="c1"># here we did not had any exception, that means the path is present, </span>
+        <span class="c1"># now let us check the value of the last item</span>
+        <span class="c1">#</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">_val</span>
+            <span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="n">_last</span><span class="p">]</span> <span class="o">=</span> <span class="n">_val</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">_path_nodes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">_val</span>
+        
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">_path_nodes</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataTree.get"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.DataTree.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Gets the value of the path within the member &#39;data&#39;::</span>
+
+<span class="sd">            self.data[key]</span>
+<span class="sd">            self.data[key0][key1][key2]...</span>
+<span class="sd">            </span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            key:</span>
+<span class="sd">                The value of the node within *data*::</span>
+
+<span class="sd">                    key := (</span>
+<span class="sd">                          &lt;single-key&gt;</span>
+<span class="sd">                        | &lt;list-of-keys&gt;</span>
+<span class="sd">                        | &lt;tuple-of-keys&gt;</span>
+<span class="sd">                    )</span>
+<span class="sd">                    single-key := &lt;key&gt;</span>
+<span class="sd">                    list-of-keys := &#39;[&#39; &lt;keylists&gt; &#39;]&#39;</span>
+<span class="sd">                    tuple-of-keys := &#39;(&#39; &lt;keylist&gt; &#39;)&#39;</span>
+<span class="sd">                    keylist := &lt;key&gt; [&#39;,&#39; &lt;keylist&gt;]</span>
+<span class="sd">                    key := (</span>
+<span class="sd">                          ItemKey</span>
+<span class="sd">                        | ListIndex</span>
+<span class="sd">                    )</span>
+<span class="sd">                    ItemKey := &quot;valid dict-key&quot;</span>
+<span class="sd">                    ListIndex := &quot;valid list-index&quot;</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The value of the addressed node/value.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Gets the value of the path within the member &#39;data&#39;::</span>
+
+<span class="sd">            self.data[nodeid]</span>
+<span class="sd">            self.data[nodeid0][nodeid1][nodeid2]...</span>
+
+<span class="sd">        When fails, a final trial is given to *list* and *dict* classes</span>
+<span class="sd">        including mixins::</span>
+
+<span class="sd">            self[nodeid]</span>
+
+<span class="sd">        When finally still missing at all, an exception is raised.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            nodeid:</span>
+<span class="sd">                The value of the node within *data*::</span>
+
+<span class="sd">                    nodeid := (</span>
+<span class="sd">                          &lt;single-nodeid&gt;</span>
+<span class="sd">                        | &lt;list-of-nodeids&gt;</span>
+<span class="sd">                        | &lt;tuple-of-nodeids&gt;</span>
+<span class="sd">                    )</span>
+<span class="sd">                    single-nodeid := &lt;nodeid&gt;</span>
+<span class="sd">                    list-of-nodeids := &#39;[&#39; &lt;nodeidlists&gt; &#39;]&#39;</span>
+<span class="sd">                    tuple-of-nodeids := &#39;(&#39; &lt;nodeidlists&gt; &#39;)&#39;</span>
+<span class="sd">                    nodeidlists := &lt;nodeid&gt; [&#39;,&#39; &lt;nodeidlists&gt;]</span>
+<span class="sd">                    nodeid := (</span>
+<span class="sd">                          ItemKey</span>
+<span class="sd">                        | ListIndex</span>
+<span class="sd">                    )</span>
+<span class="sd">                    ItemKey := &quot;valid dict-key&quot;</span>
+<span class="sd">                    ListIndex := &quot;valid list-index&quot;</span>
+
+<span class="sd">                The derived syntax classes may impose specific constraints.</span>
+<span class="sd">                Thus it is recommended to use integers and strings only</span>
+<span class="sd">                for maximum compatibility, and the ease of using mixed syntaxes::  </span>
+
+<span class="sd">                    ItemKey :=    str  # string:  dict</span>
+<span class="sd">                    ListIndex :=  int  # integer: lists, tuple, dict</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The value of the addressed node/value.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">(</span><span class="o">*</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="DataTree.import_data"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.DataTree.import_data">[docs]</a>    <span class="k">def</span> <span class="nf">import_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fpname</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The core class *DataTree *does not support serialization.</span>
+<span class="sd">        </span>
+<span class="sd">        For serialization use either a derived syntax class, or </span>
+<span class="sd">        serialize it e..g. by pickling and use the in-memory data.</span>
+<span class="sd">        For example by pickling:: </span>
+
+<span class="sd">            def import_data(self, fpname, key=None, node=None, **kargs):</span>
+<span class="sd">                if not os.path.isfile(fpname):</span>
+<span class="sd">                    if not os.path.isfile(fpname + &#39;.pkl&#39;):</span>
+<span class="sd">                        raise YapyDataTreeError(</span>
+<span class="sd">                            &quot;Missing file: &quot; + str(fpname))</span>
+<span class="sd">                    else:</span>
+<span class="sd">                        fpname = fpname + &#39;.pkl&#39;</span>
+<span class="sd">                 </span>
+<span class="sd">                if key and node == None:</span>
+<span class="sd">                    raise YapyDataTreeError(</span>
+<span class="sd">                        &quot;Given key(%s) requires a valid node.&quot; % (str(key)))</span>
+<span class="sd">                 </span>
+<span class="sd">                datafile = os.path.abspath(fpname)</span>
+<span class="sd">                with open(datafile, &#39;rb&#39;) as data_file:</span>
+<span class="sd">                    pval = pickle.load(data_file)</span>
+<span class="sd">                 </span>
+<span class="sd">                if key:</span>
+<span class="sd">                    node[key] = pval</span>
+<span class="sd">                else:</span>
+<span class="sd">                    self.data = pval</span>
+<span class="sd">                 </span>
+<span class="sd">                return pval</span>
+
+<span class="sd">            See manuals for security issues of pickling.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+            <span class="sd">&quot;&quot;&quot;Use a derived syntax class, or serialize by pickler.&quot;&quot;&quot;</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataTree.join"><a class="viewcode-back" href="../../../yapydata.datatree.datatree.html#yapydata.datatree.DataTree.join">[docs]</a>    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">keyidx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hook</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Superposes a JSON structure onto an existing. This</span>
+<span class="sd">        is a fixed mode and strategy special case of the generic</span>
+<span class="sd">        method *superpose()*. Implemented by recursion. The reduced</span>
+<span class="sd">        parameter set provides better performance on large trees</span>
+<span class="sd">        while the graph parameters still could be efficiently set</span>
+<span class="sd">        by default values.</span>
+<span class="sd">        </span>
+<span class="sd">        The superpositioning is supported by multiple strategies</span>
+<span class="sd">        defined by the parameter *mode*. The provided algorithm</span>
+<span class="sd">        of the strategy is *join*, where the input data is processed</span>
+<span class="sd">        on the exisiting tree by modification and creation as required.</span>
+
+<span class="sd">        * branches are resolved from top to the leafs </span>
+<span class="sd">        * missing sub-branches are created</span>
+<span class="sd">        * missing leafs are created</span>
+<span class="sd">        * existing leafs are replaced</span>
+
+<span class="sd">        This implements a last-wins strategy, thus in particular supports</span>
+<span class="sd">        incremental load of configurations by raising priority.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data:</span>
+<span class="sd">                Top node of the data tree to be superposed.</span>
+
+<span class="sd">            keyidx:</span>
+<span class="sd">                Key or index to be used at the insertion node. </span>
+<span class="sd">                If not given the insertion node is::</span>
+<span class="sd">                </span>
+<span class="sd">                    into dict: update by the new node</span>
+<span class="sd">                    into list: append the new node</span>
+
+<span class="sd">                    default := None </span>
+
+<span class="sd">            hook:</span>
+<span class="sd">                The insertion node for the new data:: </span>
+
+<span class="sd">                    when  not given: use top. </span>
+
+<span class="sd">                    default := None </span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Returns the merged data tree,</span>
+<span class="sd">            raises an exception in case of failure.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            YapyDataDataTreeError</span>
+
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">hook</span><span class="p">:</span>
+            <span class="n">hook</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hook</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,))</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ISSTR</span><span class="p">):</span>  <span class="c1"># data is atom</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">keyidx</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">YapyDataDataTreeError</span><span class="p">(</span>
+                        <span class="s2">&quot;update dict item(</span><span class="si">%s</span><span class="s2">) requires key&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+                        <span class="p">)</span>
+                
+                <span class="n">hook</span><span class="p">[</span><span class="n">keyidx</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>  <span class="c1"># data is dict</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">_hookx</span> <span class="o">=</span> <span class="n">hook</span><span class="p">[</span><span class="n">keyidx</span><span class="p">]</span>
+                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                    <span class="n">_hookx</span> <span class="o">=</span> <span class="n">hook</span>
+
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">_hookx</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                    <span class="c1"># will use itself - including keys - for update</span>
+                    <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                         
+                        <span class="k">if</span> <span class="n">_hookx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+                            <span class="c1"># replace an existing sub-tree</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">_hookx</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="c1"># add a new subtree</span>
+                            <span class="n">_hookx</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">_hookx</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+
+                    <span class="k">if</span> <span class="n">keyidx</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                                <span class="s2">&quot;Insertion into list requires index, got: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">keyidx</span><span class="p">)</span>
+                            <span class="p">)</span>
+
+                    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">keyidx</span><span class="p">,</span><span class="n">ISSTR</span><span class="p">):</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="n">hook</span><span class="p">[</span><span class="n">keyidx</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+                        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                            <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                                    <span class="s2">&quot;Insertion into or replacement of list failed: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                                            <span class="nb">str</span><span class="p">(</span><span class="n">keyidx</span><span class="p">),</span>
+                                        <span class="p">)</span>
+                                <span class="p">)</span>
+                        <span class="n">hook</span><span class="p">[</span><span class="n">keyidx</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">keyidx</span><span class="p">,</span> <span class="n">hook</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>  <span class="c1"># data is list or atom</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">keyidx</span><span class="p">:</span>  <span class="c1"># requires a key</span>
+                    <span class="k">raise</span> <span class="n">YapyDataDataTreeError</span><span class="p">(</span>
+                        <span class="s2">&quot;cannot update dict with </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+                        <span class="p">)</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">hook</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">keyidx</span><span class="p">):</span>
+                        <span class="c1"># a new branch - yust add it</span>
+                        <span class="n">hook</span><span class="p">[</span><span class="n">keyidx</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+
+                    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">hook</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">keyidx</span><span class="p">))</span> <span class="o">!=</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+                        <span class="c1"># icompatible types - for now replace</span>
+                        <span class="n">hook</span><span class="p">[</span><span class="n">keyidx</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># superpose existing by leafs, missing by branches and/or leafs</span>
+                        <span class="n">_hookx</span> <span class="o">=</span> <span class="n">hook</span><span class="p">[</span><span class="n">keyidx</span><span class="p">]</span> 
+                        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+                            <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">_hookx</span><span class="p">):</span>
+                                <span class="c1"># superpose an existing sub-tree</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="p">,</span> <span class="n">_hookx</span><span class="p">)</span>
+                            <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">_hookx</span><span class="p">):</span>
+                                <span class="c1"># add a new subtree</span>
+                                <span class="n">_hookx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                            <span class="k">else</span><span class="p">:</span>
+                                <span class="c1"># add a new subtree</span>
+                                <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                                        <span class="s2">&quot;index(</span><span class="si">%s</span><span class="s2">) out of range(</span><span class="si">%s</span><span class="s2">). &quot;</span> <span class="o">%</span> <span class="p">(</span>
+                                            <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
+                                            <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">_hookx</span><span class="p">)),</span>
+                                        <span class="p">)</span>
+                                    <span class="p">)</span>
+                
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hook</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">keyidx</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">keyidx</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">hook</span><span class="p">):</span>
+                <span class="c1"># so fill incrementally by default</span>
+                <span class="n">hook</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            
+            <span class="k">elif</span> <span class="n">keyidx</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">hook</span><span class="p">):</span>
+                <span class="c1"># no sparse lists suported</span>
+                <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                        <span class="s2">&quot;Insertion index(</span><span class="si">%s</span><span class="s2">) out of range(</span><span class="si">%s</span><span class="s2">). &quot;</span> <span class="o">%</span> <span class="p">(</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hook</span><span class="p">)),</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="n">keyidx</span><span class="p">),</span>
+                        <span class="p">)</span>
+                    <span class="p">)</span>
+            <span class="k">elif</span> <span class="p">(</span>
+                    <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,))</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ISSTR</span><span class="p">)</span>  <span class="c1"># data is atom</span>
+                    <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hook</span><span class="p">[</span><span class="n">keyidx</span><span class="p">],</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">,))</span>  <span class="c1"># target is atom</span>
+                <span class="p">):</span>
+                <span class="k">if</span> <span class="n">keyidx</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">YapyDataDataTreeError</span><span class="p">(</span>
+                        <span class="s2">&quot;update dict item(</span><span class="si">%s</span><span class="s2">) requires key&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+                        <span class="p">)</span>
+                
+                <span class="n">hook</span><span class="p">[</span><span class="n">keyidx</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># superpose an existing item</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">keyidx</span><span class="p">,</span> <span class="n">hook</span><span class="p">)</span>
+        
+        <span class="k">return</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 04, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

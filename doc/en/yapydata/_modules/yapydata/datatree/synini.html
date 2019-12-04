@@ -1,0 +1,1334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>yapydata.datatree.synini &mdash; yapydata  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">YapyData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_documents.html">4. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_modules.html">5. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_indices.html">6. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_resources.html">7. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">8. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">9. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_license.html">10. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">yapydata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../yapydata.html">yapydata</a> &raquo;</li>
+        
+      <li>yapydata.datatree.synini</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for yapydata.datatree.synini</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;The *YapyData.ini* module provides the extended *INI* file syntax access </span>
+<span class="sd">with optional extended syntax features.</span>
+<span class="sd">The core syntax is defined by the standard library *configparser.ConfigParser*,</span>
+<span class="sd">*YapyData.data* supports *Python2.7*, and *Python3.5+*.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="kn">from</span> <span class="nn">pythonids</span> <span class="k">import</span> <span class="n">PYV35Plus</span><span class="p">,</span> <span class="n">ISSTR</span>
+<span class="kn">from</span> <span class="nn">sourceinfo.fileinfo</span> <span class="k">import</span> <span class="n">getcaller_filename</span><span class="p">,</span> <span class="n">getcaller_linenumber</span> 
+
+
+<span class="k">if</span> <span class="n">PYV35Plus</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">configparser</span>  <span class="c1"># @UnusedImport @UnresolvedImport</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># requires &#39;strict&#39; parameter, thus the back-port,</span>
+    <span class="c1"># for now keep the construct</span>
+    <span class="c1">#import ConfigParser as configparser  # @Reimport @UnusedImport @UnresolvedImport</span>
+
+    <span class="c1"># decided to switch to the backport from Python3 - need __getitem__</span>
+    <span class="kn">import</span> <span class="nn">configparser</span>  <span class="c1"># @UnusedImport # @Reimport</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">ConfigParser</span> <span class="k">import</span> <span class="n">ConfigParser</span>  <span class="c1"># @UnusedImport</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">configparser</span> <span class="k">import</span> <span class="n">ConfigParser</span>  <span class="c1"># @Reimport @UnusedImport</span>
+
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
+
+<span class="kn">import</span> <span class="nn">yapydata</span>
+<span class="kn">from</span> <span class="nn">yapydata.datatree</span> <span class="k">import</span> <span class="n">YapyDataTreeError</span>
+<span class="kn">from</span> <span class="nn">yapydata.datatree.datatree</span> <span class="k">import</span> <span class="n">DataTree</span><span class="p">,</span> <span class="n">YapyDataDataTreeOidError</span>
+
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Arno-Can Uestuensoez&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (C) 2019 Arno-Can Uestuensoez&quot;</span> \
+                <span class="s2">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.1.1&#39;</span>
+<span class="n">__uuid__</span> <span class="o">=</span> <span class="s2">&quot;60cac28d-efe6-4a8d-802f-fa4fc94fa741&quot;</span>
+
+<span class="n">__docformat__</span> <span class="o">=</span> <span class="s2">&quot;restructuredtext en&quot;</span>
+
+
+<div class="viewcode-block" id="YapyDataINIError"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.YapyDataINIError">[docs]</a><span class="k">class</span> <span class="nc">YapyDataINIError</span><span class="p">(</span><span class="n">YapyDataTreeError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generic INI syntax error. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<span class="c1">#: fixed common keyword for special values - supported case sensitive and literally only</span>
+<span class="n">_KEYWORDS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;true&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;false&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;null&#39;</span><span class="p">:</span><span class="kc">None</span><span class="p">,}</span>
+
+
+<span class="c1">#</span>
+<span class="c1"># container types</span>
+<span class="c1">#</span>
+<span class="n">_C_LIST</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1">#: list</span>
+<span class="n">_C_DICT</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1">#: dict</span>
+
+<span class="n">_C_BYTEARRAY</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">_C_TUPLE</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">_C_SET</span> <span class="o">=</span> <span class="mi">16</span>
+
+
+<span class="c1">#: container markers - default generic base types</span>
+<span class="n">_CONTAINERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">_C_LIST</span><span class="p">,</span>             <span class="c1"># default</span>
+    <span class="s1">&#39;&#39;</span><span class="p">:</span> <span class="n">_C_LIST</span><span class="p">,</span>                    <span class="c1"># default too, will pop the empty item</span>
+    <span class="s1">&#39;list&#39;</span><span class="p">:</span> <span class="n">_C_LIST</span><span class="p">,</span>                <span class="c1"># generic base type: list - array</span>
+    <span class="s1">&#39;dict&#39;</span><span class="p">:</span> <span class="n">_C_DICT</span><span class="p">,</span>                <span class="c1"># generic base type: dict - object</span>
+<span class="p">}</span>
+
+
+<span class="c1">#: Container markers for extended types specific to this module.</span>
+<span class="c1">#: Do not use them in multi-syntax environments.</span>
+<span class="c1">#: These are meant to be concatenated to _CONTAINERS by choice.</span>
+<span class="c1">#: Some constraints apply to these types for Python.</span>
+<span class="c1">#: E.g. immutable, non-subscriptable, so applicable in specific</span>
+<span class="c1">#: data tree contexts only.</span>
+<span class="n">_CONTAINERSX</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;bytearray&#39;</span><span class="p">:</span> <span class="n">_C_BYTEARRAY</span><span class="p">,</span>      <span class="c1"># array of bytes {0..256}</span>
+    <span class="s1">&#39;tuple&#39;</span><span class="p">:</span> <span class="n">_C_TUPLE</span><span class="p">,</span>              <span class="c1"># immutable tuple</span>
+    <span class="s1">&#39;set&#39;</span><span class="p">:</span> <span class="n">_C_SET</span><span class="p">,</span>                  <span class="c1"># non-subscriptable set</span>
+<span class="p">}</span>
+
+
+<span class="c1">#: Gets list entries.</span>
+<span class="c1">#: win uses &#39;\n&#39; too: _CONCAT_LIST=re.compile(os.linesep + r&#39;[ \t]*,&#39;)</span>
+<span class="n">_CONCAT_LIST</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\r{0,1}\n[ \t]*,&#39;</span><span class="p">)</span>
+
+<span class="c1">#: Compiles regexpr for search paths spanning multiple lines.</span>
+<span class="n">_CONCAT_PATH</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\r{0,1}\n[ \t]*[:]&#39;</span><span class="p">)</span>
+
+<span class="c1">#: Compiles regexpr for search paths spanning multiple lines.</span>
+<span class="n">_CLEAR_KEY</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^[ \t]*(.*?)[ \t]*$&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="grow_branch"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.grow_branch">[docs]</a><span class="k">def</span> <span class="nf">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">subpath</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates a new branch including the assigned value to</span>
+<span class="sd">    the last node. The node types are defined by the types</span>
+<span class="sd">    of the *subpath* entries.</span>
+<span class="sd">    </span>
+<span class="sd">    Supports a single linear branch only, no sub-branching.</span>
+<span class="sd">    </span>
+<span class="sd">    The created path is validated for permitted types.</span>
+<span class="sd">    The derived types such as JSON have to support their</span>
+<span class="sd">    own branch method. Thus provided as a static method.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        subpath:</span>
+<span class="sd">            Variable list/tuple of path keys and indexes.</span>
+
+<span class="sd">        kargs:</span>
+<span class="sd">            value:</span>
+<span class="sd">                Value to be assigned to the final node. </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A created branch.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        pass-through</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_val</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+    <span class="n">_subpath</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">subpath</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ik</span> <span class="o">=</span> <span class="n">_subpath</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_val</span>
+    
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ik</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ik</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># no padding</span>
+            <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+                    <span class="s2">&quot;new list requires idx==0: </span><span class="si">%s</span><span class="se">\n</span><span class="s2"> see: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">),</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="n">ik</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)]</span>
+
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ik</span><span class="p">,</span> <span class="n">ISSTR</span><span class="p">)</span> <span class="ow">or</span> <span class="n">ik</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span><span class="p">,):</span>
+        <span class="c1"># python only: (True, False, None,)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">ik</span><span class="p">:</span> <span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)}</span>
+    
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ik</span><span class="p">,</span> <span class="nb">frozenset</span><span class="p">):</span>
+        <span class="c1"># python only</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">ik</span><span class="p">:</span> <span class="n">grow_branch</span><span class="p">(</span><span class="o">*</span><span class="n">_subpath</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">_val</span><span class="p">)}</span>
+    
+    <span class="k">raise</span> <span class="n">YapyDataDataTreeOidError</span><span class="p">(</span>
+            <span class="s2">&quot;invalid subpath key/index: </span><span class="si">%s</span><span class="se">\n</span><span class="s2"> see: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">subpath</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">ik</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="readout_data"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.readout_data">[docs]</a><span class="k">def</span> <span class="nf">readout_data</span><span class="p">(</span><span class="n">xval</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Scan tree into JSON representation. Uses recursive calls to </span>
+<span class="sd">    readout_data through  the logical tree spanned by *ConfigParser*.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        xval:</span>
+<span class="sd">            The loaded input tree as received from *ConfigDataINIX*,</span>
+<span class="sd">            which is defined by *ConfigParser.read_file()*.</span>
+
+<span class="sd">            For example a node *cf*::</span>
+
+<span class="sd">                datafile = os.path.abspath(fpname)</span>
+<span class="sd">                cf = ConfigDataINIX(datafile)</span>
+<span class="sd">                cf.load_parser()</span>
+<span class="sd">                cf.import_data(datafile)</span>
+
+<span class="sd">            is read out as ::</span>
+
+<span class="sd">                datatree = readout_data(cf)</span>
+
+<span class="sd">                </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        The resulting scanned data structure.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        pass-through</span>
+<span class="sd">        </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">xval</span><span class="o">.</span><span class="n">readout_data</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MultiOrderedDict"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.MultiOrderedDict">[docs]</a><span class="k">class</span> <span class="nc">MultiOrderedDict</span><span class="p">(</span><span class="n">OrderedDict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add lists for multi-key items.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="MultiOrderedDict.__setitem__"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.MultiOrderedDict.__setitem__">[docs]</a>    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Intercept keys which are already present.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="nb">list</span><span class="p">):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+                <span class="k">return</span>
+                <span class="c1"># elif isinstance(value,str):</span>
+                <span class="c1">#    return</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MultiOrderedDict</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__setitem__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="CaseSensitiveConfigParser"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.CaseSensitiveConfigParser">[docs]</a><span class="k">class</span> <span class="nc">CaseSensitiveConfigParser</span><span class="p">(</span><span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Preserves case of all keys - including DEFAULT section.</span>
+<span class="sd">    Suppress formatting of *optionstr*, preserves upper case characters.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="CaseSensitiveConfigParser.optionxform"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.CaseSensitiveConfigParser.optionxform">[docs]</a>    <span class="k">def</span> <span class="nf">optionxform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optionstr</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">optionstr</span></div></div>
+
+
+<div class="viewcode-block" id="DataTreeINI"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.DataTreeINI">[docs]</a><span class="k">class</span> <span class="nc">DataTreeINI</span><span class="p">(</span><span class="n">DataTree</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The the supported in-memory data tree representation of the *INI* syntax </span>
+<span class="sd">    supports a JSON compatible in memory data structure. The supported structure </span>
+<span class="sd">    relies on the standard *ConfigParser* - of *Python2* and *Python3* - with a </span>
+<span class="sd">    minimum set of custom addons. For a full set of extensions refer to the </span>
+<span class="sd">    package *multiconf*.</span>
+
+<span class="sd">    The basic scheme of the stored syntax is::</span>
+<span class="sd">    </span>
+<span class="sd">        ini-for-in-memory-json := {</span>
+<span class="sd">            &lt;sections&gt;</span>
+<span class="sd">        }</span>
+<span class="sd">        sections := &lt;section&gt; [, &lt;sections&gt;]</span>
+<span class="sd">        section := &lt;section-attributes&gt;</span>
+<span class="sd">        section-attributes := &lt;attr-value-pairs&gt; [, &lt;section-attributes&gt;]</span>
+<span class="sd">        attr-value-pairs :=  &lt;attr-value-pair&gt; [, &lt;attr-value-pairs&gt;]</span>
+<span class="sd">        attr-value-pair := &lt;attr-name&gt; &lt;separator&gt; &lt;attr-value&gt;</span>
+<span class="sd">        attr-name := &quot;any valid ConfigParser string compatible to a JSON string&quot;</span>
+<span class="sd">        attr-value := (</span>
+<span class="sd">              &lt;integer&gt;   | &lt;integer-as-string&gt;</span>
+<span class="sd">            | &lt;float&gt;     | &lt;float-as-string&gt;</span>
+<span class="sd">            | &lt;string&gt;</span>
+<span class="sd">            | &lt;list&gt;</span>
+<span class="sd">            | &lt;dict&gt;</span>
+<span class="sd">            | &lt;boolean&gt;   | &lt;boolean-as-string&gt;</span>
+<span class="sd">            | &lt;null&gt;      | &lt;null-as-string&gt;</span>
+<span class="sd">        )</span>
+
+<span class="sd">        integer-as-string := &#39;&quot;&#39; &lt;integer&gt; &#39;&quot;&#39;                  # treated as string</span>
+<span class="sd">        integer := &quot;any non-quoted valid integer value&quot;         # treated as integer</span>
+<span class="sd">        float-as-string := &#39;&quot;&#39; &lt;float&gt; &#39;&quot;&#39;                      # treated as string</span>
+<span class="sd">        float := &quot;any non-quoted valid integer value&quot;           # treated as float</span>
+<span class="sd">        string := &quot;any valid string&quot;</span>
+<span class="sd">        boolean := (true | false)</span>
+<span class="sd">        boolean-as-string := &#39;&quot;&#39; &lt;boolean&gt; &#39;&quot;&#39;                  # treated as string</span>
+<span class="sd">        null := null</span>
+<span class="sd">        null-as-string := &#39;&quot;&#39; &lt;null&gt; &#39;&quot;&#39;                        # treated as string</span>
+<span class="sd">        separator := ( &#39;:&#39; | &#39;=&#39; )</span>
+
+<span class="sd">    The following derived proprietary container types are provided. These are</span>
+<span class="sd">    compatible with the basic representation of the higher layer *multiconf*</span>
+<span class="sd">    package, which also provides command line compilation and cross-conversion </span>
+<span class="sd">    utilies.</span>
+<span class="sd">    </span>
+<span class="sd">    The *list* entries are represented as multiple lines of entries with leading</span>
+<span class="sd">    white-spaces and a comma. ::</span>
+
+<span class="sd">        list := &lt;proprietary-basic-multiline-list-syntax&gt;</span>
+<span class="sd">        proprietary-basic-multiline-list-syntax := &lt;attr-name&gt; &lt;separator&gt; &lt;list-item&gt; &lt;CR&gt; &lt;list-items-multiline&gt; &lt;CR&gt;</span>
+<span class="sd">        list-items-multiline := &lt;ws&gt; &#39;,&#39; &lt;list-item&gt; &lt;CR&gt; [&lt;list-items-multiline&gt;]</span>
+<span class="sd">        list-item := attr-value</span>
+<span class="sd">        ws := &quot;arbitrary whitespace - &lt;SPACE&gt;, &lt;tab&gt;&quot;</span>
+<span class="sd">        CR := &quot;new line&quot;</span>
+
+<span class="sd">    The *dict* entries are represented as multiple lines of entries with leading </span>
+<span class="sd">    white-spaces and a comma::</span>
+
+<span class="sd">        dict := &lt;proprietary-basic-multiline-dict-syntax&gt;</span>
+<span class="sd">        proprietary-basic-multiline-dict-syntax := &lt;attr-name&gt; &lt;separator&gt; &lt;attr-dict-item&gt; &lt;CR&gt; &lt;dict-items-multiline&gt; &lt;CR&gt;</span>
+<span class="sd">        dict-items-multiline := &lt;ws&gt; &#39;,&#39; &lt;dict-item&gt; &lt;CR&gt; [&lt;dict-items-multiline&gt;]</span>
+<span class="sd">        dict-item := attr-value-pair</span>
+<span class="sd">        ws := &quot;arbitrary whitespace - &lt;SPACE&gt;, &lt;tab&gt;&quot;</span>
+<span class="sd">        CR := &quot;new line&quot;</span>
+
+<span class="sd">    The data tree is compatible with the standard packas *json*.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="DataTreeINI.isvalid_top"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.DataTreeINI.isvalid_top">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">isvalid_top</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Validate compliance of top-node.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="p">)):</span>
+            <span class="k">raise</span> <span class="n">YapyDataINIError</span><span class="p">(</span>
+                <span class="s2">&quot;top &#39;node&#39; must be a valid INI type for RFC-4627 processing: (dict, list), got: &quot;</span>
+                <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+                <span class="p">)</span> 
+        <span class="k">return</span></div>
+
+<div class="viewcode-block" id="DataTreeINI.__init__"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.DataTreeINI.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{},</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            data:</span>
+<span class="sd">                A JSON compliant in-memory data tree in accordance to RFC-7159::</span>
+
+<span class="sd">                    json-value := (</span>
+<span class="sd">                          object | array</span>
+<span class="sd">                        | number</span>
+<span class="sd">                        | string</span>
+<span class="sd">                        | false  | true</span>
+<span class="sd">                        | null</span>
+<span class="sd">                    )</span>
+
+<span class="sd">                The equivalent *Python* types are - based on JSON-RFC7159 as canonical in-memory data::</span>
+
+<span class="sd">                    RFC-7159-type-for-json := (</span>
+<span class="sd">                          dict | list            # see: object, array</span>
+<span class="sd">                        | int  | float           # see: number</span>
+<span class="sd">                        | str                    # see: unicode / for Python: ISSTR = (str(3) | unicode(2))</span>
+<span class="sd">                        | None | True  | False   # see: null, true, false</span>
+<span class="sd">                    )</span>
+
+<span class="sd">                The initial data defines the permitted type of the first item</span>
+<span class="sd">                within the *subpath* of the spanned data tree.</span>
+<span class="sd">                </span>
+<span class="sd">                Thus atomic data types define a single node data tree only - new in RFC-7159.</span>
+
+<span class="sd">            kargs:</span>
+<span class="sd">                syntax:</span>
+<span class="sd">                    Defines the syntax variant::</span>
+
+<span class="sd">                        syntax := (</span>
+<span class="sd">                              &#39;base&#39;  # base core syntax for multi-syntax environments with global types </span>
+<span class="sd">                            | &#39;ext&#39;   # extended syntax with specific extension for this module</span>
+<span class="sd">                            | &#39;auto&#39;  # for now enables all choices - basically the same as &#39;ext&#39;</span>
+<span class="sd">                        )</span>
+<span class="sd">                        </span>
+<span class="sd">                        default := &#39;base&#39;  # maximum compatibility for multi-syntax environments</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None / initialized object</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            YapyDataDataTreeError</span>
+
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">_syn</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;syntax&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">_syn</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;ext&#39;</span><span class="p">,</span> <span class="s1">&#39;auto&#39;</span><span class="p">,):</span>
+            <span class="c1"># enable optional syntax extensions </span>
+            <span class="k">global</span> <span class="n">_CONTAINERS</span>
+            <span class="n">_CONTAINERS</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">_CONTAINERSX</span><span class="p">)</span>
+        
+        <span class="c1"># check data validity - pass eventual syntax parameters</span>
+        <span class="n">DataTreeINI</span><span class="o">.</span><span class="n">isvalid_top</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">)</span>
+        
+        <span class="c1"># actually initialize Python</span>
+        <span class="c1"># enabled syntax variant is not checked in depth - used currently by &#39;trust&#39; ... and exceptions...</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DataTreeINI</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataTreeINI.__setattr__"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.DataTreeINI.__setattr__">[docs]</a>    <span class="k">def</span> <span class="nf">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Validates types of own data attributes.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name:</span>
+<span class="sd">                Name of the attribute. Following are reserved and</span>
+<span class="sd">                treated special:</span>
+<span class="sd">                </span>
+<span class="sd">                * type: str - &#39;data&#39;</span>
+<span class="sd">                  The value is treated as the replacement of the internal</span>
+<span class="sd">                  data attribute. Replaces or creates the complete data</span>
+<span class="sd">                  of teh current instance.</span>
+
+<span class="sd">            value:</span>
+<span class="sd">                The value of the attribute. This by default superposes</span>
+<span class="sd">                present values by replacement. Non-present are created.</span>
+
+<span class="sd">        Returns:</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            YapyDataINIError</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span>
+            <span class="c1">#</span>
+            <span class="c1"># replacement of current managed data</span>
+            <span class="c1">#</span>
+            <span class="n">DataTreeINI</span><span class="o">.</span><span class="n">isvalid_top</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#</span>
+            <span class="c1"># any standard attribute with standard behavior</span>
+            <span class="c1">#</span>
+            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataTreeINI.import_data"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.DataTreeINI.import_data">[docs]</a>    <span class="k">def</span> <span class="nf">import_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fpname</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Reads an INI file. This is a simple basic method for the application</span>
+<span class="sd">        on the lower layers of the software stack. It is designed for minimal</span>
+<span class="sd">        dependencies. The used library is the standard *configparser* package.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            fpname:</span>
+<span class="sd">                File path name of the *INI* file. ::</span>
+
+<span class="sd">                    fpname := &lt;ini-file-path-name&gt;</span>
+<span class="sd">                    ini-file-path-name := (</span>
+<span class="sd">                          &lt;file-path-name&gt;           # with extension</span>
+<span class="sd">                        | &lt;file-path-name&gt; &#39;.ini&#39;    # without extension, for multiple syntaxes</span>
+<span class="sd">                    )</span>
+
+<span class="sd">            key:</span>
+<span class="sd">                The key for the insertion point::</span>
+
+<span class="sd">                    node[key] = &lt;file-data&gt;</span>
+
+<span class="sd">                    default := None - replace self.data, </span>
+
+<span class="sd">                The caller is responsible for the containment of the provided</span>
+<span class="sd">                node within the data structure represented by this object. No</span>
+<span class="sd">                checks are performed. </span>
+
+<span class="sd">            node:</span>
+<span class="sd">                The node for the insertion of the read data.::</span>
+
+<span class="sd">                    default := &lt;top&gt;</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Reference to read data structure.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            YapyDataConfigError</span>
+
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fpname</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fpname</span> <span class="o">+</span> <span class="s1">&#39;.ini&#39;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">YapyDataINIError</span><span class="p">(</span><span class="s2">&quot;Missing file: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fpname</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">fpname</span> <span class="o">=</span> <span class="n">fpname</span> <span class="o">+</span> <span class="s1">&#39;.ini&#39;</span>
+
+        <span class="n">datafile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">fpname</span><span class="p">)</span>
+        <span class="n">cf</span> <span class="o">=</span> <span class="n">ConfigDataINIX</span><span class="p">(</span><span class="n">datafile</span><span class="p">)</span>
+        <span class="n">cf</span><span class="o">.</span><span class="n">load_parser</span><span class="p">()</span>
+        <span class="n">cf</span><span class="o">.</span><span class="n">import_data</span><span class="p">(</span><span class="n">datafile</span><span class="p">)</span>
+
+        <span class="n">jval</span> <span class="o">=</span> <span class="n">cf</span><span class="o">.</span><span class="n">readout_data</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">YapyDataINIError</span><span class="p">(</span><span class="s2">&quot;Given key(</span><span class="si">%s</span><span class="s2">) requires a valid node.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)))</span>
+
+        <span class="k">if</span> <span class="n">key</span><span class="p">:</span>
+            <span class="n">node</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">jval</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">jval</span>
+
+        <span class="k">return</span> <span class="n">jval</span></div></div>
+
+
+<div class="viewcode-block" id="ConfigDataINIX"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX">[docs]</a><span class="k">class</span> <span class="nc">ConfigDataINIX</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A simple configuration file parser based on the standard *ConfigParser* class.</span>
+<span class="sd">    </span>
+<span class="sd">    The final resulting data with completely applied syntax-extensions is available by</span>
+<span class="sd">    the method *readout_data()*.</span>
+<span class="sd">    </span>
+<span class="sd">    Supports the data types::</span>
+<span class="sd">    </span>
+<span class="sd">        int, float, str</span>
+<span class="sd">    </span>
+<span class="sd">        multi-line lists,</span>
+<span class="sd">        multi-line search-paths</span>
+<span class="sd">       </span>
+<span class="sd">        null</span>
+<span class="sd">        true, false</span>
+<span class="sd">       </span>
+<span class="sd">    The optional structure::</span>
+<span class="sd">        </span>
+<span class="sd">        global-attributes-without-section</span>
+<span class="sd">    </span>
+<span class="sd">    The standard file extensions are::</span>
+<span class="sd">    </span>
+<span class="sd">       &#39;.ini&#39;</span>
+
+<span class="sd">    The supported stnadard features of *ConfigParser* include::</span>
+
+<span class="sd">        interpolation</span>
+
+<span class="sd">    For detailed information refer to the parameters of the *__init__* method.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">suffixes</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;ini&#39;</span><span class="p">,</span> <span class="p">)</span> <span class="c1">#: standard suffixes for INI</span>
+
+
+<div class="viewcode-block" id="ConfigDataINIX.__init__"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conf</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            **conf**:</span>
+<span class="sd">                The file path name of the configuration file.</span>
+<span class="sd">        </span>
+<span class="sd">           kargs:</span>
+<span class="sd">                For additional parameters see *ConfigData*.</span>
+<span class="sd">                </span>
+<span class="sd">                allow_no_value:</span>
+<span class="sd">                    Enables the support for keys without values</span>
+<span class="sd">                    of *INI* format files. Supported by the standard</span>
+<span class="sd">                    library based *configparser* . The value</span>
+<span class="sd">                    could be applied to derived custom parser::</span>
+<span class="sd">                    </span>
+<span class="sd">                        default := False</span>
+<span class="sd">                    </span>
+<span class="sd">                    See parameter *allow_no_value* of</span>
+<span class="sd">                    *configparser.ConfigParser*.</span>
+<span class="sd">                </span>
+<span class="sd">                casesens:</span>
+<span class="sd">                    Preserves case of keys::</span>
+<span class="sd">                </span>
+<span class="sd">                        default := False</span>
+<span class="sd">                </span>
+<span class="sd">                comment_prefixes:</span>
+<span class="sd">                    Defines the comment prefixes::</span>
+<span class="sd">                </span>
+<span class="sd">                        default := (&#39;#&#39;, &#39;;&#39;)</span>
+<span class="sd">                </span>
+<span class="sd">                delimiters:</span>
+<span class="sd">                    Defines the delimiters for *INI* format based</span>
+<span class="sd">                    files. Supported by the standard library based</span>
+<span class="sd">                    *configparser* . The value could be applied to</span>
+<span class="sd">                    derived custom parser::</span>
+
+<span class="sd">                        default := (&#39;=&#39;, &#39;:&#39;,)</span>
+<span class="sd">                </span>
+<span class="sd">                dict_type:</span>
+<span class="sd">                    The type of dictionary to be used by the parent class::</span>
+<span class="sd">                </span>
+<span class="sd">                        default := None</span>
+<span class="sd">                </span>
+<span class="sd">                empty_lines_in_values::</span>
+
+<span class="sd">                    default := False</span>
+<span class="sd">                </span>
+<span class="sd">                inline_comment_prefixes:</span>
+<span class="sd">                    Defines the inline comment prefixes::</span>
+
+<span class="sd">                        default := None</span>
+<span class="sd">                </span>
+<span class="sd">                interpolation:</span>
+<span class="sd">                    Enables the creation and replacement of variables</span>
+<span class="sd">                    within configuration files. Depends on the derived</span>
+<span class="sd">                    class, when not supported simply ignored::</span>
+<span class="sd">                </span>
+<span class="sd">                        default := True</span>
+<span class="sd">                </span>
+<span class="sd">                    See parameter *interpolation* of</span>
+<span class="sd">                    *configparser.ConfigParser*.</span>
+<span class="sd">                </span>
+<span class="sd">                sectionpaths:</span>
+<span class="sd">                    Enables the conversion and interpretation of section names</span>
+<span class="sd">                    as path entries. This is required, when the versatility</span>
+<span class="sd">                    of the converted and/or merged syntaxes are of different degree,</span>
+<span class="sd">                    and the actual used syntax data path elements could not be</span>
+<span class="sd">                    converted. In this case an intermediate sub-syntax is supported</span>
+<span class="sd">                    by a dotted path notation, which could be converted between the </span>
+<span class="sd">                    applied syntaxes::</span>
+<span class="sd">                    </span>
+<span class="sd">                        sectionpaths := (</span>
+<span class="sd">                             True         # long data paths e.g. from *JSON* are </span>
+<span class="sd">                                          # converted to dotted section names</span>
+<span class="sd">                                          # and vice versa</span>
+<span class="sd">                           | False        # requires compatible versatility,</span>
+<span class="sd">                                          # else raises exception</span>
+<span class="sd">                        )</span>
+<span class="sd">                        </span>
+<span class="sd">                        default := True</span>
+<span class="sd">                </span>
+<span class="sd">                   </span>
+<span class="sd">                    sectionpaths=True:</span>
+<span class="sd">                        The section names of the native *INIX* syntax by default </span>
+<span class="sd">                        constitute a one-level-only depth of data structures for </span>
+<span class="sd">                        the complexity of structure definition.</span>
+<span class="sd">                        </span>
+<span class="sd">                    sectionpaths=False:</span>
+<span class="sd">                        </span>
+<span class="sd">                </span>
+<span class="sd">                sectionpathsep:</span>
+<span class="sd">                    Defines the character used in section names as path separator.</span>
+<span class="sd">                    The character has to be valid as provided by the config parser of the syntax, </span>
+<span class="sd">                    in particular a valid character for section names of *INI* files, and has</span>
+<span class="sd">                    to be semantically suitable as a special separator character::</span>
+<span class="sd">                      </span>
+<span class="sd">                        sectionpathsep := []</span>
+<span class="sd">                        </span>
+<span class="sd">                        default := &#39;.&#39;</span>
+<span class="sd">                   </span>
+<span class="sd">                    Valid only when *sectionpaths* is active. </span>
+<span class="sd">                </span>
+<span class="sd">                strict:</span>
+<span class="sd">                    Controls the verification of duplicate sections</span>
+<span class="sd">                    when these are used::</span>
+<span class="sd">                </span>
+<span class="sd">                        strict := (</span>
+<span class="sd">                              True    # raise an exception for duplicates</span>
+<span class="sd">                            | False   # accept</span>
+<span class="sd">                        )</span>
+<span class="sd">                        </span>
+<span class="sd">                        default := False</span>
+<span class="sd">                </span>
+<span class="sd">                    See *strict* option of *ConfigParser*.</span>
+<span class="sd">                </span>
+<span class="sd">                quiet:</span>
+<span class="sd">                    Suppresses display of non-errors::</span>
+
+<span class="sd">                        default := False</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            None/object</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allow_no_value</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;allow_no_value&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">casesens</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;casesens&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">comment_prefixes</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;comment_prefixes&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delimiters</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;delimiters&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dict_type</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dict_type&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">empty_lines_in_values</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;empty_lines_in_values&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inline_comment_prefixes</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;inline_comment_prefixes&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interpolation</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;interpolation&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quiet</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;quiet&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">strict</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;strict&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># changed default</span></div>
+
+<div class="viewcode-block" id="ConfigDataINIX.__bool__"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.__bool__">[docs]</a>    <span class="k">def</span> <span class="nf">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="o">.</span><span class="n">sections</span><span class="p">())</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="ConfigDataINIX.__nonzero__"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.__nonzero__">[docs]</a>    <span class="k">def</span> <span class="nf">__nonzero__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="o">.</span><span class="n">sections</span><span class="p">())</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="ConfigDataINIX.__getitem__"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.__getitem__">[docs]</a>    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the section object.</span>
+<span class="sd">       Requires for Python2 the backport from Python3 &quot;configparser&quot;, see PyPI</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="ConfigDataINIX.get"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the section object - compatible to Python3 and</span>
+<span class="sd">        the backport of the *configparser*.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="o">.</span><span class="n">sections</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="ConfigDataINIX.import_data"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.import_data">[docs]</a>    <span class="k">def</span> <span class="nf">import_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conf</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Reads the configuration file and imports data. Supported standard types are::</span>
+<span class="sd">   </span>
+<span class="sd">           &#39;cfg&#39;, &#39;conf&#39;, &#39;ini&#39;,</span>
+<span class="sd">        </span>
+<span class="sd">        The imported data for the suported standard syntax is interpreted as:</span>
+<span class="sd">        </span>
+<span class="sd">            +----------------------------------------+-------------+-------------------+-------------+-------------------------+----------------------------------------------+</span>
+<span class="sd">            | syntax of imported config              | sections as | keys as           | path as     | insertion position      | remark                                       |</span>
+<span class="sd">            +========================================+=============+===================+=============+=========================+==============================================+</span>
+<span class="sd">            | `conf &lt;parser_conf.html&gt;`_             | sections    | keys to &lt;section&gt; | --          | top, &lt;section&gt;, DEFAULT | no rename and no nested sections, no globals |</span>
+<span class="sd">            +----------------------------------------+-------------+-------------------+-------------+-------------------------+----------------------------------------------+</span>
+<span class="sd">            | `ini &lt;parser_ini.html&gt;`_               | sections    | keys by section   | --          | top, &lt;section&gt;, DEFAULT | no rename and no nested sections, no globals |</span>
+<span class="sd">            +----------------------------------------+-------------+-------------------+-------------+-------------------------+----------------------------------------------+</span>
+<span class="sd">            | `inix &lt;parser_inix.html&gt;`_             | sections    | keys by section   | --          | top, &lt;section&gt;, DEFAULT | no rename and no nested sections, no globals |</span>
+<span class="sd">            +----------------------------------------+-------------+-------------------+-------------+-------------------------+----------------------------------------------+</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            conf:</span>
+<span class="sd">                The file path name of the configuration file.</span>
+<span class="sd">        </span>
+<span class="sd">           kargs:</span>
+<span class="sd">                Unknown options are passed through to the</span>
+<span class="sd">                configuration parser.</span>
+<span class="sd">        </span>
+<span class="sd">                anchor:</span>
+<span class="sd">                    The insertion point for the imported data::</span>
+<span class="sd">        </span>
+<span class="sd">                      anchor := (</span>
+<span class="sd">                           &lt;section&gt;</span>
+<span class="sd">                         | &#39;DEFAULT&#39;</span>
+<span class="sd">                         | &lt;top&gt;</span>
+<span class="sd">                      )</span>
+<span class="sd">                      </span>
+<span class="sd">                      top := &quot;imports valid INIX/INI/CONF files with sections only&quot;</span>
+<span class="sd">                      section := &quot;the name of the section&quot;</span>
+<span class="sd">                      &#39;DEFAULT&#39; := &quot;keyword defined by the standard library as </span>
+<span class="sd">                                    global defaults for interpolation&quot;</span>
+<span class="sd">        </span>
+<span class="sd">                      default := &lt;top&gt;</span>
+<span class="sd">        </span>
+<span class="sd">                strict:</span>
+<span class="sd">                    Activates validation. The boolean value is</span>
+<span class="sd">                    mapped to the corresponding option of the</span>
+<span class="sd">                    called import parser:</span>
+<span class="sd">        </span>
+<span class="sd">                        +------------+----------+-------+--------+</span>
+<span class="sd">                        | parser     | option   | True  | False  |</span>
+<span class="sd">                        +============+==========+=======+========+</span>
+<span class="sd">                        | conf       | strict   | True  | False  |</span>
+<span class="sd">                        +------------+----------+-------+--------+</span>
+<span class="sd">                        | ini        | strict   | True  | False  |</span>
+<span class="sd">                        +------------+----------+-------+--------+</span>
+<span class="sd">                        | inix       | strict   | True  | False  |</span>
+<span class="sd">                        +------------+----------+-------+--------+</span>
+<span class="sd">        </span>
+<span class="sd">                syntax:</span>
+<span class="sd">                    Force the provided syntax. For available</span>
+<span class="sd">                    values refer to syntax multiplexer</span>
+<span class="sd">                    *self.synmux*.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            True for success, else False or raises an exception.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># sectionless</span>
+        <span class="c1"># add &#39;[globaldummy]&#39; for &#39;configparser&#39;</span>
+        <span class="c1"># will be removed by &#39;read_out&#39;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span>
+                <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">([</span><span class="s1">&#39;[globaldummy]&#39;</span><span class="p">],</span> <span class="n">fp</span><span class="p">),</span>
+                <span class="n">source</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
+                <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span> <span class="o">!=</span> <span class="p">[]</span></div>
+
+ 
+<div class="viewcode-block" id="ConfigDataINIX.keys"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.keys">[docs]</a>    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="o">.</span><span class="n">sections</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ConfigDataINIX.load_parser"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.load_parser">[docs]</a>    <span class="k">def</span> <span class="nf">load_parser</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Loads the syntax parser *configparser.ConfigParser* and</span>
+<span class="sd">        patches the behaviour for common &#39;conf&#39; and &#39;cfg&#39; format.</span>
+<span class="sd">        Supports the most of the files in &#39;/etc&#39; of POSIX based</span>
+<span class="sd">        OS.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            kargs:</span>
+<span class="sd">                For the description of the options refer to the</span>
+<span class="sd">                method header of *multiconf.data.load_parser()*.</span>
+<span class="sd">                Unknown are passed through to the loaded</span>
+<span class="sd">                configuration parser.</span>
+<span class="sd">        </span>
+<span class="sd">                For the following parameters see __init__: </span>
+<span class="sd">        </span>
+<span class="sd">                * **allow_no_value**</span>
+<span class="sd">                * **casesens**</span>
+<span class="sd">                * **comment_prefixes**</span>
+<span class="sd">                * **inline_comment_prefixes**</span>
+<span class="sd">                * **delimiters**</span>
+<span class="sd">                * **dict_type**</span>
+<span class="sd">                * **empty_lines_in_values**</span>
+<span class="sd">                * **interpolation**</span>
+<span class="sd">                * **strict**</span>
+<span class="sd">                * **quiet**</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            True, or raises an exception.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+<span class="sd">        </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">kw_optparser</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">kw_optparser</span><span class="p">[</span><span class="s1">&#39;strict&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;strict&#39;</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+<span class="c1">#             try:</span>
+<span class="c1">#                 kw_optparser[&#39;strict&#39;] = self.conf[&#39;strict&#39;]</span>
+<span class="c1">#             except KeyError:</span>
+<span class="c1">#                 kw_optparser[&#39;strict&#39;] = self.strict</span>
+            <span class="k">pass</span>
+
+<span class="c1">#         _ip = self.conf.get(&#39;interpolation&#39;)</span>
+<span class="c1">#         if _ip:</span>
+<span class="c1">#             if _ip.lower() in (&#39;false&#39;, &#39;0&#39;, &#39;off&#39;, &#39;no&#39;):</span>
+<span class="c1">#                 kw_optparser[&#39;interpolation&#39;] = None</span>
+<span class="c1">#             elif _ip.lower() not in (&#39;false&#39;, &#39;0&#39;, &#39;off&#39;, &#39;no&#39;):</span>
+<span class="c1">#                 raise MultiConfError(&quot;invalid value: interpolation=&quot; + str(_ip))</span>
+<span class="c1">#         elif self.interpolation == False:</span>
+<span class="c1">#             kw_optparser[&#39;interpolation&#39;] = None</span>
+
+<span class="c1">#         _d = self.conf.get(&#39;delimiters&#39;, None)</span>
+<span class="c1">#         if _d:</span>
+<span class="c1">#             kw_optparser[&#39;delimiters&#39;] = tuple(_d)</span>
+<span class="c1">#         elif self.delimiters:</span>
+<span class="c1">#             kw_optparser[&#39;delimiters&#39;] = self.delimiters</span>
+<span class="c1"># </span>
+<span class="c1"># </span>
+<span class="c1">#         _d = self.conf.get(&#39;comment_prefixes&#39;, None)</span>
+<span class="c1">#         if _d:</span>
+<span class="c1">#             kw_optparser[&#39;comment_prefixes&#39;] = tuple(_d)</span>
+<span class="c1"># </span>
+<span class="c1">#         _d = self.conf.get(&#39;inline_comment_prefixes&#39;, None)</span>
+<span class="c1">#         if _d:</span>
+<span class="c1">#             kw_optparser[&#39;inline_comment_prefixes&#39;] = tuple(_d)</span>
+<span class="c1"># </span>
+<span class="c1">#         _d = self.conf.get(&#39;empty_lines_in_values&#39;, None)</span>
+<span class="c1">#         if _d:</span>
+<span class="c1">#             kw_optparser[&#39;empty_lines_in_values&#39;] = tuple(_d)</span>
+<span class="c1"># </span>
+<span class="c1">#         _d = self.conf.get(&#39;allow_no_value&#39;, None)</span>
+<span class="c1">#         if _d:</span>
+<span class="c1">#             kw_optparser[&#39;allow_no_value&#39;] = _d</span>
+<span class="c1">#         elif not kargs.get(&#39;allow_no_value&#39;):</span>
+<span class="c1">#             kw_optparser[&#39;allow_no_value&#39;] = self.allow_no_value</span>
+<span class="c1"># </span>
+<span class="c1">#         dict_type = kargs.get(&#39;dict_type&#39;, self.dict_type)</span>
+<span class="c1">#         if _d:</span>
+<span class="c1">#             kw_optparser[&#39;dict_type&#39;] = dict_type</span>
+<span class="c1"># </span>
+<span class="c1">#         try:</span>
+<span class="c1">#             _quiet = kargs.pop(&#39;quiet&#39;)</span>
+<span class="c1">#         except:</span>
+<span class="c1">#             pass</span>
+
+        <span class="c1"># activate case senitivity</span>
+<span class="c1">#        _cs = self.conf.get(&#39;casesens&#39;, False)</span>
+<span class="c1">#         _cs = self.conf.get(&#39;casesens&#39;)</span>
+<span class="c1">#         if _cs == None:</span>
+<span class="c1">#             _cs = kargs.get(&#39;casesens&#39;, False)</span>
+<span class="c1">#         if _cs not in (True, False):</span>
+<span class="c1">#             if _cs is None:</span>
+<span class="c1">#                 _cs = False</span>
+<span class="c1">#             elif _cs.lower() in (&#39;false&#39;, &#39;0&#39;, &#39;off&#39;, &#39;no&#39;):</span>
+<span class="c1">#                 _cs = False</span>
+<span class="c1">#             elif _cs.lower() not in (&#39;true&#39;, &#39;1&#39;, &#39;on&#39;, &#39;yes&#39;):</span>
+<span class="c1">#                 raise MultiConfError(&quot;invalid value: casesens=&quot; + str(_cs))</span>
+
+        <span class="n">_cs</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">_cs</span><span class="p">:</span>
+            <span class="n">_parser</span> <span class="o">=</span> <span class="n">CaseSensitiveConfigParser</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_parser</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span>
+
+        <span class="k">if</span> <span class="n">yapydata</span><span class="o">.</span><span class="n">_debug</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="s2">&quot;DBG:</span><span class="si">%s</span><span class="s2">:</span><span class="si">%s</span><span class="s2">:_parser = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">getcaller_filename</span><span class="p">()),</span> 
+                <span class="nb">str</span><span class="p">(</span><span class="n">getcaller_linenumber</span><span class="p">()),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">_parser</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="s2">&quot;DBG:</span><span class="si">%s</span><span class="s2">:</span><span class="si">%s</span><span class="s2">:kw_optparser = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">getcaller_filename</span><span class="p">()),</span> 
+                <span class="nb">str</span><span class="p">(</span><span class="n">getcaller_linenumber</span><span class="p">()),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">kw_optparser</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+<span class="c1">#         self.kw_optparser = kw_optparser</span>
+<span class="c1">#         if dict_type:</span>
+<span class="c1">#             self.confdata = _parser(</span>
+<span class="c1">#                 dict_type=dict_type,</span>
+<span class="c1">#                 **kw_optparser</span>
+<span class="c1">#                 )</span>
+<span class="c1">#         else:</span>
+<span class="c1">#             self.confdata = _parser(</span>
+<span class="c1">#                 **kw_optparser</span>
+<span class="c1">#                 )</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span> <span class="o">=</span> <span class="n">_parser</span><span class="p">(</span>
+            <span class="o">**</span><span class="n">kw_optparser</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="ConfigDataINIX.readout_data"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.readout_data">[docs]</a>    <span class="k">def</span> <span class="nf">readout_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the configuration as JSON compatible format.</span>
+<span class="sd">        Removes the special dummy section header &#39;globaldummy&#39;,</span>
+<span class="sd">        see *import_data*.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            kargs:</span>
+<span class="sd">                stronly:</span>
+<span class="sd">                    Scans all as *str* only. ::</span>
+<span class="sd">        </span>
+<span class="sd">                      stronly := (</span>
+<span class="sd">                            True    # int and float are</span>
+<span class="sd">                                    # converted to str</span>
+<span class="sd">                          | False   # numeric values are kept</span>
+<span class="sd">                      )</span>
+<span class="sd">        </span>
+<span class="sd">                    default := False</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            In-memory JSON compatible data.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="p">)</span>
+
+        <span class="n">_stronly</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;stronly&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="o">.</span><span class="n">sections</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s1">&#39;globaldummy&#39;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">_stronly</span><span class="p">:</span>
+                        <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+                        <span class="k">continue</span>
+
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="c1"># int</span>
+                        <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="c1"># float</span>
+                            <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                        <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                            <span class="k">try</span><span class="p">:</span>
+                                <span class="c1"># common conceptual keywords: true, false, null</span>
+                                <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">_KEYWORDS</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
+                            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+<span class="c1">#                                 try:</span>
+<span class="c1">#                                     # is meta keyword only - maps the multi-line entry to a container type syntax</span>
+<span class="c1">#                                     # default set is (dict, list), with the default selection of list</span>
+<span class="c1">#                                     container = _CONTAINERS[v]</span>
+<span class="c1">#                                 except KeyError:</span>
+                                <span class="k">try</span><span class="p">:</span>
+                                    <span class="n">_v</span> <span class="o">=</span> <span class="n">_CONCAT_LIST</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">_v</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+
+                                        <span class="c1"># is meta keyword only - maps the multi-line entry to a container type syntax</span>
+                                        <span class="c1"># default is list</span>
+                                        <span class="k">try</span><span class="p">:</span>
+                                            <span class="n">container</span> <span class="o">=</span> <span class="n">_CONTAINERS</span><span class="p">[</span><span class="n">_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                                            <span class="n">_v</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                                        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                                            <span class="n">container</span> <span class="o">=</span> <span class="n">_C_LIST</span>  <span class="c1">#: default container type</span>
+
+                                        <span class="k">if</span> <span class="n">container</span> <span class="o">==</span> <span class="n">_C_DICT</span><span class="p">:</span>
+                                            <span class="c1"># process comma separated multi-line dictionaries</span>
+                                            <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                                            <span class="k">for</span> <span class="n">_vi</span> <span class="ow">in</span> <span class="n">_v</span><span class="p">:</span>
+                                                <span class="n">_dk</span><span class="p">,</span><span class="n">_dv</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[=:]&#39;</span><span class="p">,</span> <span class="n">_vi</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                                                <span class="n">_dk</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">_CLEAR_KEY</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="n">_dk</span><span class="p">))</span>
+                                                <span class="k">try</span><span class="p">:</span>
+                                                    <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">_dk</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">_dv</span><span class="p">)</span>
+                                                <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                                                    <span class="k">try</span><span class="p">:</span>
+                                                        <span class="n">res</span><span class="p">[</span><span class="n">_dk</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">_dv</span><span class="p">)</span>
+                                                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                                                        <span class="n">res</span><span class="p">[</span><span class="n">_dk</span><span class="p">]</span> <span class="o">=</span> <span class="n">_dv</span>
+
+                                        <span class="k">elif</span> <span class="n">container</span> <span class="o">==</span> <span class="n">_C_BYTEARRAY</span><span class="p">:</span>
+                                            <span class="c1"># process comma separated multi-line bytearray</span>
+                                            <span class="c1"># it is native and mutable, so do not need intermediate list</span>
+                                            <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">()</span>
+                                            <span class="k">for</span> <span class="n">_vi</span> <span class="ow">in</span> <span class="n">_v</span><span class="p">:</span>
+                                                <span class="k">try</span><span class="p">:</span>
+                                                    <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">_vi</span><span class="p">))</span>
+                                                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                                                    <span class="c1"># wrong range as well as non-int have ValueError</span>
+                                                    <span class="k">raise</span> <span class="n">YapyDataTreeError</span><span class="p">(</span>
+                                                        <span class="s2">&quot;Bytearray(0..256) failed: [</span><span class="si">%s</span><span class="s2">] = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                                                            <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">),</span>
+                                                            <span class="nb">str</span><span class="p">(</span><span class="n">_vi</span><span class="p">),</span>
+                                                            <span class="p">)</span>
+                                                        <span class="p">)</span>
+
+                                        <span class="k">else</span><span class="p">:</span> <span class="c1"># elif container == _C_LIST:</span>
+                                            <span class="c1"># process comma separated multi-line lists and related</span>
+                                            <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                                            <span class="k">for</span> <span class="n">_vi</span> <span class="ow">in</span> <span class="n">_v</span><span class="p">:</span>
+                                                <span class="k">try</span><span class="p">:</span>
+                                                    <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">_vi</span><span class="p">))</span>
+                                                <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                                                    <span class="k">try</span><span class="p">:</span>
+                                                        <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">_vi</span><span class="p">))</span>
+                                                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                                                        <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_vi</span><span class="p">)</span>
+
+                                            <span class="c1"># now cast to closely related types</span>
+                                            <span class="k">if</span> <span class="n">container</span> <span class="o">==</span> <span class="n">_C_TUPLE</span><span class="p">:</span>
+                                                <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+                                            <span class="k">elif</span> <span class="n">container</span> <span class="o">==</span> <span class="n">_C_SET</span><span class="p">:</span>
+                                                <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+
+                                    <span class="k">else</span><span class="p">:</span>
+                                        <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+                                        
+                                <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                                    <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">_stronly</span><span class="p">:</span>
+                        <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+                        <span class="k">continue</span>
+
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="c1"># int</span>
+                        <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="c1"># float</span>
+                            <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                        <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                            <span class="k">try</span><span class="p">:</span>
+                                <span class="c1"># common conceptual keywords: true, false, null</span>
+                                <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">_KEYWORDS</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
+                            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                                <span class="k">try</span><span class="p">:</span>
+                                    <span class="n">_v</span> <span class="o">=</span> <span class="n">_CONCAT_LIST</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">_v</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                                        <span class="c1"># is meta keyword only - maps the multi-line entry to a container type syntax</span>
+                                        <span class="c1"># default is list</span>
+                                        <span class="k">try</span><span class="p">:</span>
+                                            <span class="n">container</span> <span class="o">=</span> <span class="n">_CONTAINERS</span><span class="p">[</span><span class="n">_v</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                                            <span class="n">_v</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                                        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                                            <span class="n">container</span> <span class="o">=</span> <span class="n">_C_LIST</span>  <span class="c1">#: default container type</span>
+
+                                        <span class="k">if</span> <span class="n">container</span> <span class="o">==</span> <span class="n">_C_DICT</span><span class="p">:</span>
+                                            <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                                        <span class="k">else</span><span class="p">:</span>  <span class="c1"># elif container == _C_LIST:</span>
+                                            <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                                        
+                                        <span class="k">if</span> <span class="n">container</span> <span class="o">==</span> <span class="n">_C_DICT</span><span class="p">:</span>
+                                            <span class="c1"># process comma separated multi-line dictionaries</span>
+                                            <span class="c1">#res[k] = {}</span>
+                                            <span class="k">for</span> <span class="n">_vi</span> <span class="ow">in</span> <span class="n">_v</span><span class="p">:</span>
+                                                <span class="n">_dk</span><span class="p">,</span><span class="n">_dv</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[=:]&#39;</span><span class="p">,</span> <span class="n">_vi</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                                                <span class="n">_dk</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">_CLEAR_KEY</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="n">_dk</span><span class="p">))</span>
+                                                <span class="k">try</span><span class="p">:</span>
+                                                    <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">][</span><span class="n">_dk</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">_dv</span><span class="p">)</span>
+                                                <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                                                    <span class="k">try</span><span class="p">:</span>
+                                                        <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">][</span><span class="n">_dk</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">_dv</span><span class="p">)</span>
+                                                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                                                        <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">][</span><span class="n">_dk</span><span class="p">]</span> <span class="o">=</span> <span class="n">_dv</span>
+
+                                        <span class="k">elif</span> <span class="n">container</span> <span class="o">==</span> <span class="n">_C_BYTEARRAY</span><span class="p">:</span>
+                                            <span class="c1"># process comma separated multi-line bytearray</span>
+                                            <span class="c1"># it is native and mutable, so do not need intermediate list</span>
+                                            <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">()</span>
+                                            <span class="k">for</span> <span class="n">_vi</span> <span class="ow">in</span> <span class="n">_v</span><span class="p">:</span>
+                                                <span class="k">try</span><span class="p">:</span>
+                                                    <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">_vi</span><span class="p">))</span>
+                                                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                                                    <span class="c1"># wrong range as well as non-int have ValueError</span>
+                                                    <span class="k">raise</span> <span class="n">YapyDataTreeError</span><span class="p">(</span>
+                                                        <span class="s2">&quot;Bytearray(0..256) failed: [</span><span class="si">%s</span><span class="s2">] = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span>
+                                                            <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">),</span>
+                                                            <span class="nb">str</span><span class="p">(</span><span class="n">_vi</span><span class="p">),</span>
+                                                            <span class="p">)</span>
+                                                        <span class="p">)</span>
+
+                                        <span class="k">else</span><span class="p">:</span> <span class="c1"># elif container == _C_LIST:</span>
+                                            <span class="c1"># process comma separated multi-line lists and related</span>
+                                            <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                                            <span class="k">for</span> <span class="n">_vi</span> <span class="ow">in</span> <span class="n">_v</span><span class="p">:</span>
+                                                <span class="k">try</span><span class="p">:</span>
+                                                    <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">_vi</span><span class="p">))</span>
+                                                <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                                                    <span class="k">try</span><span class="p">:</span>
+                                                        <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">_vi</span><span class="p">))</span>
+                                                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                                                        <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_vi</span><span class="p">)</span>
+
+                                            <span class="c1"># now cast to closely related types</span>
+                                            <span class="k">if</span> <span class="n">container</span> <span class="o">==</span> <span class="n">_C_TUPLE</span><span class="p">:</span>
+                                                <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">])</span>
+                                            <span class="k">elif</span> <span class="n">container</span> <span class="o">==</span> <span class="n">_C_SET</span><span class="p">:</span>
+                                                <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">])</span>
+
+                                    <span class="k">else</span><span class="p">:</span>
+                                        <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+                                <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                                    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+                                        <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+                                    <span class="k">else</span><span class="p">:</span>
+                                        <span class="k">raise</span>
+
+        <span class="k">return</span> <span class="n">res</span></div>
+
+<div class="viewcode-block" id="ConfigDataINIX.set"><a class="viewcode-back" href="../../../yapydata.datatree.synini.html#yapydata.datatree.synini.ConfigDataINIX.set">[docs]</a>    <span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">confdata</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div></div>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 04, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

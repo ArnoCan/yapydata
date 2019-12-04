@@ -1,0 +1,1058 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.4. yapydata.datatree.synini &mdash; yapydata  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5.5. yapydata.datatree.synjson" href="yapydata.datatree.synjson.html" />
+    <link rel="prev" title="5.3. yapydata.datatree.datatree" href="yapydata.datatree.datatree.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">YapyData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">4. Documents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_modules.html">5. Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="yapydata.html">5.1. yapydata.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.html">5.2. yapydata.datatree.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.datatree.html">5.3. yapydata.datatree.datatree</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.4. yapydata.datatree.synini</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-yapydata.datatree.synini">5.4.1. Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">5.4.2. Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grow-branch">5.4.2.1. grow_branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#readout-data">5.4.2.2. readout_data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#datatreeini">5.4.3. DataTreeINI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#init">5.4.3.1. __init__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setattr">5.4.3.2. __setattr__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#isvalid-top">5.4.3.3. isvalid_top</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import-data">5.4.3.4. import_data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#configdatainix">5.4.4. ConfigDataINIX</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">5.4.4.1. __init__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bool">5.4.4.2. __bool__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getitem">5.4.4.3. __getitem__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nonzero">5.4.4.4. __nonzero__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get">5.4.4.5. get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">5.4.4.6. import_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keys">5.4.4.7. keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-parser">5.4.4.8. load_parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">5.4.4.9. readout_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set">5.4.4.10. set</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#multiordereddict">5.4.5. MultiOrderedDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setitem">5.4.5.1. __setitem__</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#casesensitiveconfigparser">5.4.6. CaseSensitiveConfigParser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#optionxform">5.4.6.1. optionxform</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">5.4.7. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synjson.html">5.5. yapydata.datatree.synjson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synjson4627.html">5.6. yapydata.datatree.synjson4627</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synprop.html">5.7. yapydata.datatree.synprop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synxml.html">5.8. yapydata.datatree.synxml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synyaml.html">5.9. yapydata.datatree.synyaml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">6. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">7. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">8. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">9. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">10. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yapydata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index_modules.html">5. Modules</a> &raquo;</li>
+        
+      <li>5.4. yapydata.datatree.synini</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/yapydata.datatree.synini.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="shortcuttab"><div class="section" id="yapydata-datatree-synini">
+<h1>5.4. yapydata.datatree.synini<a class="headerlink" href="#yapydata-datatree-synini" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-yapydata.datatree.synini">
+<span id="module"></span><h2>5.4.1. Module<a class="headerlink" href="#module-yapydata.datatree.synini" title="Permalink to this headline">¶</a></h2>
+<p>The <em>YapyData.ini</em> module provides the extended <em>INI</em> file syntax access
+with optional extended syntax features.
+The core syntax is defined by the standard library <em>configparser.ConfigParser</em>,
+<em>YapyData.data</em> supports <em>Python2.7</em>, and <em>Python3.5+</em>.</p>
+<p>Sources: <a class="reference external" href="_modules/yapydata/datatree/synini.html#">yapydata/datatree/synini.py</a></p>
+</div>
+<div class="section" id="functions">
+<h2>5.4.2. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="grow-branch">
+<h3>5.4.2.1. grow_branch<a class="headerlink" href="#grow-branch" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="yapydata.datatree.synini.grow_branch">
+<code class="sig-prename descclassname">yapydata.datatree.synini.</code><code class="sig-name descname">grow_branch</code><span class="sig-paren">(</span><em class="sig-param">*subpath</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#grow_branch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.grow_branch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new branch including the assigned value to
+the last node. The node types are defined by the types
+of the <em>subpath</em> entries.</p>
+<p>Supports a single linear branch only, no sub-branching.</p>
+<p>The created path is validated for permitted types.
+The derived types such as JSON have to support their
+own branch method. Thus provided as a static method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subpath</strong> – Variable list/tuple of path keys and indexes.</p></li>
+<li><p><strong>kargs</strong> – <dl class="simple">
+<dt>value:</dt><dd><p>Value to be assigned to the final node.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A created branch.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="readout-data">
+<h3>5.4.2.2. readout_data<a class="headerlink" href="#readout-data" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="yapydata.datatree.synini.readout_data">
+<code class="sig-prename descclassname">yapydata.datatree.synini.</code><code class="sig-name descname">readout_data</code><span class="sig-paren">(</span><em class="sig-param">xval</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#readout_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.readout_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scan tree into JSON representation. Uses recursive calls to
+readout_data through  the logical tree spanned by <em>ConfigParser</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>xval</strong> – <p>The loaded input tree as received from <em>ConfigDataINIX</em>,
+which is defined by <em>ConfigParser.read_file()</em>.</p>
+<p>For example a node <em>cf</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datafile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">fpname</span><span class="p">)</span>
+<span class="n">cf</span> <span class="o">=</span> <span class="n">ConfigDataINIX</span><span class="p">(</span><span class="n">datafile</span><span class="p">)</span>
+<span class="n">cf</span><span class="o">.</span><span class="n">load_parser</span><span class="p">()</span>
+<span class="n">cf</span><span class="o">.</span><span class="n">import_data</span><span class="p">(</span><span class="n">datafile</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>is read out as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datatree</span> <span class="o">=</span> <span class="n">readout_data</span><span class="p">(</span><span class="n">cf</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting scanned data structure.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="datatreeini">
+<h2>5.4.3. DataTreeINI<a class="headerlink" href="#datatreeini" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="yapydata.datatree.synini.DataTreeINI">
+<em class="property">class </em><code class="sig-prename descclassname">yapydata.datatree.synini.</code><code class="sig-name descname">DataTreeINI</code><span class="sig-paren">(</span><em class="sig-param">data={}</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#DataTreeINI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.DataTreeINI" title="Permalink to this definition">¶</a></dt>
+<dd><p>The the supported in-memory data tree representation of the <em>INI</em> syntax
+supports a JSON compatible in memory data structure. The supported structure
+relies on the standard <em>ConfigParser</em> - of <em>Python2</em> and <em>Python3</em> - with a
+minimum set of custom addons. For a full set of extensions refer to the
+package <em>multiconf</em>.</p>
+<p>The basic scheme of the stored syntax is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ini</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">memory</span><span class="o">-</span><span class="n">json</span> <span class="p">:</span><span class="o">=</span> <span class="p">{</span>
+    <span class="o">&lt;</span><span class="n">sections</span><span class="o">&gt;</span>
+<span class="p">}</span>
+<span class="n">sections</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">section</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="o">&lt;</span><span class="n">sections</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">section</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">section</span><span class="o">-</span><span class="n">attributes</span><span class="o">&gt;</span>
+<span class="n">section</span><span class="o">-</span><span class="n">attributes</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">pairs</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="o">&lt;</span><span class="n">section</span><span class="o">-</span><span class="n">attributes</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">pairs</span> <span class="p">:</span><span class="o">=</span>  <span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">pair</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">pairs</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">pair</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">separator</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">&gt;</span>
+<span class="n">attr</span><span class="o">-</span><span class="n">name</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;any valid ConfigParser string compatible to a JSON string&quot;</span>
+<span class="n">attr</span><span class="o">-</span><span class="n">value</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;</span>   <span class="o">|</span> <span class="o">&lt;</span><span class="n">integer</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">string</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span>     <span class="o">|</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">string</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="nb">dict</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;</span>   <span class="o">|</span> <span class="o">&lt;</span><span class="n">boolean</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">string</span><span class="o">&gt;</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="n">null</span><span class="o">&gt;</span>      <span class="o">|</span> <span class="o">&lt;</span><span class="n">null</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">string</span><span class="o">&gt;</span>
+<span class="p">)</span>
+
+<span class="n">integer</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">string</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;</span> <span class="s1">&#39;&quot;&#39;</span>                  <span class="c1"># treated as string</span>
+<span class="n">integer</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;any non-quoted valid integer value&quot;</span>         <span class="c1"># treated as integer</span>
+<span class="nb">float</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">string</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="s1">&#39;&quot;&#39;</span>                      <span class="c1"># treated as string</span>
+<span class="nb">float</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;any non-quoted valid integer value&quot;</span>           <span class="c1"># treated as float</span>
+<span class="n">string</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;any valid string&quot;</span>
+<span class="n">boolean</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="n">true</span> <span class="o">|</span> <span class="n">false</span><span class="p">)</span>
+<span class="n">boolean</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">string</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;</span> <span class="s1">&#39;&quot;&#39;</span>                  <span class="c1"># treated as string</span>
+<span class="n">null</span> <span class="p">:</span><span class="o">=</span> <span class="n">null</span>
+<span class="n">null</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">string</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">&lt;</span><span class="n">null</span><span class="o">&gt;</span> <span class="s1">&#39;&quot;&#39;</span>                        <span class="c1"># treated as string</span>
+<span class="n">separator</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span> <span class="s1">&#39;:&#39;</span> <span class="o">|</span> <span class="s1">&#39;=&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>The following derived proprietary container types are provided. These are
+compatible with the basic representation of the higher layer <em>multiconf</em>
+package, which also provides command line compilation and cross-conversion
+utilies.</p>
+<p>The <em>list</em> entries are represented as multiple lines of entries with leading
+white-spaces and a comma.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">proprietary</span><span class="o">-</span><span class="n">basic</span><span class="o">-</span><span class="n">multiline</span><span class="o">-</span><span class="nb">list</span><span class="o">-</span><span class="n">syntax</span><span class="o">&gt;</span>
+<span class="n">proprietary</span><span class="o">-</span><span class="n">basic</span><span class="o">-</span><span class="n">multiline</span><span class="o">-</span><span class="nb">list</span><span class="o">-</span><span class="n">syntax</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">separator</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">item</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">items</span><span class="o">-</span><span class="n">multiline</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+<span class="nb">list</span><span class="o">-</span><span class="n">items</span><span class="o">-</span><span class="n">multiline</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">ws</span><span class="o">&gt;</span> <span class="s1">&#39;,&#39;</span> <span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">item</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="nb">list</span><span class="o">-</span><span class="n">items</span><span class="o">-</span><span class="n">multiline</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="nb">list</span><span class="o">-</span><span class="n">item</span> <span class="p">:</span><span class="o">=</span> <span class="n">attr</span><span class="o">-</span><span class="n">value</span>
+<span class="n">ws</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;arbitrary whitespace - &lt;SPACE&gt;, &lt;tab&gt;&quot;</span>
+<span class="n">CR</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;new line&quot;</span>
+</pre></div>
+</div>
+<p>The <em>dict</em> entries are represented as multiple lines of entries with leading
+white-spaces and a comma:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">proprietary</span><span class="o">-</span><span class="n">basic</span><span class="o">-</span><span class="n">multiline</span><span class="o">-</span><span class="nb">dict</span><span class="o">-</span><span class="n">syntax</span><span class="o">&gt;</span>
+<span class="n">proprietary</span><span class="o">-</span><span class="n">basic</span><span class="o">-</span><span class="n">multiline</span><span class="o">-</span><span class="nb">dict</span><span class="o">-</span><span class="n">syntax</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">separator</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">attr</span><span class="o">-</span><span class="nb">dict</span><span class="o">-</span><span class="n">item</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nb">dict</span><span class="o">-</span><span class="n">items</span><span class="o">-</span><span class="n">multiline</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+<span class="nb">dict</span><span class="o">-</span><span class="n">items</span><span class="o">-</span><span class="n">multiline</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">ws</span><span class="o">&gt;</span> <span class="s1">&#39;,&#39;</span> <span class="o">&lt;</span><span class="nb">dict</span><span class="o">-</span><span class="n">item</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="nb">dict</span><span class="o">-</span><span class="n">items</span><span class="o">-</span><span class="n">multiline</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="nb">dict</span><span class="o">-</span><span class="n">item</span> <span class="p">:</span><span class="o">=</span> <span class="n">attr</span><span class="o">-</span><span class="n">value</span><span class="o">-</span><span class="n">pair</span>
+<span class="n">ws</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;arbitrary whitespace - &lt;SPACE&gt;, &lt;tab&gt;&quot;</span>
+<span class="n">CR</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;new line&quot;</span>
+</pre></div>
+</div>
+<p>The data tree is compatible with the standard packas <em>json</em>.</p>
+</dd></dl>
+
+<div class="section" id="init">
+<h3>5.4.3.1. __init__<a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.DataTreeINI.__init__">
+<code class="sig-prename descclassname">DataTreeINI.</code><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">data={}</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#DataTreeINI.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.DataTreeINI.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – <p>A JSON compliant in-memory data tree in accordance to RFC-7159:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">json</span><span class="o">-</span><span class="n">value</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="nb">object</span> <span class="o">|</span> <span class="n">array</span>
+    <span class="o">|</span> <span class="n">number</span>
+    <span class="o">|</span> <span class="n">string</span>
+    <span class="o">|</span> <span class="n">false</span>  <span class="o">|</span> <span class="n">true</span>
+    <span class="o">|</span> <span class="n">null</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The equivalent <em>Python</em> types are - based on JSON-RFC7159 as canonical in-memory data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RFC</span><span class="o">-</span><span class="mi">7159</span><span class="o">-</span><span class="nb">type</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">json</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="nb">dict</span> <span class="o">|</span> <span class="nb">list</span>            <span class="c1"># see: object, array</span>
+    <span class="o">|</span> <span class="nb">int</span>  <span class="o">|</span> <span class="nb">float</span>           <span class="c1"># see: number</span>
+    <span class="o">|</span> <span class="nb">str</span>                    <span class="c1"># see: unicode / for Python: ISSTR = (str(3) | unicode(2))</span>
+    <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="kc">True</span>  <span class="o">|</span> <span class="kc">False</span>   <span class="c1"># see: null, true, false</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The initial data defines the permitted type of the first item
+within the <em>subpath</em> of the spanned data tree.</p>
+<p>Thus atomic data types define a single node data tree only - new in RFC-7159.</p>
+</p></li>
+<li><p><strong>kargs</strong> – <dl>
+<dt>syntax:</dt><dd><p>Defines the syntax variant:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">syntax</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="s1">&#39;base&#39;</span>  <span class="c1"># base core syntax for multi-syntax environments with global types</span>
+    <span class="o">|</span> <span class="s1">&#39;ext&#39;</span>   <span class="c1"># extended syntax with specific extension for this module</span>
+    <span class="o">|</span> <span class="s1">&#39;auto&#39;</span>  <span class="c1"># for now enables all choices - basically the same as &#39;ext&#39;</span>
+<span class="p">)</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;base&#39;</span>  <span class="c1"># maximum compatibility for multi-syntax environments</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None / initialized object</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="yapydata.datatree.datatree.html#yapydata.datatree.datatree.YapyDataDataTreeError" title="yapydata.datatree.datatree.YapyDataDataTreeError"><strong>YapyDataDataTreeError</strong></a> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="setattr">
+<h3>5.4.3.2. __setattr__<a class="headerlink" href="#setattr" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.DataTreeINI.__setattr__">
+<code class="sig-prename descclassname">DataTreeINI.</code><code class="sig-name descname">__setattr__</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#DataTreeINI.__setattr__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.DataTreeINI.__setattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates types of own data attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – <p>Name of the attribute. Following are reserved and
+treated special:</p>
+<ul>
+<li><p>type: str - ‘data’
+The value is treated as the replacement of the internal
+data attribute. Replaces or creates the complete data
+of teh current instance.</p></li>
+</ul>
+</p></li>
+<li><p><strong>value</strong> – The value of the attribute. This by default superposes
+present values by replacement. Non-present are created.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#yapydata.datatree.synini.YapyDataINIError" title="yapydata.datatree.synini.YapyDataINIError"><strong>YapyDataINIError</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="isvalid-top">
+<h3>5.4.3.3. isvalid_top<a class="headerlink" href="#isvalid-top" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.DataTreeINI.isvalid_top">
+<em class="property">static </em><code class="sig-prename descclassname">DataTreeINI.</code><code class="sig-name descname">isvalid_top</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#DataTreeINI.isvalid_top"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.DataTreeINI.isvalid_top" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate compliance of top-node.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="import-data">
+<h3>5.4.3.4. import_data<a class="headerlink" href="#import-data" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.DataTreeINI.import_data">
+<code class="sig-prename descclassname">DataTreeINI.</code><code class="sig-name descname">import_data</code><span class="sig-paren">(</span><em class="sig-param">fpname</em>, <em class="sig-param">key=None</em>, <em class="sig-param">node=None</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#DataTreeINI.import_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.DataTreeINI.import_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads an INI file. This is a simple basic method for the application
+on the lower layers of the software stack. It is designed for minimal
+dependencies. The used library is the standard <em>configparser</em> package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fpname</strong> – <p>File path name of the <em>INI</em> file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fpname</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">ini</span><span class="o">-</span><span class="n">file</span><span class="o">-</span><span class="n">path</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">ini</span><span class="o">-</span><span class="n">file</span><span class="o">-</span><span class="n">path</span><span class="o">-</span><span class="n">name</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="n">file</span><span class="o">-</span><span class="n">path</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>           <span class="c1"># with extension</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">-</span><span class="n">path</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="s1">&#39;.ini&#39;</span>    <span class="c1"># without extension, for multiple syntaxes</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>key</strong> – <p>The key for the insertion point:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">-</span><span class="n">data</span><span class="o">&gt;</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">None</span> <span class="o">-</span> <span class="n">replace</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>The caller is responsible for the containment of the provided
+node within the data structure represented by this object. No
+checks are performed.</p>
+</p></li>
+<li><p><strong>node</strong> – <p>The node for the insertion of the read data.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">top</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reference to read data structure.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>YapyDataConfigError</strong> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="configdatainix">
+<h2>5.4.4. ConfigDataINIX<a class="headerlink" href="#configdatainix" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="yapydata.datatree.synini.ConfigDataINIX">
+<em class="property">class </em><code class="sig-prename descclassname">yapydata.datatree.synini.</code><code class="sig-name descname">ConfigDataINIX</code><span class="sig-paren">(</span><em class="sig-param">conf</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX" title="Permalink to this definition">¶</a></dt>
+<dd><p>A simple configuration file parser based on the standard <em>ConfigParser</em> class.</p>
+<p>The final resulting data with completely applied syntax-extensions is available by
+the method <em>readout_data()</em>.</p>
+<p>Supports the data types:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span>
+
+<span class="n">multi</span><span class="o">-</span><span class="n">line</span> <span class="n">lists</span><span class="p">,</span>
+<span class="n">multi</span><span class="o">-</span><span class="n">line</span> <span class="n">search</span><span class="o">-</span><span class="n">paths</span>
+
+<span class="n">null</span>
+<span class="n">true</span><span class="p">,</span> <span class="n">false</span>
+</pre></div>
+</div>
+<p>The optional structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">global</span><span class="o">-</span><span class="n">attributes</span><span class="o">-</span><span class="n">without</span><span class="o">-</span><span class="n">section</span>
+</pre></div>
+</div>
+<p>The standard file extensions are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;.ini&#39;</span>
+</pre></div>
+</div>
+<p>The supported stnadard features of <em>ConfigParser</em> include:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">interpolation</span>
+</pre></div>
+</div>
+<p>For detailed information refer to the parameters of the <em>__init__</em> method.</p>
+</dd></dl>
+
+<div class="section" id="id1">
+<h3>5.4.4.1. __init__<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.__init__">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">conf</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**conf**</strong> – <p>The file path name of the configuration file.</p>
+<dl>
+<dt>kargs:</dt><dd><p>For additional parameters see <em>ConfigData</em>.</p>
+<dl>
+<dt>allow_no_value:</dt><dd><p>Enables the support for keys without values
+of <em>INI</em> format files. Supported by the standard
+library based <em>configparser</em> . The value
+could be applied to derived custom parser:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>See parameter <em>allow_no_value</em> of
+<em>configparser.ConfigParser</em>.</p>
+</dd>
+<dt>casesens:</dt><dd><p>Preserves case of keys:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</dd>
+<dt>comment_prefixes:</dt><dd><p>Defines the comment prefixes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>delimiters:</dt><dd><p>Defines the delimiters for <em>INI</em> format based
+files. Supported by the standard library based
+<em>configparser</em> . The value could be applied to
+derived custom parser:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</dd>
+<dt>dict_type:</dt><dd><p>The type of dictionary to be used by the parent class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>empty_lines_in_values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<dl>
+<dt>inline_comment_prefixes:</dt><dd><p>Defines the inline comment prefixes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</dd>
+<dt>interpolation:</dt><dd><p>Enables the creation and replacement of variables
+within configuration files. Depends on the derived
+class, when not supported simply ignored:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>See parameter <em>interpolation</em> of
+<em>configparser.ConfigParser</em>.</p>
+</dd>
+<dt>sectionpaths:</dt><dd><p>Enables the conversion and interpretation of section names
+as path entries. This is required, when the versatility
+of the converted and/or merged syntaxes are of different degree,
+and the actual used syntax data path elements could not be
+converted. In this case an intermediate sub-syntax is supported
+by a dotted path notation, which could be converted between the
+applied syntaxes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sectionpaths</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+     <span class="kc">True</span>         <span class="c1"># long data paths e.g. from *JSON* are</span>
+                  <span class="c1"># converted to dotted section names</span>
+                  <span class="c1"># and vice versa</span>
+   <span class="o">|</span> <span class="kc">False</span>        <span class="c1"># requires compatible versatility,</span>
+                  <span class="c1"># else raises exception</span>
+<span class="p">)</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>sectionpaths=True:</dt><dd><p>The section names of the native <em>INIX</em> syntax by default
+constitute a one-level-only depth of data structures for
+the complexity of structure definition.</p>
+</dd>
+</dl>
+<p>sectionpaths=False:</p>
+</dd>
+<dt>sectionpathsep:</dt><dd><p>Defines the character used in section names as path separator.
+The character has to be valid as provided by the config parser of the syntax,
+in particular a valid character for section names of <em>INI</em> files, and has
+to be semantically suitable as a special separator character:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sectionpathsep</span> <span class="p">:</span><span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+</pre></div>
+</div>
+<p>Valid only when <em>sectionpaths</em> is active.</p>
+</dd>
+<dt>strict:</dt><dd><p>Controls the verification of duplicate sections
+when these are used:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">strict</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="kc">True</span>    <span class="c1"># raise an exception for duplicates</span>
+    <span class="o">|</span> <span class="kc">False</span>   <span class="c1"># accept</span>
+<span class="p">)</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>See <em>strict</em> option of <em>ConfigParser</em>.</p>
+</dd>
+<dt>quiet:</dt><dd><p>Suppresses display of non-errors:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None/object</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="bool">
+<h3>5.4.4.2. __bool__<a class="headerlink" href="#bool" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.__bool__">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">__bool__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.__bool__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.__bool__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="getitem">
+<h3>5.4.4.3. __getitem__<a class="headerlink" href="#getitem" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.__getitem__">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">__getitem__</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.__getitem__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the section object.
+Requires for Python2 the backport from Python3 “configparser”, see PyPI</p>
+</dd></dl>
+
+</div>
+<div class="section" id="nonzero">
+<h3>5.4.4.4. __nonzero__<a class="headerlink" href="#nonzero" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.__nonzero__">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">__nonzero__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.__nonzero__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.__nonzero__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="get">
+<h3>5.4.4.5. get<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.get">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the section object - compatible to Python3 and
+the backport of the <em>configparser</em>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h3>5.4.4.6. import_data<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.import_data">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">import_data</code><span class="sig-paren">(</span><em class="sig-param">conf</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.import_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.import_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the configuration file and imports data. Supported standard types are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;cfg&#39;</span><span class="p">,</span> <span class="s1">&#39;conf&#39;</span><span class="p">,</span> <span class="s1">&#39;ini&#39;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>The imported data for the suported standard syntax is interpreted as:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 8%" />
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 16%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>syntax of imported config</p></th>
+<th class="head"><p>sections as</p></th>
+<th class="head"><p>keys as</p></th>
+<th class="head"><p>path as</p></th>
+<th class="head"><p>insertion position</p></th>
+<th class="head"><p>remark</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="parser_conf.html">conf</a></p></td>
+<td><p>sections</p></td>
+<td><p>keys to &lt;section&gt;</p></td>
+<td><p>–</p></td>
+<td><p>top, &lt;section&gt;, DEFAULT</p></td>
+<td><p>no rename and no nested sections, no globals</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="parser_ini.html">ini</a></p></td>
+<td><p>sections</p></td>
+<td><p>keys by section</p></td>
+<td><p>–</p></td>
+<td><p>top, &lt;section&gt;, DEFAULT</p></td>
+<td><p>no rename and no nested sections, no globals</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="parser_inix.html">inix</a></p></td>
+<td><p>sections</p></td>
+<td><p>keys by section</p></td>
+<td><p>–</p></td>
+<td><p>top, &lt;section&gt;, DEFAULT</p></td>
+<td><p>no rename and no nested sections, no globals</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>conf</strong> – <p>The file path name of the configuration file.</p>
+<dl>
+<dt>kargs:</dt><dd><p>Unknown options are passed through to the
+configuration parser.</p>
+<dl>
+<dt>anchor:</dt><dd><p>The insertion point for the imported data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anchor</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+     <span class="o">&lt;</span><span class="n">section</span><span class="o">&gt;</span>
+   <span class="o">|</span> <span class="s1">&#39;DEFAULT&#39;</span>
+   <span class="o">|</span> <span class="o">&lt;</span><span class="n">top</span><span class="o">&gt;</span>
+<span class="p">)</span>
+
+<span class="n">top</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;imports valid INIX/INI/CONF files with sections only&quot;</span>
+<span class="n">section</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;the name of the section&quot;</span>
+<span class="s1">&#39;DEFAULT&#39;</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;keyword defined by the standard library as</span>
+              <span class="k">global</span> <span class="n">defaults</span> <span class="k">for</span> <span class="n">interpolation</span><span class="s2">&quot;</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">top</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt>strict:</dt><dd><p>Activates validation. The boolean value is
+mapped to the corresponding option of the
+called import parser:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 27%" />
+<col style="width: 19%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>parser</p></th>
+<th class="head"><p>option</p></th>
+<th class="head"><p>True</p></th>
+<th class="head"><p>False</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>conf</p></td>
+<td><p>strict</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>ini</p></td>
+<td><p>strict</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>inix</p></td>
+<td><p>strict</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd>
+<dt>syntax:</dt><dd><p>Force the provided syntax. For available
+values refer to syntax multiplexer
+<em>self.synmux</em>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True for success, else False or raises an exception.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="keys">
+<h3>5.4.4.7. keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.keys">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="load-parser">
+<h3>5.4.4.8. load_parser<a class="headerlink" href="#load-parser" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.load_parser">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">load_parser</code><span class="sig-paren">(</span><em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.load_parser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.load_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the syntax parser <em>configparser.ConfigParser</em> and
+patches the behaviour for common ‘conf’ and ‘cfg’ format.
+Supports the most of the files in ‘/etc’ of POSIX based
+OS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kargs</strong> – <p>For the description of the options refer to the
+method header of <em>multiconf.data.load_parser()</em>.
+Unknown are passed through to the loaded
+configuration parser.</p>
+<p>For the following parameters see __init__:</p>
+<ul class="simple">
+<li><p><strong>allow_no_value</strong></p></li>
+<li><p><strong>casesens</strong></p></li>
+<li><p><strong>comment_prefixes</strong></p></li>
+<li><p><strong>inline_comment_prefixes</strong></p></li>
+<li><p><strong>delimiters</strong></p></li>
+<li><p><strong>dict_type</strong></p></li>
+<li><p><strong>empty_lines_in_values</strong></p></li>
+<li><p><strong>interpolation</strong></p></li>
+<li><p><strong>strict</strong></p></li>
+<li><p><strong>quiet</strong></p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True, or raises an exception.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="id3">
+<h3>5.4.4.9. readout_data<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.readout_data">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">readout_data</code><span class="sig-paren">(</span><em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.readout_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.readout_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the configuration as JSON compatible format.
+Removes the special dummy section header ‘globaldummy’,
+see <em>import_data</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kargs</strong> – <dl>
+<dt>stronly:</dt><dd><p>Scans all as <em>str</em> only.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stronly</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="kc">True</span>    <span class="c1"># int and float are</span>
+              <span class="c1"># converted to str</span>
+    <span class="o">|</span> <span class="kc">False</span>   <span class="c1"># numeric values are kept</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>default := False</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>In-memory JSON compatible data.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="set">
+<h3>5.4.4.10. set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.ConfigDataINIX.set">
+<code class="sig-prename descclassname">ConfigDataINIX.</code><code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param">section</em>, <em class="sig-param">option</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#ConfigDataINIX.set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.ConfigDataINIX.set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+<div class="section" id="multiordereddict">
+<h2>5.4.5. MultiOrderedDict<a class="headerlink" href="#multiordereddict" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="yapydata.datatree.synini.MultiOrderedDict">
+<em class="property">class </em><code class="sig-prename descclassname">yapydata.datatree.synini.</code><code class="sig-name descname">MultiOrderedDict</code><a class="reference internal" href="_modules/yapydata/datatree/synini.html#MultiOrderedDict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.MultiOrderedDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add lists for multi-key items.</p>
+</dd></dl>
+
+<div class="section" id="setitem">
+<h3>5.4.5.1. __setitem__<a class="headerlink" href="#setitem" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.MultiOrderedDict.__setitem__">
+<code class="sig-prename descclassname">MultiOrderedDict.</code><code class="sig-name descname">__setitem__</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#MultiOrderedDict.__setitem__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.MultiOrderedDict.__setitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Intercept keys which are already present.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="casesensitiveconfigparser">
+<h2>5.4.6. CaseSensitiveConfigParser<a class="headerlink" href="#casesensitiveconfigparser" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="yapydata.datatree.synini.CaseSensitiveConfigParser">
+<em class="property">class </em><code class="sig-prename descclassname">yapydata.datatree.synini.</code><code class="sig-name descname">CaseSensitiveConfigParser</code><span class="sig-paren">(</span><em class="sig-param">defaults=None</em>, <em class="sig-param">dict_type=&lt;class 'dict'&gt;</em>, <em class="sig-param">allow_no_value=False</em>, <em class="sig-param">*</em>, <em class="sig-param">delimiters=('='</em>, <em class="sig-param">':')</em>, <em class="sig-param">comment_prefixes=('#'</em>, <em class="sig-param">';')</em>, <em class="sig-param">inline_comment_prefixes=None</em>, <em class="sig-param">strict=True</em>, <em class="sig-param">empty_lines_in_values=True</em>, <em class="sig-param">default_section='DEFAULT'</em>, <em class="sig-param">interpolation=&lt;object object&gt;</em>, <em class="sig-param">converters=&lt;object object&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#CaseSensitiveConfigParser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.CaseSensitiveConfigParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preserves case of all keys - including DEFAULT section.
+Suppress formatting of <em>optionstr</em>, preserves upper case characters.</p>
+</dd></dl>
+
+<div class="section" id="optionxform">
+<h3>5.4.6.1. optionxform<a class="headerlink" href="#optionxform" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synini.CaseSensitiveConfigParser.optionxform">
+<code class="sig-prename descclassname">CaseSensitiveConfigParser.</code><code class="sig-name descname">optionxform</code><span class="sig-paren">(</span><em class="sig-param">optionstr</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synini.html#CaseSensitiveConfigParser.optionxform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.CaseSensitiveConfigParser.optionxform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>5.4.7. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="yapydata.datatree.synini.YapyDataINIError">
+<em class="property">exception </em><code class="sig-prename descclassname">yapydata.datatree.synini.</code><code class="sig-name descname">YapyDataINIError</code><a class="reference internal" href="_modules/yapydata/datatree/synini.html#YapyDataINIError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synini.YapyDataINIError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic INI syntax error.</p>
+</dd></dl>
+
+</div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="yapydata.datatree.synjson.html" class="btn btn-neutral float-right" title="5.5. yapydata.datatree.synjson" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="yapydata.datatree.datatree.html" class="btn btn-neutral float-left" title="5.3. yapydata.datatree.datatree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 04, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

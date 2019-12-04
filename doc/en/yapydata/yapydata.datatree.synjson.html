@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.5. yapydata.datatree.synjson &mdash; yapydata  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5.6. yapydata.datatree.synjson4627" href="yapydata.datatree.synjson4627.html" />
+    <link rel="prev" title="5.4. yapydata.datatree.synini" href="yapydata.datatree.synini.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">YapyData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">4. Documents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_modules.html">5. Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="yapydata.html">5.1. yapydata.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.html">5.2. yapydata.datatree.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.datatree.html">5.3. yapydata.datatree.datatree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synini.html">5.4. yapydata.datatree.synini</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.5. yapydata.datatree.synjson</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-yapydata.datatree.synjson">5.5.1. Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">5.5.2. Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grow-branch">5.5.2.1. grow_branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#readout-data">5.5.2.2. readout_data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#datatreejson">5.5.3. DataTreeJSON</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#init">5.5.3.1. __init__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#isvalid-top">5.5.3.2. isvalid_top</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setattr">5.5.3.3. __setattr__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create">5.5.3.4. create</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import-data">5.5.3.5. import_data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">5.5.4. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synjson4627.html">5.6. yapydata.datatree.synjson4627</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synprop.html">5.7. yapydata.datatree.synprop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synxml.html">5.8. yapydata.datatree.synxml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yapydata.datatree.synyaml.html">5.9. yapydata.datatree.synyaml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">6. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">7. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">8. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">9. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">10. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yapydata</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index_modules.html">5. Modules</a> &raquo;</li>
+        
+      <li>5.5. yapydata.datatree.synjson</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/yapydata.datatree.synjson.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="shortcuttab"><div class="section" id="yapydata-datatree-synjson">
+<h1>5.5. yapydata.datatree.synjson<a class="headerlink" href="#yapydata-datatree-synjson" title="Permalink to this headline">¶</a></h1>
+<p>The <em>JSON</em> access in compliance to RFC-7159 <a class="reference internal" href="references.html#rfc7159" id="id1"><span>[RFC7159]</span></a>.</p>
+<div class="section" id="module-yapydata.datatree.synjson">
+<span id="module"></span><h2>5.5.1. Module<a class="headerlink" href="#module-yapydata.datatree.synjson" title="Permalink to this headline">¶</a></h2>
+<p>The <em>YapyData.json</em> module provides <em>JSON</em> access in compliance to RFC-7159 <a class="reference internal" href="references.html#rfc7159" id="id2"><span>[RFC7159]</span></a>.</p>
+<p>Sources: <a class="reference external" href="_modules/yapydata/datatree/synjson.html#">yapydata/datatree/synjson.py</a></p>
+</div>
+<div class="section" id="functions">
+<h2>5.5.2. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="grow-branch">
+<h3>5.5.2.1. grow_branch<a class="headerlink" href="#grow-branch" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="yapydata.datatree.synjson.grow_branch">
+<code class="sig-prename descclassname">yapydata.datatree.synjson.</code><code class="sig-name descname">grow_branch</code><span class="sig-paren">(</span><em class="sig-param">*subpath</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synjson.html#grow_branch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synjson.grow_branch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new branch including the assigned value to
+the last node. The node types are defined by the types
+of the <em>subpath</em> entries.</p>
+<p>Supports a single linear branch only, no sub-branching.</p>
+<p>The created path is validated for permitted types.
+The derived types such as JSON have to support their
+own branch method. Thus provided as a static method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subpath</strong> – Variable list/tuple of path keys and indexes.</p></li>
+<li><p><strong>kargs</strong> – <dl class="simple">
+<dt>value:</dt><dd><p>Value to be assigned to the final node.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A created branch.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="readout-data">
+<h3>5.5.2.2. readout_data<a class="headerlink" href="#readout-data" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="yapydata.datatree.synjson.readout_data">
+<code class="sig-prename descclassname">yapydata.datatree.synjson.</code><code class="sig-name descname">readout_data</code><span class="sig-paren">(</span><em class="sig-param">xval</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synjson.html#readout_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synjson.readout_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>For API call-compliance with other syntaxes. Returns here the
+input tree only.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>xval</strong> – The input tree from the <em>DataTreeJSON</em> - which is
+the result from <em>json.load()</em>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The returns here the input <em>xval</em>.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="datatreejson">
+<h2>5.5.3. DataTreeJSON<a class="headerlink" href="#datatreejson" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="yapydata.datatree.synjson.DataTreeJSON">
+<em class="property">class </em><code class="sig-prename descclassname">yapydata.datatree.synjson.</code><code class="sig-name descname">DataTreeJSON</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synjson.html#DataTreeJSON"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synjson.DataTreeJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides JSON RFC-7159 compliant in-memory data trees.</p>
+</dd></dl>
+
+<div class="section" id="init">
+<h3>5.5.3.1. __init__<a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synjson.DataTreeJSON.__init__">
+<code class="sig-prename descclassname">DataTreeJSON.</code><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synjson.html#DataTreeJSON.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synjson.DataTreeJSON.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – <p>A JSON compliant in-memory data tree in accordance to RFC-7159:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">json</span><span class="o">-</span><span class="n">value</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="nb">object</span> <span class="o">|</span> <span class="n">array</span>
+    <span class="o">|</span> <span class="n">number</span>
+    <span class="o">|</span> <span class="n">string</span>
+    <span class="o">|</span> <span class="n">false</span>  <span class="o">|</span> <span class="n">true</span>
+    <span class="o">|</span> <span class="n">null</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The equivalent <em>Python</em> types are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">RFC</span><span class="o">-</span><span class="mi">7159</span><span class="o">-</span><span class="nb">type</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">json</span><span class="o">&gt;</span>
+
+<span class="n">RFC</span><span class="o">-</span><span class="mi">7159</span><span class="o">-</span><span class="nb">type</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">json</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="nb">dict</span> <span class="o">|</span> <span class="nb">list</span>            <span class="c1"># see: object, array</span>
+    <span class="o">|</span> <span class="nb">int</span>  <span class="o">|</span> <span class="nb">float</span>           <span class="c1"># see: number</span>
+    <span class="o">|</span> <span class="nb">str</span>                    <span class="c1"># see: unicode / for Python: ISSTR = (str(3) | unicode(2))</span>
+    <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="kc">True</span>  <span class="o">|</span> <span class="kc">False</span>   <span class="c1"># see: null, true, false</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The initial data defines the permitted type of the first item
+within the <em>subpath</em> of the spanned data tree.</p>
+<p>Thus atomic data types define a single node data tree only - new in RFC-7159.</p>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None / initialized object</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="yapydata.datatree.datatree.html#yapydata.datatree.datatree.YapyDataDataTreeError" title="yapydata.datatree.datatree.YapyDataDataTreeError"><strong>YapyDataDataTreeError</strong></a> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="isvalid-top">
+<h3>5.5.3.2. isvalid_top<a class="headerlink" href="#isvalid-top" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synjson.DataTreeJSON.isvalid_top">
+<em class="property">static </em><code class="sig-prename descclassname">DataTreeJSON.</code><code class="sig-name descname">isvalid_top</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synjson.html#DataTreeJSON.isvalid_top"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synjson.DataTreeJSON.isvalid_top" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate conformance of top-node to RFC-7159.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="setattr">
+<h3>5.5.3.3. __setattr__<a class="headerlink" href="#setattr" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synjson.DataTreeJSON.__setattr__">
+<code class="sig-prename descclassname">DataTreeJSON.</code><code class="sig-name descname">__setattr__</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synjson.html#DataTreeJSON.__setattr__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synjson.DataTreeJSON.__setattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates types of own data attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – <p>Name of the attribute. Following are reserved and
+treated special:</p>
+<ul>
+<li><p>type: str - ‘data’
+The value is treated as the replacement of the internal
+data attribute. Replaces or creates the complete data
+of teh current instance.</p></li>
+</ul>
+</p></li>
+<li><p><strong>value</strong> – The value of the attribute. This by default superposes
+present values by replacement. Non-present are created.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="yapydata.datatree.datatree.html#yapydata.datatree.datatree.YapyDataDataTreeError" title="yapydata.datatree.datatree.YapyDataDataTreeError"><strong>YapyDataDataTreeError</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="create">
+<h3>5.5.3.4. create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synjson.DataTreeJSON.create">
+<code class="sig-prename descclassname">DataTreeJSON.</code><code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">*subpath</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synjson.html#DataTreeJSON.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synjson.DataTreeJSON.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds constraints in accordance to RFC-7159.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="import-data">
+<h3>5.5.3.5. import_data<a class="headerlink" href="#import-data" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="yapydata.datatree.synjson.DataTreeJSON.import_data">
+<code class="sig-prename descclassname">DataTreeJSON.</code><code class="sig-name descname">import_data</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">key=None</em>, <em class="sig-param">node=None</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/yapydata/datatree/synjson.html#DataTreeJSON.import_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synjson.DataTreeJSON.import_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a JSON file. This is a simple basic method for the application
+on the lower layers of the software stack. It is designed for minimal
+dependencies. The used library is the standard <em>json</em> package.
+The data is not validated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> – <p>The source of the <em>JSON</em> string data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">input</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+       <span class="o">&lt;</span><span class="n">fpname</span><span class="o">&gt;</span>        <span class="c1"># file path name</span>
+    <span class="o">|</span>  <span class="o">&lt;</span><span class="n">file</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;</span>       <span class="c1"># file pointer id</span>
+    <span class="o">|</span>  <span class="o">&lt;</span><span class="n">io</span><span class="o">-</span><span class="n">stream</span><span class="o">&gt;</span>     <span class="c1"># io stream id</span>
+<span class="p">)</span>
+
+<span class="n">fpname</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">json</span><span class="o">-</span><span class="n">file</span><span class="o">-</span><span class="n">path</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">json</span><span class="o">-</span><span class="n">file</span><span class="o">-</span><span class="n">path</span><span class="o">-</span><span class="n">name</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="n">file</span><span class="o">-</span><span class="n">path</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>           <span class="c1"># with extension</span>
+    <span class="o">|</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">-</span><span class="n">path</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="s1">&#39;.json&#39;</span>   <span class="c1"># without extension, for multiple syntaxes</span>
+<span class="p">)</span>
+<span class="n">file</span><span class="o">-</span><span class="nb">id</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;open file: file_id = open(&lt;fpname&gt;)&quot;</span>
+<span class="n">io</span><span class="o">-</span><span class="n">stream</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;open io stream - io_stream = io.StreamIO(&lt;json-string&gt;)&quot;</span>
+<span class="n">json</span><span class="o">-</span><span class="n">string</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;a valid string in accordance to RFC-7159&quot;</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>key</strong> – <p>The key for the insertion point:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">-</span><span class="n">data</span><span class="o">&gt;</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">None</span> <span class="o">-</span> <span class="n">replace</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>The caller is responsible for the containment of the provided
+node within the data structure represented by this object. No
+checks are performed.</p>
+</p></li>
+<li><p><strong>node</strong> – <p>The node for the insertion of the read data.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">top</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reference to read data structure.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>YapyDataConfigError</strong> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>5.5.4. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="yapydata.datatree.synjson.YapyDataJSONError">
+<em class="property">exception </em><code class="sig-prename descclassname">yapydata.datatree.synjson.</code><code class="sig-name descname">YapyDataJSONError</code><a class="reference internal" href="_modules/yapydata/datatree/synjson.html#YapyDataJSONError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#yapydata.datatree.synjson.YapyDataJSONError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic JSON syntax error.</p>
+</dd></dl>
+
+</div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="yapydata.datatree.synjson4627.html" class="btn btn-neutral float-right" title="5.6. yapydata.datatree.synjson4627" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="yapydata.datatree.synini.html" class="btn btn-neutral float-left" title="5.4. yapydata.datatree.synini" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 04, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
