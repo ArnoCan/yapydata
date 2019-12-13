@@ -115,7 +115,7 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class DataTreePROP</h1><p class="nomargin-top"><span class="codelink"><a href="yapydata.datatree.synprop-pysrc.html#DataTreePROP">source&nbsp;code</a></span></p>
 <center>
-<center>  <map id="uml_class_diagram_for_yapydata_20" name="uml_class_diagram_for_yapydata_20">
+<center>  <map id="uml_class_diagram_for_yapydata_12" name="uml_class_diagram_for_yapydata_12">
 <area shape="rect" id="node1_11" href="yapydata.datatree.synprop.DataTreePROP-class.html#__init__" title="NOT YET IMPLEMENTED" alt="" coords="124,352,308,372"/>
 <area shape="rect" id="node1" href="yapydata.datatree.synprop.DataTreePROP-class.html" title="Supports Java .properties." alt="" coords="112,320,320,379"/>
 <area shape="rect" id="node2_12" href="yapydata.datatree.datatree.DataTree-class.html#M_FIRST" title="yapydata.datatree.datatree.DataTree.M_FIRST" alt="" coords="17,93,415,113"/>
@@ -131,7 +131,7 @@
 <area shape="rect" id="node2" href="yapydata.datatree.datatree.DataTree-class.html" title="Provides JSON based read&#45;only configuration of capabilities." alt="" coords="5,68,427,301"/>
 <area shape="rect" id="node3" href="javascript:void(0);" title="??&#45;10" alt="" coords="185,5,245,49"/>
 </map>
-  <img src="uml_class_diagram_for_yapydata_20.gif" alt='' usemap="#uml_class_diagram_for_yapydata_20" ismap="ismap" class="graph-without-title" />
+  <img src="uml_class_diagram_for_yapydata_12.gif" alt='' usemap="#uml_class_diagram_for_yapydata_12" ismap="ismap" class="graph-without-title" />
 </center>
 </center>
 <hr />
@@ -214,9 +214,9 @@
 of the path is provided as a tuple of path items.</p>
 <dl class="rst-docutils">
 <dt>Args:</dt>
-<dd><dl class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
+<dd><dl class="rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
 <dt>subpath:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">The list of keys constituting a branch of a data tree.
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">The list of keys constituting a branch of a data tree.
 The <em>subpath</em> is treated as a branch of one of the nodes
 of a provided <em>searchpath</em> - which is by default the top node.
 The supported values are:</p>
@@ -249,15 +249,15 @@ ListIndex := &quot;valid list-index&quot;
 <p>The derived syntax classes may impose specific constraints.
 Thus it is recommended to use integers and strings only
 for maximum compatibility, and the ease of using mixed syntaxes:</p>
-<pre class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
+<pre class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
 ItemKey :=    str  # string:  dict
 ListIndex :=  int  # integer: lists, tuple, dict
 </pre>
 </dd>
 <dt>kargs:</dt>
-<dd><dl class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
+<dd><dl class="rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
 <dt>searchpath:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Optional search path for the match of the provided
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Optional search path for the match of the provided
 address <em>subpath</em>. The provided <em>subpath</em> is applied
 to each node of the <em>searchpath</em> in accordance to the
 <em>direction</em> option. This provides the search and
@@ -273,17 +273,17 @@ path-item := (
 
 default := &lt;top-node&gt;
 </pre>
-<p class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">The search path entries has to be actually present by default.
+<p class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">The search path entries has to be actually present by default.
 These  could be either created by loading a complete tree
 structure, or by using the <em>Capabilities.create()</em> member.
 See also parameter 'strict'.</p>
 </dd>
 <dt>direction:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">The search direction of the <em>subpath</em> within the
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">The search direction of the <em>subpath</em> within the
 <em>searchpath</em>. In case of multiple superpositioned
 attributes the first traversed match.</p>
 <p>The provided values are:</p>
-<pre class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
+<pre class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
 direction := (
       up   | 0  | False # search from right-to-left
     | down | 1  | True  # search from left-to-right
@@ -293,9 +293,9 @@ default:= up
 </pre>
 </dd>
 <dt>match:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Sets the match criteria for the search operation.
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Sets the match criteria for the search operation.
 Interferes with <em>direction</em>:</p>
-<pre class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
+<pre class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
 match := (
       M_FIRST | 'first'   # use first matching node
     | M_LAST  | 'last'    # use last matching node
@@ -306,9 +306,9 @@ default := M_FIRST
 </pre>
 </dd>
 <dt>partial:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Enables the return of partial sub paths in case the requested
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Enables the return of partial sub paths in case the requested
 path is not completely present.</p>
-<pre class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
+<pre class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
 partial := (
       True   # when not completely present, the longest
              # existing part is returned, the completeness
@@ -319,20 +319,20 @@ partial := (
 </pre>
 </dd>
 <dt>strict:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Controls the required consistency. This comprises:</p>
-<ol class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-arabic simple">
-<li><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">the presence of the search path entries</p>
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Controls the required consistency. This comprises:</p>
+<ol class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-arabic simple">
+<li><p class="rst-rst-rst-first rst-rst-first rst-first">the presence of the search path entries</p>
 </li>
-<li><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">the presence of the requested subpath within the set
+<li><p class="rst-rst-rst-first rst-rst-first rst-first">the presence of the requested subpath within the set
 of search paths</p>
 </li>
 </ol>
 </dd>
 <dt>pysyn:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Activates full <em>Python</em> syntax. This in particular enables all
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Activates full <em>Python</em> syntax. This in particular enables all
 container types of intermediate nodes for arbitrary paths.
 Includes <em>tuple</em>, <em>set</em>, <em>frozenset</em>, etc.</p>
-<pre class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
+<pre class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
 pysyn := (
       True   # allows all python types as container nodes
     | False  # allows list and dict only as container nodes
@@ -346,7 +346,7 @@ default := False
 </dl>
 </dd>
 <dt>Returns:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">In case of a match returns the tuple:</p>
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">In case of a match returns the tuple:</p>
 <pre class="rst-literal-block">
 return := (&lt;attr-value-path&gt;, &lt;attr-value&gt;, &lt;partial&gt;)
 
@@ -360,11 +360,11 @@ partial := (
     | True    # the actually present part of the path
 )
 </pre>
-<p class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">Else raises <em>YapyDataDataTreeOidError</em>.</p>
+<p class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">Else raises <em>YapyDataDataTreeOidError</em>.</p>
 </dd>
 <dt>Raises:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">YapyDataDataTreeOidError</p>
-<p class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">pass-through</p>
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">YapyDataDataTreeOidError</p>
+<p class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">pass-through</p>
 </dd>
 </dl>
   <dl class="fields">
@@ -398,9 +398,9 @@ requires in case of a <em>list</em> the start with the index <em>0</em>, while
 in case of the <em>dict</em> arbitrary keys could be assigned.</p>
 <dl class="rst-docutils">
 <dt>Args:</dt>
-<dd><dl class="rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
+<dd><dl class="rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
 <dt>subpath:</dt>
-<dd><p class="rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">The list of keys constituting a branch of a data tree.
+<dd><p class="rst-rst-rst-first rst-rst-first rst-first">The list of keys constituting a branch of a data tree.
 The <em>subpath</em> is treated as a branch of one of the nodes
 of a provided <em>searchpath</em> - which is by default the top node.
 The supported values are:</p>
@@ -424,14 +424,14 @@ new-node := (
     | None            # null:    dict
 )
 </pre>
-<p class="rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">Some <em>Python</em> data types are immutable, which could be subscripted read-only,
+<p class="rst-rst-rst-last rst-rst-last rst-last">Some <em>Python</em> data types are immutable, which could be subscripted read-only,
 e.g. strings. While others such as sets are iterable, but not subscriptable
 at all. Refer to the manual for a detailed list.</p>
 </dd>
 <dt>kargs:</dt>
-<dd><dl class="rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
+<dd><dl class="rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
 <dt>hook:</dt>
-<dd><p class="rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Optional node as parent of the insertion point for the new sub path.
+<dd><p class="rst-rst-rst-first rst-rst-first rst-first">Optional node as parent of the insertion point for the new sub path.
 The node must exist and be part of the targeted data structure. No
 additional checks are done:</p>
 <pre class="rst-literal-block">
@@ -440,12 +440,12 @@ memory-node := &quot;node address&quot;
 
 default := &lt;top-node&gt;
 </pre>
-<p class="rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">The <em>hook</em> node could either be a border node of the existing tree,
+<p class="rst-rst-rst-last rst-rst-last rst-last">The <em>hook</em> node could either be a border node of the existing tree,
 or any arbitrary node with a partial of complete part of the requested
 <em>subpath</em>. Existing nodes are reused.</p>
 </dd>
 <dt>strict:</dt>
-<dd><p class="rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">If <em>True</em> requires all present nodes of the <em>subpath</em> to of the
+<dd><p class="rst-rst-rst-first rst-rst-first rst-first">If <em>True</em> requires all present nodes of the <em>subpath</em> to of the
 appropriate type, missing are created. When <em>False</em> present nodes
 of inappropriate type are simply replaced.</p>
 <pre class="rst-literal-block">
@@ -455,12 +455,12 @@ strict := (
 )
 default := False
 </pre>
-<p class="rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">Nodes of type <em>None</em> are always treated as non-present placeholder,
+<p class="rst-rst-rst-last rst-rst-last rst-last">Nodes of type <em>None</em> are always treated as non-present placeholder,
 thus replaced in any case.</p>
 </dd>
 <dt>value:</dt>
-<dd><p class="rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Value of the created final node:</p>
-<pre class="rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
+<dd><p class="rst-rst-rst-first rst-rst-first rst-first">Value of the created final node:</p>
+<pre class="rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
 value := &lt;value-of-node&gt;
 
 value-of-node := &lt;valid-json-node-type&gt;
@@ -479,7 +479,7 @@ default := None
 </dl>
 </dd>
 <dt>Returns:</dt>
-<dd><p class="rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">In case of success the in-memory nodes of the sub path:</p>
+<dd><p class="rst-rst-rst-first rst-rst-first rst-first">In case of success the in-memory nodes of the sub path:</p>
 <pre class="rst-literal-block">
 return := (&lt;attr-value-path&gt;)
 
@@ -493,13 +493,13 @@ in-memory nodes := (
 non-subscriptable-node := &quot;any valid type&quot;
 </pre>
 <p>else raises <em>YapyDataDataTreeOidError</em>.</p>
-<p class="rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">The last node contains in case of an atomic type the value
+<p class="rst-rst-rst-last rst-rst-last rst-last">The last node contains in case of an atomic type the value
 of the node, while the intermediate nodes represent the
 indexed containers.</p>
 </dd>
 <dt>Raises:</dt>
-<dd><p class="rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">YapyDataDataTreeOidError</p>
-<p class="rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">pass-through</p>
+<dd><p class="rst-rst-rst-first rst-rst-first rst-first">YapyDataDataTreeOidError</p>
+<p class="rst-rst-rst-last rst-rst-last rst-last">pass-through</p>
 </dd>
 </dl>
   <dl class="fields">
@@ -531,10 +531,10 @@ self.data[key0][key1][key2]...
 </pre>
 <dl class="rst-docutils">
 <dt>Args:</dt>
-<dd><dl class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
+<dd><dl class="rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
 <dt>key:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">The value of the node within <em>data</em>:</p>
-<pre class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">The value of the node within <em>data</em>:</p>
+<pre class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
 key := (
       &lt;single-key&gt;
     | &lt;list-of-keys&gt;
@@ -555,10 +555,10 @@ ListIndex := &quot;valid list-index&quot;
 </dl>
 </dd>
 <dt>Returns:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last">The value of the addressed node/value.</p>
+<dd><p class="rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last">The value of the addressed node/value.</p>
 </dd>
 <dt>Raises:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last">pass-through</p>
+<dd><p class="rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last">pass-through</p>
 </dd>
 </dl>
   <dl class="fields">
@@ -646,24 +646,20 @@ For example by pickling::
 for specific syntaxes.</p>
 <dl class="rst-docutils">
 <dt>Args:</dt>
-<dd><dl class="rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
+<dd><dl class="rst-first rst-last rst-docutils">
 <dt>value:</dt>
-<dd><p class="rst-first rst-last">Top node.</p>
-</dd>
+<dd>Top node.</dd>
 <dt>kargs:</dt>
-<dd><p class="rst-first rst-last">Specific syntax related dynamic parameters to be defined
-by derived classes.</p>
-</dd>
+<dd>Specific syntax related dynamic parameters to be defined
+by derived classes.</dd>
 </dl>
 </dd>
 <dt>Returns:</dt>
-<dd><p class="rst-first rst-last">None</p>
-</dd>
+<dd>None</dd>
 <dt>Results:</dt>
-<dd><dl class="rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
+<dd><dl class="rst-first rst-last rst-docutils">
 <dt>YapyDataTreeError:</dt>
-<dd><p class="rst-first rst-last">Raises exception when not valid.</p>
-</dd>
+<dd>Raises exception when not valid.</dd>
 </dl>
 </dd>
 </dl>
@@ -702,27 +698,27 @@ defined by the parameter <em>mode</em>. The provided algorithm
 of the strategy is <em>join</em>, where the input data is processed
 on the exisiting tree by modification and creation as required.</p>
 <ul class="rst-simple">
-<li><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">branches are resolved from top to the leafs</p>
+<li><p class="rst-rst-rst-first rst-rst-first rst-first">branches are resolved from top to the leafs</p>
 </li>
-<li><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">missing sub-branches are created</p>
+<li><p class="rst-rst-rst-first rst-rst-first rst-first">missing sub-branches are created</p>
 </li>
-<li><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">missing leafs are created</p>
+<li><p class="rst-rst-rst-first rst-rst-first rst-first">missing leafs are created</p>
 </li>
-<li><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">existing leafs are replaced</p>
+<li><p class="rst-rst-rst-first rst-rst-first rst-first">existing leafs are replaced</p>
 </li>
 </ul>
 <p>This implements a last-wins strategy, thus in particular supports
 incremental load of configurations by raising priority.</p>
 <dl class="rst-docutils">
 <dt>Args:</dt>
-<dd><dl class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
+<dd><dl class="rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last rst-docutils">
 <dt>data:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last">Top node of the data tree to be superposed.</p>
+<dd><p class="rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last">Top node of the data tree to be superposed.</p>
 </dd>
 <dt>keyidx:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Key or index to be used at the insertion node.
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">Key or index to be used at the insertion node.
 If not given the insertion node is:</p>
-<pre class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
+<pre class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
 into dict: update by the new node
 into list: append the new node
 
@@ -730,8 +726,8 @@ default := None
 </pre>
 </dd>
 <dt>hook:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">The insertion node for the new data:</p>
-<pre class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">The insertion node for the new data:</p>
+<pre class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last rst-literal-block">
 when  not given: use top.
 
 default := None
@@ -740,12 +736,12 @@ default := None
 </dl>
 </dd>
 <dt>Returns:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-last rst-rst-rst-rst-first rst-rst-rst-rst-last rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last">Returns the merged data tree,
+<dd><p class="rst-rst-rst-first rst-rst-rst-last rst-rst-first rst-rst-last rst-first rst-last">Returns the merged data tree,
 raises an exception in case of failure.</p>
 </dd>
 <dt>Raises:</dt>
-<dd><p class="rst-rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-rst-first rst-rst-rst-rst-rst-first rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">YapyDataDataTreeError</p>
-<p class="rst-rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-rst-last rst-rst-rst-rst-rst-last rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">pass-through</p>
+<dd><p class="rst-rst-rst-rst-first rst-rst-rst-first rst-rst-first rst-first">YapyDataDataTreeError</p>
+<p class="rst-rst-rst-rst-last rst-rst-rst-last rst-rst-last rst-last">pass-through</p>
 </dd>
 </dl>
   <dl class="fields">
@@ -858,7 +854,7 @@ raises an exception in case of failure.</p>
   </tr>
   <tr>
     <td align="lest" class="footer">
-    Generated by Epydoc 4.0.4 / Python-3.8 / fedora27 on Fri Dec 13 09:06:34 2019
+    Generated by Epydoc 4.0.4 / Python-3.8 / fedora27 on Fri Dec 13 10:39:08 2019
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
