@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 """Distribute 'yapydata', a low-level data syntax processing for Python.
 
 Additional local options for this *setup.py* module:
@@ -14,13 +13,6 @@ Additional local options for this *setup.py* module:
 """
 from __future__ import absolute_import
 from __future__ import print_function
-
-try:
-    # optional remote debug
-    from rdbg import start        # load a slim bootstrap module
-    start.start_remote_debug()    # check whether '--rdbg' option is present, if so accomplish bootstrap
-except:
-    pass
 
 #
 # setup extension modules -  pip install setuplib / pip install pysetuplib 
@@ -41,7 +33,7 @@ __license__ = "Artistic-License-2.0 + Forced-Fairplay-Constraints"
 __copyright__ = "Copyright (C) 2015-2019 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez"
 __uuid__ = "60cac28d-efe6-4a8d-802f-fa4fc94fa741"
 
-__vers__ = [0, 1, 38,]
+__vers__ = [0, 1, 39,]
 __version__ = "%02d.%02d.%03d"%(__vers__[0],__vers__[1],__vers__[2],)
 __release__ = "%d.%d.%d" % (__vers__[0], __vers__[1], __vers__[2],) + '-rc0'
 __status__ = 'beta'
@@ -97,7 +89,7 @@ setuptools.setup(
     author_email=__author_email__,
     description="The 'yapydata provides miscellaneous low-level *Python* data access APIs.",
     download_url="https://sourceforge.net/projects/yapydata/files/",
-    install_requires=["yapyutils"],
+    install_requires=_install_requires,
     license=__license__,
     long_description=_long_description,
     name=_name,
