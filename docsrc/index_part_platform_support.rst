@@ -6,8 +6,8 @@ Platform Support
 
 The supported Python versions are:
 
-* Core syntax: `Python2.7+, Python3.5+ <install.html#>`_ - see [YapyData]_
-* Implementations: `CPython, PyPy, IPython, Jython, IronPython <install.html#>`_ - see [YapyData]_
+* Core syntax: `Python2.7+, Python3.5+ <install.html#>`_ - see [pythonids]_
+* Implementations: `CPython, PyPy, IPython, Jython, IronPython <install.html#>`_ - see [pythonids]_
 
 The supported platforms are:
 
